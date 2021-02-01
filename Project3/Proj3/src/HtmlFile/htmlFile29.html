@@ -1,0 +1,2790 @@
+<html class="js no-touchevents details" dir="ltr" lang="en" prefix="og: https://ogp.me/ns#">
+ <head>
+  <script src="https://js-agent.newrelic.com/nr-1184.min.js">
+  </script>
+  <script async="" src="https://static.criteo.net/js/ld/publishertag.prebid.js" type="text/javascript">
+  </script>
+  <!-- PLACE AFTER OPENING HEAD TAG: Header Bidding Script -->
+  <link crossorigin="" href="https://config.playwire.com" rel="preconnect"/>
+  <link crossorigin="" href="https://cdn.intergi.com" rel="preconnect"/>
+  <link crossorigin="" href="https://cdn.intergient.com" rel="preconnect"/>
+  <link crossorigin="" href="https://securepubads.g.doubleclick.net" rel="preconnect"/>
+  <link crossorigin="" href="https://cdn.playwire.com" rel="preconnect"/>
+  <link crossorigin="" href="https://cdn.video.playwire.com" rel="preconnect"/>
+  <link crossorigin="" href="https://cdn.video.playwire.com" rel="preconnect"/>
+  <link crossorigin="" href="https://z.moatads.com" rel="preconnect"/>
+  <script src="https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101">
+  </script>
+  <script async="" src="https://c.amazon-adsystem.com/aax2/apstag.js">
+  </script>
+  <script async="" src="https://www.google-analytics.com/analytics.js" type="text/javascript">
+  </script>
+  <script async="" id="ld-ajs" src="//cdn2.lockerdome.com/_js/ajs.js">
+  </script>
+  <script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-NBS6K3" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   var tyche = { mode: 'tyche', config: '//config.playwire.com/1022050/v2/websites/69785/banner.json' }
+  </script>
+  <script data-delay="“1500”" id="tyche" src="https://cdn.intergient.com/pageos/pageos.js" type="text/javascript">
+  </script>
+  <script charset="utf-8" src="https://cdn.intergient.com/pageos/1.5.1/videoCard.1451368a7b5e945a3252.js">
+  </script>
+  <script charset="utf-8" src="https://cdn.intergient.com/pageos/1.5.1/kinesis.626e949ff963addca6d5.js">
+  </script>
+  <script async="" src="https://z.moatads.com/playwireprebidheader597261727146/moatheader.js" type="text/javascript">
+  </script>
+  <!-- Playwire code ends -->
+  <script>
+   var current_date = 2020-10-17; var current_year = 2020; var current_day = 17; var current_month = 10;
+  </script>
+  <meta charset="utf-8"/>
+  <script type="text/javascript">
+   (window.NREUM||(NREUM={})).loader_config={licenseKey:"fc5994cfb8",applicationID:"41957789"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);
+  </script>
+  <script>
+   var zflag_nid="305", zflag_cid="48112/41562/1", zflag_sid="4677", zflag_width="1", zflag_height="1", zflag_sz="15";
+  </script>
+  <meta content="InfoPlease" property="og:site_name"/>
+  <meta content="Click here to learn more information about the 50 States of America including maps, facts, historical information and more." name="description"/>
+  <meta content="https://www.infoplease.com/us/states" property="og:url"/>
+  <meta content="The United States: Information &amp; Statistics By State" property="og:title"/>
+  <meta content="no-referrer" name="referrer"/>
+  <meta content="Click here to learn more information about the 50 States of America including maps, facts, historical information and more." property="og:description"/>
+  <meta content="https://www.infoplease.com/themes/ip/images/og_logo_pos.jpg" property="og:image"/>
+  <meta content="2017-02-08T15:45:30-05:00" property="og:updated_time"/>
+  <meta content="Drupal 8 (https://www.drupal.org)" name="Generator"/>
+  <meta content="width" name="MobileOptimized"/>
+  <meta content="true" name="HandheldFriendly"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <script type="application/ld+json">
+   { "@context": "https://schema.org", "@graph": [ { "@type": "Webpage", "name": "The United States: Information \u0026 Statistics By State", "headline": "The United States: Information \u0026 Statistics By State", "description": "Click here to learn more information about the 50 States of America including maps, facts, historical information and more.", "image": { "@type": "ImageObject", "representativeOfPage": "True", "url": "https://www.infoplease.com/themes/ip/logo.png", "width": "2582", "height": "1722" }, "datePublished": "2017-02-08T15:45:30-0500", "dateModified": "2020-07-24T00:25:12-0400", "author": { "@type": "Organization", "@id": "https://www.infoplease.com", "name": "Infoplease" }, "publisher": { "@type": "Organization", "@id": "https://www.infoplease.com", "name": "Infoplease", "logo": { "@type": "ImageObject", "url": "https://www.infoplease.com/themes/ip/logo.png", "width": "280", "height": "100" } }, "mainEntityOfPage": { "@type": "Webpage", "@id": "https://www.infoplease.com/us/states" } }, { "@type": "WebPage", "breadcrumb": { "@type": "BreadcrumbList", "itemListElement": [ { "@type": "ListItem", "position": 1, "item": { "@id": "https://www.infoplease.com/", "name": "Home" } }, { "@type": "ListItem", "position": 2, "item": { "@id": "https://www.infoplease.com/us", "name": "United States" } }, { "@type": "ListItem", "position": 3, "item": { "@id": "https://www.infoplease.com/us/states", "name": "The United States: Information \u0026 Statistics By State" } } ] } } ]
+}
+  </script>
+  <link href="/themes/ip/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+  <link href="https://www.infoplease.com/us/states" rel="canonical"/>
+  <title>
+   The 50 States of America | US State Information
+  </title>
+  <link href="/sites/infoplease.com/files/css/css_E-f6B38bHeCFyVGNjopFE0mVoOS8K_RAVH64Uux9QCc.css" media="all" rel="stylesheet"/>
+  <link href="/sites/infoplease.com/files/css/css_Rhje5n_kqyHOBSvStXicr_D6sBNEGpiRqHFdIYdqoH0.css" media="all" rel="stylesheet"/>
+  <!--[if lte IE 8]><script src="/sites/infoplease.com/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script><![endif]-->
+  <script async="" defer="" src="/core/assets/vendor/modernizr/modernizr.min.js?v=3.3.1">
+  </script>
+  <style>
+   .async-hide { opacity: 0 !important}
+  </style>
+  <script>
+   (function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-NBS6K3':true});
+  </script>
+  <style id="pwCustomCSS" type="text/css">
+   body.head-title-The-Judicial-Branch---Infoplease header.site-header{
+position: absolute !important;
+}
+  </style>
+  <script src="https://cdn.intergi.com/pageos/js/libs/aws-sdk-kinesis.min.js">
+  </script>
+  <script charset="utf-8" src="https://cdn.intergient.com/pageos/1.5.1/trendiVideo.ad0a769b014c6c59d207.js">
+  </script>
+  <script src="https://cdn.intergi.com/hera/releases/4.3.61/tyche.js" type="text/javascript">
+  </script>
+  <script src="https://cdn.intergi.com/hera/releases/4.3.61/runtime.ef9880918efdc5c0ac46.js" type="text/javascript">
+  </script>
+  <script src="https://cdn.intergi.com/hera/releases/4.3.61/vendor/npm.core-js.ffb4b0a70697fbafb4fe.js" type="text/javascript">
+  </script>
+  <script src="https://cdn.intergi.com/hera/releases/4.3.61/vendor/npm.babel.e42d14b31536f4c718ea.js" type="text/javascript">
+  </script>
+  <script src="https://cdn.intergi.com/hera/releases/4.3.61/vendor/npm.lodash.922cd3f43a34caef1c38.js" type="text/javascript">
+  </script>
+  <script src="https://cdn.intergi.com/hera/releases/4.3.61/vendor/npm.intersection-observer.8aa2efdfa26796cda0fc.js" type="text/javascript">
+  </script>
+  <script src="https://cdn.intergi.com/hera/releases/4.3.61/vendor/npm.process.940d3a7ac2b6ed08f335.js" type="text/javascript">
+  </script>
+  <script src="https://cdn.intergi.com/hera/releases/4.3.61/vendor/npm.webpack.1e0f2b4c3cee24713006.js" type="text/javascript">
+  </script>
+  <script src="https://cdn.intergi.com/hera/releases/4.3.61/lib/lib-main.aa0becec495b9d9b6de4.js" type="text/javascript">
+  </script>
+  <script src="https://cdn.intergi.com/hera/releases/4.3.61/main.18d2ec6841db85f4d7c5.js" type="text/javascript">
+  </script>
+  <script src="https://cdn.intergi.com/hera/releases/4.3.61/lib/lib.55782284870bfbbd6c84.js" type="text/javascript">
+  </script>
+  <style type="text/css">
+   #pw-close-btn {cursor: pointer;position: fixed;width: 32px;z-index: 2147483645;}.pw-close-btn-top.pw-close-btn-top--flex-docked {top: 75px !important;}.pw-close-btn-top.pw-close-btn-top--flex {top: 215px !important;}.pw-close-btn {position: absolute !important;right: 0px;top: -42px !important;}.pw-close-btn-top {right: 84px !important;top: 5px !important;}#pw-close-btn.hide {display:none!important}#pw-close-btn.show {display:block!important}#pw-close-btn.bolt-linear-ad-on {display:none;}#pw-close-btn .circle {display:inline-block!important;font-family:sans-serif!important;line-height:0!important;width:32px;height:32px;}#tyche_trendi_video_container #pw-close-btn .circle {width:16px;height:16px;}
+  </style>
+  <script src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" type="text/javascript">
+  </script>
+  <script async="" src="https://cdn.intergi.com/prebid/prebid.js" type="text/javascript">
+  </script>
+  <style id="pwCSSstyling" type="text/css">
+   .pw-tag { text-align: center; opacity: 1}.pw-oop-tag {width: 1px; height: 1px; line-height:1px; position: fixed}.pw-tag-hidden { visibility: hidden; opacity: 0}.pw-in-article { padding:20px 0; }.pw-in-article_hidden { visibility: hidden; height:0; }.pw-fixed-mobile-leaderboard{ position: fixed;bottom: 0px;left: 50%;width: 320px;height:50px;margin-left:-160px;z-index: 2147483645;text-align: center;padding: 2px 0;background: rgba(0, 0, 0, 0.8);transition: opacity .6s ease-in}.fixed-mobile-close { cursor: pointer;border-top: 1px solid rgba(0,0,0,0.35);border-left: 1px solid rgba(0,0,0,0.35);border-right: 1px solid rgba(0,0,0,0.35);border-radius: 4px 4px 0 0; padding: 3px 6px 3px 6px;position: absolute; top: -22px; right: -1px; z-index: -1;background-color: rgba(0,0,0,0.55);box-shadow: inset 0 0 0 1px rgba(255,255,255,0.2);color: rgba(255,255,255,0.75);line-height: 1.2;font-size: 12px;font-family: Helvetica,Arial,sans-serif;-webkit-transition: all .5s ease-out;-moz-transition: all .5s ease-out;-o-transition: all .5s ease-out;transition: all .5s ease-out;}.pw-siderail-left-close { cursor: pointer;border-top: 1px solid rgba(0,0,0,0.35);border-left: 1px solid rgba(0,0,0,0.35);border-right: 1px solid rgba(0,0,0,0.35);border-radius: 4px 4px 0 0; padding: 3px 6px 3px 6px; position: absolute;top: -22px; left: -1px; z-index: -1; background-color: rgba(0,0,0,0.55);box-shadow: inset 0 0 0 1px rgba(255,255,255,0.2);color: rgba(255,255,255,0.75);line-height: 1.2;font-size: 12px;font-family: Helvetica,Arial,sans-serif;-webkit-transition: all .5s ease-out;-moz-transition: all .5s ease-out;-o-transition: all .5s ease-out;transition: all .5s ease-out;}.pw-siderail-right-close { cursor: pointer;border-top: 1px solid rgba(0,0,0,0.35);border-left: 1px solid rgba(0,0,0,0.35);border-right: 1px solid rgba(0,0,0,0.35);border-radius: 4px 4px 0 0; padding: 3px 6px 3px 6px; position: absolute;top: -22px; right: -1px; z-index: -1; background-color: rgba(0,0,0,0.55);box-shadow: inset 0 0 0 1px rgba(255,255,255,0.2);color: rgba(255,255,255,0.75);line-height: 1.2;font-size: 12px;font-family: Helvetica,Arial,sans-serif;-webkit-transition: all .5s ease-out;-moz-transition: all .5s ease-out;-o-transition: all .5s ease-out;transition: all .5s ease-out;}div[data-pw-desk="leaderboard_atf"].pw-sticky,div[data-pw-mobi="leaderboard_atf"].pw-sticky { z-index: 2147483645;position: fixed; top:0px; left:0px; width: 100%; padding: 20px 0;background: rgba(0,0,0,.2);overflow:hidden;transition: 750ms opacity ease-out;opacity: 1;border-bottom: 1px solid rgba(238, 238, 238, 0.4)}div[data-pw-desk="med_rect_atf"].pw-sticky { z-index: 2147483644;position: fixed; width: 300px; padding: 0; background: transparent;overflow:hidden;transition: 750ms opacity ease-out;opacity: 1;border-bottom: 20px solid #fff;border-top: 20px solid #fff}.pws-sticky:before {z-index: -1;-webkit-filter: blur(34px);width: 100%;height: 100%;content: "";position: absolute;top: 0px;left: 0px;background: rgba(0,0,0,.5);}.pw-sticky-hide{opacity: 0%;}#pw-oop-behind_page { z-index: 0}#pw-oop-above_page { z-index: 2147483647}#pw-oop-top_rail { top: 0px; left:0px}#pw-oop-left_rail { left: 0px; top: 0px; position: fixed;min-width:160px;height:600px}#pw-oop-right_rail { right: 0px; top: 0px; position: fixed;min-width:160px;height:600px}.pw-tps{ display: none }#tycheConsole{ background-color: #fff; border-top: 1px solid;font-family: Arial, Helvetica, sans-serif; font-size: 12px;position: fixed; bottom: 0; width: 100%; padding: 0 2% 2% 2%;z-index: 9999999999; box-sizing: border-box}#tycheConsole a:visited{ color: rgb(52, 152, 219) }#tycheConsole li:hover{background: rgba(52, 152, 219,.26)}.ad__name{ display:inline-block; width: 15%; font-weight:bold;}div[data-pw-desk="leaderboard_atf"] > div > iframe { margin:auto; }#pw-oop-bottom_rail > div > iframe { margin:auto; }#video_backfill {position: relative; top: 50%; transform: translateY(-50%); -ms-transform: translateY(-50%);z-index: 11}#video_backfill > .pw_report_ad_container { display: block}
+  </style>
+  <script async="" src="https://securepubads.g.doubleclick.net/gpt/pubads_impl_2020101401.js?21068028">
+  </script>
+  <script charset="utf-8" src="//cdn.playwire.com/bolt4/js/zeus/releases/4.3.32/7.js">
+  </script>
+  <style>
+  </style>
+  <script charset="utf-8" src="//cdn.playwire.com/bolt4/js/zeus/releases/4.3.32/5.js">
+  </script>
+  <link as="script" href="https://adservice.google.com/adsid/integrator.js?domain=www.infoplease.com" rel="preload"/>
+  <script src="https://adservice.google.com/adsid/integrator.js?domain=www.infoplease.com" type="text/javascript">
+  </script>
+  <link href="https://e2603231e1144c7b2718307577886878.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html" rel="prefetch"/>
+  <link href="https://tpc.googlesyndication.com/safeframe/1-0-37/html/container.html" rel="prefetch"/>
+  <link href="https://cdn.intergi.com/tyche-assets/report_ad/report_ad_style.css" rel="stylesheet" type="text/css"/>
+  <script async="" charset="UTF-8" src="https://resources.infolinks.com/js/1715.006-2.108/ice.js" type="text/javascript">
+  </script>
+  <script charset="UTF-8" src="https://router.infolinks.com/gsd?evt=afterGSD&amp;pid=3185668&amp;pdom=www.infoplease.com&amp;purl=https%3A%2F%2Fwww.infoplease.com%2Fus%2Fstates&amp;jsv=1715.006-2.108&amp;_cb=16029988157170" type="text/javascript">
+  </script>
+  <style type="text/css">
+  </style>
+  <script charset="UTF-8" src="https://rt3017.infolinks.com/action/getads.htm?hks=%5B%7B%22lid%22%3A%22d_IL_INSEARCH%22%2C%22bdc%22%3A1%2C%22prod_t%22%3A%22d%22%2C%22garc%22%3A0%2C%22sdata%22%3A%22homes%22%2C%22scs%22%3A%221iC3F6b0W8%22%7D%5D&amp;rid=559c868f-4bf7-40ef-80c4-cfd81aaceae1&amp;jsv=1715.006-2.108&amp;sr=800X600&amp;rts=1602998816235&amp;cfv=-1&amp;cb=singleGetAdsResponse&amp;os=Windows&amp;ov=10&amp;br=ChromeHeadless&amp;bv=86.0.4240.75&amp;dv=p&amp;ce=t&amp;purl=https%3A%2F%2Fwww.infoplease.com%2Fus%2Fstates&amp;tzo=-0400&amp;c=c&amp;strg=true&amp;rsd=1-oeiUmkkNaeYHqHYFx_JESgGE3hreuY3ZXo7QzXTEx_OtJMpqC_Ct4DUIIHu0i4yjUcuBeKYAaYwnfNRsYX9UNZ69qqoEw0hSRq2EPcJ7jjVpvBbdUcJiO7XzH4TG71UJ8k2jUzHiepZyzSS69H3_8mKmoxH_Q-&amp;rsk=47&amp;rcs=dzn-XG2Up8rTpK3hjG-mkw&amp;usprivacy=1---" type="text/javascript">
+  </script>
+  <script src="https://aka-cdn.adtechus.com/dt/common/postscribe.js" type="text/javascript">
+  </script>
+ </head>
+ <body class="user-logged-out path-node page-node-type-subhub head-title-The-50-States-of-America---US-State-Information">
+  <!-- Google Tag Manager -->
+  <noscript>
+   <iframe height="0" src="//www.googletagmanager.com/ns.html?id=GTM-NBS6K3" style="display:none;visibility:hidden" width="0">
+   </iframe>
+  </noscript>
+  <script type="text/javascript">
+   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0];var j=d.createElement(s);var dl=l!='dataLayer'?'&l='+l:'';j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;j.type='text/javascript';j.async=true;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NBS6K3');
+  </script>
+  <div class="adLeaderboard adBanner" id="adBanner" style="background-color: transparent; height: 1px; width: 1px; position: fixed; bottom: -10px; left: -10px;">
+  </div>
+  <!-- End Google Tag Manager -->
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas="">
+   <header class="site-header">
+    <div class="container">
+     <a class="col-sm-3 col-xs-6 ip-logo" href="/" rel="home" title="Home">
+      <img alt="Home" class="b-lazy b-loaded" src="/themes/ip/images/logo-white.svg"/>
+     </a>
+     <button class="ip-search-toggle">
+      <img class="b-lazy b-loaded" src="/themes/ip/images/mag-glass.svg"/>
+     </button>
+     <button class="ip-nav-search-close">
+      <img class="b-lazy b-loaded" src="/themes/ip/images/close.svg"/>
+     </button>
+     <div class="block" id="block-mainnavigation-2">
+      <div class="region-we-mega-menu">
+       <a class="navbar-toggle collapsed">
+        <span class="icon-bar">
+        </span>
+        <span class="icon-bar">
+        </span>
+        <span class="icon-bar">
+        </span>
+       </a>
+       <nav class="main navbar navbar-default navbar-we-mega-menu mobile-collapse click-action mobile-main-menu" data-action="clicked" data-alwayshowsubmenu="1" data-animation="None" data-autoarrow="1" data-block-theme="ip" data-menu-name="main" data-mobile-collapse="1" data-style="Default">
+        <div class="container-fluid">
+         <ul class="we-mega-menu-ul">
+          <li class="we-mega-menu-li dropdown-menu main-menu-browse" data-class="main-menu-browse" data-element-type="we-mega-menu-li" data-group="0" data-id="1a723417-141b-4c01-8390-43bc05c17e8a" data-level="0" data-submenu="1" hide-sub-when-collapse="0">
+           <span class="we-megamenu-nolink" data-drupal-link-system-path="&lt;front&gt;">
+            Browse
+            <i class="arrow down">
+            </i>
+           </span>
+           <div class="we-mega-menu-submenu" data-element-type="we-mega-menu-submenu" data-submenu-width="1200" style="width: 1200px">
+            <div class="we-mega-menu-submenu-inner">
+             <div class="we-mega-menu-row" data-custom-row="0" data-element-type="we-mega-menu-row">
+              <div class="we-mega-menu-col span3" data-element-type="we-mega-menu-col" data-hidewhencollapse="0" data-width="3">
+               <ul class="nav nav-tabs subul">
+                <li class="we-mega-menu-li dropdown-menu we-mega-menu-group" data-element-type="we-mega-menu-li" data-group="1" data-id="ff3e3eff-37a7-4c29-bc5c-2260588e3e2d" data-level="1" data-submenu="1" hide-sub-when-collapse="0">
+                 <span class="we-megamenu-nolink" data-drupal-link-system-path="&lt;front&gt;">
+                  World
+                  <i class="arrow down">
+                  </i>
+                 </span>
+                 <div class="we-mega-menu-submenu" data-element-type="we-mega-menu-submenu">
+                  <div class="we-mega-menu-submenu-inner">
+                   <div class="we-mega-menu-row" data-custom-row="0" data-element-type="we-mega-menu-row">
+                    <div class="we-mega-menu-col span12" data-element-type="we-mega-menu-col" data-hidewhencollapse="0" data-width="12">
+                     <ul class="nav nav-tabs subul">
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="a4a2e641-8a37-4cae-8a23-d9eb1b3fb181" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/world" target="" title="">
+                        World Overview
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="cb1c78ba-b3c5-4aa7-9aba-80e35a6eeb25" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/atlas" target="" title="">
+                        Atlas
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="9161d572-95be-4598-a77e-6f434c4e3d09" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/world/countries" target="" title="">
+                        Countries
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="67431e6f-f079-4256-9c6e-9115547796c4" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/world/disasters" target="" title="">
+                        Disasters
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="3cfa6176-642f-4594-a369-6f287c4aa14c" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/current-events" target="" title="">
+                        News
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="676bb6ec-a766-41fc-8126-55dd6a57d1e8" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/world/countries/flags" target="" title="">
+                        Flags of the World
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="fed9df34-c250-462b-a592-e1f4e94df822" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/world/geography/geography-maps-country-information-distance-calculator" target="" title="">
+                        Geography
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="4d8d75e6-b221-42ba-8e0d-eb29f046ea51" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/world/diplomacy" target="" title="">
+                        International Relations
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="530cc07a-c6ec-4017-a6fc-eaea78d71a61" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/culture-entertainment/religion" target="" title="">
+                        Religion
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="22d47f9e-20af-4bdb-8f0b-791cb357f290" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/world/world-statistics" target="" title="">
+                        Statistics
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="177dba64-9022-4451-9139-5ce838f19878" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/world/monuments-landmarks" target="" title="">
+                        Structures &amp; Buildings
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="5f59129b-05d1-4ee3-ae12-26853728aa41" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/world/travel-transportation" target="" title="">
+                        Travel
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="15dc6059-ceac-44e1-9cc0-6e8d3d965146" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/biographies/government-politics/world-leaders" target="" title="">
+                        World Rulers
+                       </a>
+                      </li>
+                     </ul>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </li>
+                <li class="we-mega-menu-li dropdown-menu we-mega-menu-group" data-element-type="we-mega-menu-li" data-group="1" data-id="e45e053c-0185-4d5c-8ab2-1d17e5f1b7f4" data-level="1" data-submenu="1" hide-sub-when-collapse="0">
+                 <span class="we-megamenu-nolink" data-drupal-link-system-path="&lt;front&gt;">
+                  People
+                  <i class="arrow down">
+                  </i>
+                 </span>
+                 <div class="we-mega-menu-submenu" data-element-type="we-mega-menu-submenu">
+                  <div class="we-mega-menu-submenu-inner">
+                   <div class="we-mega-menu-row" data-custom-row="0" data-element-type="we-mega-menu-row">
+                    <div class="we-mega-menu-col span12" data-element-type="we-mega-menu-col" data-hidewhencollapse="0" data-width="12">
+                     <ul class="nav nav-tabs subul">
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="9de0a2bb-f293-40f7-a616-31749e2714f5" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/biographies" target="" title="">
+                        People Overview
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="1b19e2b7-8467-4935-adb8-5c17e815b06c" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/biographies/society-culture/academia-and-culture" target="" title="">
+                        Academia &amp; Culture
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="20e77017-ade4-4a1c-8fe5-7e5df056669e" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/culture-entertainment" target="" title="">
+                        Arts &amp; Entertainment
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="65fef05d-8367-4380-a556-7115b76c461e" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/biographies/society-culture/business-biographies" target="" title="">
+                        Business
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="773ac213-1255-45a0-8dc1-3006d0b34ff5" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/biographies/government-politics" target="" title="">
+                        Government
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="61cfdce9-b3b5-4a88-9ae6-f13f8c998e5c" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/people/in-the-news" target="" title="">
+                        Newsmakers
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="241a306b-bf64-4b88-9b79-454b50256708" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/science" target="" title="">
+                        Science
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="e144c555-0438-4f7f-802f-8fa1e1b7f83f" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/biographies/sports" target="" title="">
+                        Sports
+                       </a>
+                      </li>
+                     </ul>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </li>
+               </ul>
+              </div>
+              <div class="we-mega-menu-col span3" data-blocktitle="1" data-element-type="we-mega-menu-col" data-hidewhencollapse="0" data-width="3">
+               <ul class="nav nav-tabs subul">
+                <li class="we-mega-menu-li dropdown-menu we-mega-menu-group" data-element-type="we-mega-menu-li" data-group="1" data-id="26d1626f-a7f9-4b2d-bda0-a19182b3b878" data-level="1" data-submenu="1" hide-sub-when-collapse="0">
+                 <span class="we-megamenu-nolink" data-drupal-link-system-path="&lt;front&gt;">
+                  U.S.
+                  <i class="arrow down">
+                  </i>
+                 </span>
+                 <div class="we-mega-menu-submenu" data-element-type="we-mega-menu-submenu">
+                  <div class="we-mega-menu-submenu-inner">
+                   <div class="we-mega-menu-row" data-custom-row="0" data-element-type="we-mega-menu-row">
+                    <div class="we-mega-menu-col span12" data-element-type="we-mega-menu-col" data-hidewhencollapse="0" data-width="12">
+                     <ul class="nav nav-tabs subul">
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="c4049b03-08d3-4f01-afb6-c07cb304fef6" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/us" target="" title="">
+                        U.S. Overview
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="11f654b6-17f6-40df-854c-fe1296ea413b" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/us/cities" target="" title="">
+                        Cities
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="927a27e3-bbed-4715-8212-18b1584a403e" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/primary-sources/government" target="" title="">
+                        U.S. Documents
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="af8b257b-83f4-4e60-b30b-36c08a23975b" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/us/society-culture/gender-sexuality" target="" title="">
+                        Gender Issues
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="0dcfb035-3eda-4f29-816b-466870f8a7bb" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/world/geography/geography-maps-country-information-distance-calculator" target="" title="">
+                        Geography
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="9a41a5fe-7153-4201-a22a-4837e354487d" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/us/government" target="" title="">
+                        Government
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="23258840-bc85-4fb0-bb88-ce0239aa0e1f" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/current-events" target="" title="">
+                        News
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="faecca9a-42a4-49c4-a466-504b1b1d757a" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/us/military" target="" title="">
+                        Military
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="b7a741f7-ccd0-45db-9d5d-e0311755e640" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/history-and-government/us-historical-monuments" target="" title="">
+                        Monuments &amp; Landmarks
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="a1522757-57d9-4011-8954-cf72e71a576e" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/us/postal-information" target="" title="">
+                        Postal Information
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="b0f03f17-f878-43df-b447-b46b5450ed4a" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/us/society-culture/race" target="" title="">
+                        Race &amp; Ethnicity
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="7681b583-1195-42e1-a3ce-91f80e657ed5" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/us/states" target="" title="">
+                        States
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="59e82755-eb02-450d-81cf-dd9e5d00fd6f" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/us/us-statistics" target="" title="">
+                        Statistics
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="78a597de-29f1-4bc8-b0a7-6ed1c8e90bf2" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/culture-entertainment/entertainment" target="" title="">
+                        Arts &amp; Entertainment
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="859fbbf0-ed65-484c-87d9-1ef9013fdeb0" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/sports" target="" title="">
+                        Sports
+                       </a>
+                      </li>
+                     </ul>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </li>
+                <li class="we-mega-menu-li dropdown-menu we-mega-menu-group" data-element-type="we-mega-menu-li" data-group="1" data-id="e1bc4f50-e073-4d69-b307-abd57db40de1" data-level="1" data-submenu="1" hide-sub-when-collapse="0">
+                 <span class="we-megamenu-nolink" data-drupal-link-system-path="&lt;front&gt;">
+                  History
+                  <i class="arrow down">
+                  </i>
+                 </span>
+                 <div class="we-mega-menu-submenu" data-element-type="we-mega-menu-submenu">
+                  <div class="we-mega-menu-submenu-inner">
+                   <div class="we-mega-menu-row" data-custom-row="0" data-element-type="we-mega-menu-row">
+                    <div class="we-mega-menu-col span12" data-element-type="we-mega-menu-col" data-hidewhencollapse="0" data-width="12">
+                     <ul class="nav nav-tabs subul">
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="4b93647c-84fc-4a69-99c9-a421fd7559b4" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/history" target="" title="">
+                        History Overview
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="c56361ab-8d10-4c0c-83c7-251a5eb04a38" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/timeline-archive" target="" title="">
+                        Timelines
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="f6bdbafb-edc7-4fe9-b578-9cca0babbf51" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/history/world" target="" title="">
+                        World History
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="7e9ce0c4-b34d-4021-a9a1-51b6f26f2a3f" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/history/us" target="" title="">
+                        U.S. History
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="4ad2a1d4-8110-45ff-864f-61a7e677915c" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/history/black-history" target="" title="">
+                        Black History Month
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="dbbab138-8121-4d5a-a022-8a8af6ff3073" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/history/hispanic-heritage" target="" title="">
+                        Hispanic Heritage Month
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="9646478f-f2ce-49e5-b90d-a26bc85f39d1" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/history/womens-history" target="" title="">
+                        Women's History Month
+                       </a>
+                      </li>
+                     </ul>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </li>
+               </ul>
+              </div>
+              <div class="we-mega-menu-col span3" data-blocktitle="1" data-element-type="we-mega-menu-col" data-hidewhencollapse="0" data-width="3">
+               <ul class="nav nav-tabs subul">
+                <li class="we-mega-menu-li dropdown-menu we-mega-menu-group" data-element-type="we-mega-menu-li" data-group="1" data-id="823c9906-9f40-4c10-8bb9-57da2519a641" data-level="1" data-submenu="1" hide-sub-when-collapse="0">
+                 <span class="we-megamenu-nolink" data-drupal-link-system-path="&lt;front&gt;">
+                  Math &amp; Science
+                  <i class="arrow down">
+                  </i>
+                 </span>
+                 <div class="we-mega-menu-submenu" data-element-type="we-mega-menu-submenu">
+                  <div class="we-mega-menu-submenu-inner">
+                   <div class="we-mega-menu-row" data-custom-row="0" data-element-type="we-mega-menu-row">
+                    <div class="we-mega-menu-col span12" data-element-type="we-mega-menu-col" data-hidewhencollapse="0" data-width="12">
+                     <ul class="nav nav-tabs subul">
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="ad31b703-5dfd-4ea0-bea2-52aff8db39cc" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/math-science" target="" title="">
+                        Math &amp; Science Overview
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="a924bf45-ec7b-4870-97a9-fc046d125d37" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/math-science/aviation" target="" title="">
+                        Aviation
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="0b4e7ad8-b50a-469c-934a-2f3e129fe476" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/math-science/biology" target="" title="">
+                        Biology
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="5d21d31e-4f9b-4610-8779-69692b65c49d" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/math-science/computers-internet" target="" title="">
+                        Computers &amp; Internet
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="789f214d-109b-4b6a-8084-75bbc0aa448d" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/math-science/earth-environment" target="" title="">
+                        Earth &amp; Environment
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="f5853629-653e-45e3-a782-57b0a357fb31" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/math-science/health" target="" title="">
+                        Health
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="e906c067-e474-4ac3-b6fa-d158707529fd" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/math-science/inventions-discoveries" target="" title="">
+                        Inventions &amp; Discoveries
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="1616d2b9-7d57-4980-9559-5bdc425e5e61" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/math-science/mathematics" target="" title="">
+                        Mathematics
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="f306cda5-cdc9-476e-9d51-4e64af61e583" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/math-science/physics" target="" title="">
+                        Physics
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="37a433fe-ab89-4d18-b369-3ea72e8ad9fc" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/math-science/space" target="" title="">
+                        Space
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="92382932-5ad4-4351-832a-94d653aa683c" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/math-science/weather" target="" title="">
+                        Weather
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="7aad6b27-5acb-4bac-8acf-be91c836bbb8" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/math-science/weights-measures" target="" title="">
+                        Weights &amp; Measures
+                       </a>
+                      </li>
+                     </ul>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </li>
+                <li class="we-mega-menu-li dropdown-menu we-mega-menu-group" data-element-type="we-mega-menu-li" data-group="1" data-id="29a78c62-ce20-4f1e-bb70-da47b92141ae" data-level="1" data-submenu="1" hide-sub-when-collapse="0">
+                 <span class="we-megamenu-nolink" data-drupal-link-system-path="&lt;front&gt;">
+                  Calendar &amp; Holidays
+                  <i class="arrow down">
+                  </i>
+                 </span>
+                 <div class="we-mega-menu-submenu" data-element-type="we-mega-menu-submenu">
+                  <div class="we-mega-menu-submenu-inner">
+                   <div class="we-mega-menu-row" data-custom-row="0" data-element-type="we-mega-menu-row">
+                    <div class="we-mega-menu-col span12" data-element-type="we-mega-menu-col" data-hidewhencollapse="0" data-width="12">
+                     <ul class="nav nav-tabs subul">
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="7ebfbf4a-de2b-460b-930f-1928372833d7" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/calendars" target="" title="">
+                        Calendar &amp; Holidays Overview
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="4411d1bf-0883-4267-8759-11614e0f285f" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/calendars/history" target="" title="">
+                        Calendars
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="d76efcb5-a742-4b6a-b14d-217d6d76e9ca" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/culture-entertainment/holidays" target="" title="">
+                        Holidays
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="56cc31b3-222b-448a-bf5c-bd325334323d" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/calendars/months-seasons" target="" title="">
+                        Seasons, Months, Days
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="fe1989d7-ce71-4b13-9848-4f86e931467e" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/calendar" target="" title="">
+                        Perpetual Calendar
+                       </a>
+                      </li>
+                     </ul>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </li>
+               </ul>
+              </div>
+              <div class="we-mega-menu-col span3" data-blocktitle="1" data-element-type="we-mega-menu-col" data-hidewhencollapse="0" data-width="3">
+               <ul class="nav nav-tabs subul">
+                <li class="we-mega-menu-li dropdown-menu we-mega-menu-group" data-element-type="we-mega-menu-li" data-group="1" data-id="460bd358-e183-4af6-a30d-8c241e4f3651" data-level="1" data-submenu="1" hide-sub-when-collapse="0">
+                 <span class="we-megamenu-nolink" data-drupal-link-system-path="&lt;front&gt;">
+                  Business
+                  <i class="arrow down">
+                  </i>
+                 </span>
+                 <div class="we-mega-menu-submenu" data-element-type="we-mega-menu-submenu">
+                  <div class="we-mega-menu-submenu-inner">
+                   <div class="we-mega-menu-row" data-custom-row="0" data-element-type="we-mega-menu-row">
+                    <div class="we-mega-menu-col span12" data-element-type="we-mega-menu-col" data-hidewhencollapse="0" data-width="12">
+                     <ul class="nav nav-tabs subul">
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="b1311617-2ec4-4bde-804a-719134a89765" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/business-and-finance" target="" title="">
+                        Business Overview
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="9513d3b1-064f-4a95-9e98-a0c9ed4302f3" data-level="2" data-submenu="0" description="Business" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/business-finance/business-statistics" target="" title="Business">
+                        Business
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="4feb0c14-5b30-4a3d-8f9d-8d69a49f82ff" data-level="2" data-submenu="0" description="Consumer Resources" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/business/consumer-resources/consumer-resources" target="" title="Consumer Resources">
+                        Consumer Resources
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="757bd3fa-14b6-4466-8e1f-4d6277557bc9" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/business/money" target="" title="">
+                        Currency
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="afe3b0e4-dbb8-48db-823f-833990412195" data-level="2" data-submenu="0" description="Economy" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/business/economy/economy" target="" title="Economy">
+                        Economy
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="d71a21f6-4513-4b0b-85e3-7536e3c8abb1" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/business/labor/labor-and-employment" target="" title="">
+                        Employment &amp; Labor
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="96f6fbb9-2438-42e8-b2a9-28d2fb98fc3d" data-level="2" data-submenu="0" description="Personal Finance" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/business/consumer-resources/personal-finance" target="" title="Personal Finance">
+                        Personal Finance
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="a4bbd341-91b6-4f5a-9c15-fcb11d0264c4" data-level="2" data-submenu="0" description="Poverty &amp; Income" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/business/poverty-income/poverty-and-income" target="" title="Poverty &amp;amp; Income">
+                        Poverty &amp; Income
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="1b6f5657-2b70-428f-b6f0-6805afc58846" data-level="2" data-submenu="0" description="Taxes" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/business/economy/taxes/taxes" target="" title="Taxes">
+                        Taxes
+                       </a>
+                      </li>
+                     </ul>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </li>
+                <li class="we-mega-menu-li dropdown-menu we-mega-menu-group" data-element-type="we-mega-menu-li" data-group="1" data-id="8f6bc10c-f6ac-4aeb-a173-e18ad1841128" data-level="1" data-submenu="1" hide-sub-when-collapse="0">
+                 <span class="we-megamenu-nolink" data-drupal-link-system-path="&lt;front&gt;">
+                  Primary Sources
+                  <i class="arrow down">
+                  </i>
+                 </span>
+                 <div class="we-mega-menu-submenu" data-element-type="we-mega-menu-submenu">
+                  <div class="we-mega-menu-submenu-inner">
+                   <div class="we-mega-menu-row" data-custom-row="0" data-element-type="we-mega-menu-row">
+                    <div class="we-mega-menu-col span12" data-element-type="we-mega-menu-col" data-hidewhencollapse="0" data-width="12">
+                     <ul class="nav nav-tabs subul">
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="3afed967-659a-4564-81d3-3bf591e0dc22" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/primary-sources" target="" title="">
+                        Primary Sources Overview
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="a0ff5327-d5c0-48e5-ba40-8ab97d733777" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/primary-sources/philosophy-religion" target="" title="">
+                        Philosophy &amp; Religion
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="eb835e9d-1daa-4e9d-a932-25e4e1c99f09" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/primary-sources/fables-fairytales" target="" title="">
+                        Fables &amp; Fairy Tales
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="4cedd10c-1b01-4072-9c53-311f846a73e4" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/primary-sources/government" target="" title="">
+                        Government
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="aefbd0b6-b078-45d0-9705-5b8cdb1f7a9d" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/primary-sources/history-biography" target="" title="">
+                        History &amp; Biography
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="feeac410-62de-4c7c-979c-debf7d0a60ec" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/primary-sources/poetry" target="" title="">
+                        Poetry
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="4888d99f-f9f3-47f9-9789-cef11babf5c1" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/primary-sources/speeches-essays" target="" title="">
+                        Speeches &amp; Essays
+                       </a>
+                      </li>
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="d4ae94e0-8a6f-488e-aedf-2af5588f8acf" data-level="2" data-submenu="0" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/primary-sources/books-plays" target="" title="">
+                        Books &amp; Plays
+                       </a>
+                      </li>
+                     </ul>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </li>
+                <li class="we-mega-menu-li dropdown-menu we-mega-menu-group" data-element-type="we-mega-menu-li" data-group="1" data-id="d8fe03d9-7281-434f-99d8-20bb7c5a5c4f" data-level="1" data-submenu="1" data-target="_self" hide-sub-when-collapse="0">
+                 <span class="we-megamenu-nolink" data-drupal-link-system-path="&lt;front&gt;">
+                  Ask the Editors
+                  <i class="arrow down">
+                  </i>
+                 </span>
+                 <div class="we-mega-menu-submenu" data-element-type="we-mega-menu-submenu">
+                  <div class="we-mega-menu-submenu-inner">
+                   <div class="we-mega-menu-row" data-custom-row="0" data-element-type="we-mega-menu-row">
+                    <div class="we-mega-menu-col span12" data-element-type="we-mega-menu-col" data-hidewhencollapse="0" data-width="12">
+                     <ul class="nav nav-tabs subul">
+                      <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="0b5e80e8-3b89-44fd-9c59-936fa70e3df2" data-level="2" data-submenu="0" data-target="_self" hide-sub-when-collapse="0">
+                       <a class="we-mega-menu-li" href="/askeds" target="_self" title="">
+                        View All Questions &amp; Answers
+                       </a>
+                      </li>
+                     </ul>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </li>
+               </ul>
+              </div>
+             </div>
+            </div>
+           </div>
+          </li>
+          <li class="we-mega-menu-li dropdown-menu show-desktop main-menu-tools" data-class="show-desktop main-menu-tools" data-element-type="we-mega-menu-li" data-group="0" data-id="2e777ddd-8c5d-47c9-8025-33ebe0b5aa9c" data-level="0" data-submenu="1" hide-sub-when-collapse="0">
+           <span class="we-megamenu-nolink" data-drupal-link-system-path="&lt;front&gt;">
+            Tools
+            <i class="arrow down">
+            </i>
+           </span>
+           <div class="we-mega-menu-submenu" data-element-type="we-mega-menu-submenu">
+            <div class="we-mega-menu-submenu-inner">
+             <div class="we-mega-menu-row" data-custom-row="0" data-element-type="we-mega-menu-row">
+              <div class="we-mega-menu-col span6" data-element-type="we-mega-menu-col" data-hidewhencollapse="0" data-width="6">
+               <ul class="nav nav-tabs subul">
+                <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="5e333d26-f3ae-4028-86a8-706eaa8ffc85" data-level="1" data-submenu="0" hide-sub-when-collapse="0">
+                 <a class="we-mega-menu-li" href="/conversion-calculator" target="" title="">
+                  Conversion Calculator
+                 </a>
+                </li>
+                <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="fe7e30ab-c7a0-436b-804a-864a5904f3f4" data-level="1" data-submenu="0" hide-sub-when-collapse="0">
+                 <a class="we-mega-menu-li" href="/atlas/latitude-longitude" target="" title="">
+                  Latitude &amp; Longitude
+                 </a>
+                </li>
+                <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="a61a0ac9-5d80-446b-a641-5db5a7e8ea2c" data-level="1" data-submenu="0" hide-sub-when-collapse="0">
+                 <a class="we-mega-menu-li" href="/calendar" target="" title="">
+                  Perpetual Calendar
+                 </a>
+                </li>
+                <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="df73eac9-3705-471d-a220-469569eab2b3" data-level="1" data-submenu="0" hide-sub-when-collapse="0">
+                 <a class="we-mega-menu-li" href="/dictionary" target="" title="">
+                  Dictionary
+                 </a>
+                </li>
+                <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="6c5c3d7c-ffd1-4c40-a868-e9692d71c5f4" data-level="1" data-submenu="0" hide-sub-when-collapse="0">
+                 <a class="we-mega-menu-li" href="/thesaurus" target="" title="">
+                  Thesaurus
+                 </a>
+                </li>
+                <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="3018a940-9a0b-41d1-950b-893f2cac3886" data-level="1" data-submenu="0" hide-sub-when-collapse="0">
+                 <a class="we-mega-menu-li" href="/atlas/calculate-distance" target="" title="">
+                  Distance Calculator
+                 </a>
+                </li>
+                <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="b83929b5-c2ce-4cd0-add6-c643d1542ed3" data-level="1" data-submenu="0" hide-sub-when-collapse="0">
+                 <a class="we-mega-menu-li" href="/math-science/chemistry/periodic-table" target="" title="">
+                  Periodic Table
+                 </a>
+                </li>
+                <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="72ca68da-9f4a-4d9c-a32d-4d75531731ff" data-level="1" data-submenu="0" hide-sub-when-collapse="0">
+                 <a class="we-mega-menu-li" href="/videos" target="" title="">
+                  Videos
+                 </a>
+                </li>
+               </ul>
+              </div>
+              <div class="we-mega-menu-col span6" data-blocktitle="1" data-element-type="we-mega-menu-col" data-hidewhencollapse="0" data-width="6">
+               <ul class="nav nav-tabs subul">
+                <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="e3e7c305-dcb0-47ed-9c51-74259aa3a7c2" data-level="1" data-submenu="0" data-target="_self" hide-sub-when-collapse="0">
+                 <a class="we-mega-menu-li" href="/spelling-check" target="_self" title="">
+                  Spellcheck
+                 </a>
+                </li>
+                <li class="we-mega-menu-li menu-tools-atlas dropdown-menu" data-class="menu-tools-atlas" data-element-type="we-mega-menu-li" data-id="c35ff46f-42ff-45df-ab3c-e760791c12af" data-level="1" data-submenu="1" hide-sub-when-collapse="0">
+                 <a class="we-mega-menu-li" href="/atlas" target="" title="">
+                  Atlas
+                 </a>
+                 <div class="we-mega-menu-submenu" data-element-type="we-mega-menu-submenu">
+                  <div class="we-mega-menu-submenu-inner">
+                   <div class="we-mega-menu-row" data-custom-row="1" data-element-type="we-mega-menu-row">
+                    <div class="we-mega-menu-col span12" data-block="atlastoolsmenu" data-blocktitle="1" data-element-type="we-mega-menu-col" data-hidewhencollapse="0" data-width="12">
+                     <div class="type-of-block">
+                      <div class="block-inner">
+                       <h2>
+                        Atlas Tools Menu
+                       </h2>
+                       <div class="block" id="block-atlastoolsmenu">
+                        <a href="/atlas">
+                         Atlas »
+                        </a>
+                        <p>
+                         Learn more about the world with our collection of regional and country maps.
+                        </p>
+                        <div>
+                         <div class="field_menu_grid">
+                          <div class="field-collection-item field-collection-item--name-field-menu-grid field-collection-item--view-mode-full">
+                           <div class="content">
+                            <img alt="Europe" class="b-lazy b-loaded" height="333" src="/sites/infoplease.com/files/styles/scale600w/public/2020-04/europe.jpg?itok=ebEl2eAK" width="600"/>
+                            <div class="field_menu_grid_title">
+                             <div class="field__label">
+                              Title
+                             </div>
+                             <div class="field__item">
+                              Maps of Europe
+                             </div>
+                            </div>
+                            <p>
+                             Brush up on your geography and finally learn what countries are in Eastern Europe with our maps.
+                            </p>
+                            <a href="/atlas/europe">
+                             Maps of Europe »
+                            </a>
+                           </div>
+                          </div>
+                         </div>
+                         <div class="field_menu_grid">
+                          <div class="field-collection-item field-collection-item--name-field-menu-grid field-collection-item--view-mode-full">
+                           <div class="content">
+                            <img alt="Middle East" class="b-lazy b-loaded" height="333" src="/sites/infoplease.com/files/styles/scale600w/public/2020-04/middleeast.jpg?itok=Gc5KL7-t" width="600"/>
+                            <div class="field_menu_grid_title">
+                             <div class="field__label">
+                              Title
+                             </div>
+                             <div class="field__item">
+                              Maps of the Middle East
+                             </div>
+                            </div>
+                            <p>
+                             Not sure about the geography of the middle east? We've got you covered with our map collection.
+                            </p>
+                            <a href="/atlas/middle-east">
+                             Maps of the Middle East »
+                            </a>
+                           </div>
+                          </div>
+                         </div>
+                        </div>
+                       </div>
+                      </div>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </li>
+                <li class="we-mega-menu-li dropdown-menu" data-element-type="we-mega-menu-li" data-id="2e0f0558-c45c-477d-b238-6ac7fd976580" data-level="1" data-submenu="1" hide-sub-when-collapse="0">
+                 <a class="we-mega-menu-li" href="/encyclopedia" target="" title="">
+                  Encyclopedia
+                 </a>
+                 <div class="we-mega-menu-submenu" data-element-type="we-mega-menu-submenu">
+                  <div class="we-mega-menu-submenu-inner">
+                   <div class="we-mega-menu-row" data-custom-row="1" data-element-type="we-mega-menu-row">
+                    <div class="we-mega-menu-col span12" data-block="encyclopediatoolsmenu" data-blocktitle="1" data-element-type="we-mega-menu-col" data-hidewhencollapse="0" data-width="12">
+                     <div class="type-of-block">
+                      <div class="block-inner">
+                       <h2>
+                        Encyclopedia Tools Menu
+                       </h2>
+                       <div class="block" id="block-encyclopediatoolsmenu">
+                        <a href="/encyclopedia">
+                         Encyclopedia »
+                        </a>
+                        <p>
+                         Need a reference? Check our encyclopedia for a gloss on thousands of topics from biographies to the table of elements.
+                        </p>
+                        <div>
+                         <div class="field_menu_grid">
+                          <div class="field-collection-item field-collection-item--name-field-menu-grid field-collection-item--view-mode-full">
+                           <div class="content">
+                            <img alt="The Trojan War" class="b-lazy b-loaded" height="333" src="/sites/infoplease.com/files/styles/scale600w/public/2020-04/Triumph_of_Achilles_in_Corfu_Achilleion.jpg?itok=bqLAl-Mb" width="600"/>
+                            <div class="field_menu_grid_title">
+                             <div class="field__label">
+                              Title
+                             </div>
+                             <div class="field__item">
+                              The Trojan War
+                             </div>
+                            </div>
+                            <p>
+                             Learn more about the mythic conflict between the Argives and the Trojans.
+                            </p>
+                            <a href="/encyclopedia/arts/classical-lit/myths-folklore/trojan-war">
+                             The Trojan War »
+                            </a>
+                           </div>
+                          </div>
+                         </div>
+                         <div class="field_menu_grid">
+                          <div class="field-collection-item field-collection-item--name-field-menu-grid field-collection-item--view-mode-full">
+                           <div class="content">
+                            <img alt="Buddhism" class="b-lazy b-loaded" height="333" src="/sites/infoplease.com/files/styles/scale600w/public/2020-04/iStock-1163662016.jpg?itok=nQK7DBsZ" width="600"/>
+                            <div class="field_menu_grid_title">
+                             <div class="field__label">
+                              Title
+                             </div>
+                             <div class="field__item">
+                              Buddhism
+                             </div>
+                            </div>
+                            <p>
+                             Learn about one of the world's oldest and most popular religions.
+                            </p>
+                            <a href="/encyclopedia/religion/eastern/buddhism/buddhism/basic-beliefs-and-practices">
+                             Buddhism »
+                            </a>
+                           </div>
+                          </div>
+                         </div>
+                        </div>
+                       </div>
+                      </div>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </li>
+               </ul>
+              </div>
+             </div>
+            </div>
+           </div>
+          </li>
+          <li class="we-mega-menu-li dropdown-menu show-mobile" data-class="show-mobile" data-element-type="we-mega-menu-li" data-group="0" data-id="3a19eceb-3b38-41de-b670-2cadc9a43db1" data-level="0" data-submenu="1" hide-sub-when-collapse="0">
+           <span class="we-megamenu-nolink" data-drupal-link-system-path="&lt;front&gt;">
+            Tools
+            <i class="arrow down">
+            </i>
+           </span>
+           <div class="we-mega-menu-submenu" data-element-type="we-mega-menu-submenu">
+            <div class="we-mega-menu-submenu-inner">
+             <div class="we-mega-menu-row" data-custom-row="0" data-element-type="we-mega-menu-row">
+              <div class="we-mega-menu-col span12" data-element-type="we-mega-menu-col" data-hidewhencollapse="0" data-width="12">
+               <ul class="nav nav-tabs subul">
+                <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="501ad0d1-f040-4423-b9be-505e10f8cbdb" data-level="1" data-submenu="0" hide-sub-when-collapse="0">
+                 <a class="we-mega-menu-li" href="/conversion-calculator" target="" title="">
+                  Conversion Calculator
+                 </a>
+                </li>
+                <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="7d7af736-828f-4a52-b92b-23ab199ec5d3" data-level="1" data-submenu="0" hide-sub-when-collapse="0">
+                 <a class="we-mega-menu-li" href="/atlas/latitude-longitude" target="" title="">
+                  Latitude &amp; Longitude
+                 </a>
+                </li>
+                <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="0c257c8f-b968-406f-adb9-85e12e3c4bfa" data-level="1" data-submenu="0" hide-sub-when-collapse="0">
+                 <a class="we-mega-menu-li" href="/calendar" target="" title="">
+                  Perpetual Calendar
+                 </a>
+                </li>
+                <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="51a704e4-affb-4bb9-a641-86d000766348" data-level="1" data-submenu="0" hide-sub-when-collapse="0">
+                 <a class="we-mega-menu-li" href="/dictionary" target="" title="">
+                  Dictionary
+                 </a>
+                </li>
+                <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="cb7dbf20-e015-47c6-9a2e-f2a1f75ca130" data-level="1" data-submenu="0" hide-sub-when-collapse="0">
+                 <a class="we-mega-menu-li" href="/thesaurus" target="" title="">
+                  Thesaurus
+                 </a>
+                </li>
+                <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="19fbc65b-0112-43fc-8f06-fe9419bb5c57" data-level="1" data-submenu="0" hide-sub-when-collapse="0">
+                 <a class="we-mega-menu-li" href="/math-science/chemistry/periodic-table" target="" title="">
+                  Periodic Table
+                 </a>
+                </li>
+                <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="b2bdfbdc-509f-480a-9d4c-b2a5b84abefa" data-level="1" data-submenu="0" hide-sub-when-collapse="0">
+                 <a class="we-mega-menu-li" href="/atlas/calculate-distance" target="" title="">
+                  Distance Calculator
+                 </a>
+                </li>
+                <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="824351be-2933-4665-8d68-b9d980202020" data-level="1" data-submenu="0" hide-sub-when-collapse="0">
+                 <a class="we-mega-menu-li" href="/videos" target="" title="">
+                  Videos
+                 </a>
+                </li>
+                <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="5109beb8-fbe5-4cfc-8504-d9a7b6e4b984" data-level="1" data-submenu="0" hide-sub-when-collapse="0">
+                 <a class="we-mega-menu-li" href="/atlas" target="" title="">
+                  Atlas
+                 </a>
+                </li>
+                <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="020e0659-8dea-49f7-a609-8cc65678b67e" data-level="1" data-submenu="0" hide-sub-when-collapse="0">
+                 <a class="we-mega-menu-li" href="/encyclopedia" target="" title="">
+                  Encyclopedia
+                 </a>
+                </li>
+               </ul>
+              </div>
+             </div>
+            </div>
+           </div>
+          </li>
+          <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="6867f29f-8726-4c62-9eae-2ffd482a5664" data-level="0" data-submenu="0" description="Quizzes and Trivia" hide-sub-when-collapse="0">
+           <a class="we-mega-menu-li" href="/quizzes" target="" title="Quizzes and Trivia">
+            Quizzes
+           </a>
+          </li>
+          <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="503b6b2f-f62d-4a18-a790-17487bcc65c9" data-level="0" data-submenu="0" hide-sub-when-collapse="0">
+           <a class="we-mega-menu-li" href="/top-ten-archive" target="" title="">
+            Top 10s
+           </a>
+          </li>
+          <li class="we-mega-menu-li" data-element-type="we-mega-menu-li" data-id="53ad389c-5f3b-4481-b5d3-9efd966a6f0a" data-level="0" data-submenu="0" hide-sub-when-collapse="0">
+           <a class="we-mega-menu-li" href="/daily" target="" title="">
+            Day In History
+           </a>
+          </li>
+         </ul>
+        </div>
+       </nav>
+      </div>
+     </div>
+     <div class="ip-search-form block" data-drupal-selector="ip-search-form" id="block-ipsearchformblock">
+      <form accept-charset="UTF-8" action="/us/states" id="ip-search-form" method="post">
+       <div class="js-form-item form-item js-form-type-search-api-autocomplete form-item-keys js-form-item-keys form-no-label">
+        <label class="visually-hidden" for="edit-keys">
+         Search
+        </label>
+        <input autocomplete="off" class="form-autocomplete form-text ui-autocomplete-input" data-autocomplete-path="/search_api_autocomplete/search" data-drupal-selector="edit-keys" data-search-api-autocomplete-search="search" id="edit-keys" maxlength="128" name="keys" placeholder="Search" size="60" title="Enter the terms you wish to search for." type="text" value=""/>
+        <span class="field-suffix" style="display: inline-block;">
+         <div class="voice-search-block">
+          <img src="/modules/contrib/custom_voice_search/images/mic.png"/>
+         </div>
+        </span>
+       </div>
+       <input class="form-actions button js-form-submit form-submit" data-drupal-selector="edit-submit" id="edit-submit--3" name="op" type="submit" value="Search"/>
+       <input autocomplete="off" data-drupal-selector="form-owe9uz-om5urkr4zyf-8q9jtjgbrls9ni3xapixab4g" name="form_build_id" type="hidden" value="form-OWe9uZ-oM5URKR4zyf-8q9JTjgbrlS9Ni3xapIxAb4g"/>
+       <input data-drupal-selector="edit-ip-search-form" name="form_id" type="hidden" value="ip_search_form"/>
+      </form>
+     </div>
+    </div>
+   </header>
+   <div id="content-anchor" style="position:absolute;">
+   </div>
+   <section class="layout-full-width">
+    <div class="block" id="block-ipleaderboardad">
+     <!-- 728 x 90 ATF Desktop -->
+     <div class="pw-tag" data-google-query-id="CJ_t5fazvewCFeIIiAkd-EwNGg" data-pw-desk="leaderboard_atf" id="leaderboard_atf" style="max-width: 970px; margin: auto;">
+      <div id="google_ads_iframe_/154013155/1022050/69785/1022050-69785-desktop_leaderboard_0__container__" style="border: 0pt none;">
+       <iframe data-google-container-id="1" data-load-complete="true" frameborder="0" height="250" id="google_ads_iframe_/154013155/1022050/69785/1022050-69785-desktop_leaderboard_0" marginheight="0" marginwidth="0" name="google_ads_iframe_/154013155/1022050/69785/1022050-69785-desktop_leaderboard_0" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-presentation" scrolling="no" srcdoc="" style="border: 0px; vertical-align: bottom;" title="3rd party ad content" width="970">
+       </iframe>
+      </div>
+      <div class="pw_report_ad_container" data-pw-in-article="true" style="line-height: normal; display: inline-block; width: 100%; text-align: center;">
+       <a class="playwire_report_ad_link" href="#" id="report_ad_leaderboard_atf" style='color: #4db2ec;font-size:10px;font-family:"Open Sans",arial,sans-serif'>
+        Report Ad
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+   <div class="container node-80737">
+    <main class="row">
+     <article class="col-sm-8">
+      <nav aria-labelledby="system-breadcrumb" class="page-breadcrumb" role="navigation">
+       <h2 class="visually-hidden" id="system-breadcrumb">
+        Breadcrumb
+       </h2>
+       <ol class="breadcrumb-navigation">
+        <li>
+         <a href="/">
+          Home
+         </a>
+         &gt;
+        </li>
+        <li>
+         <a href="/us">
+          United States
+         </a>
+         &gt;
+        </li>
+        <li>
+         The United States: Information &amp; Statistics By State
+        </li>
+       </ol>
+      </nav>
+      <p>
+       <a class="block-citing" href="/citing-page" id="cite">
+        <img class="b-lazy b-loaded" data-pin-nopin="true" src="https://res.cloudinary.com/fen-learning/image/upload/c_limit/infopls_images/images/IPcite.gif" style="vertical-align:middle;"/>
+        Cite
+       </a>
+      </p>
+      <h1 class="page-title">
+       <span>
+        The United States: Information &amp; Statistics By State
+       </span>
+      </h1>
+      <section class="main-section col-sm-12" id="mainaside">
+       <div class="hidden" data-drupal-messages-fallback="">
+       </div>
+       <article data-history-node-id="80737" role="article">
+        <div class="update-date">
+         Updated November 12, 2019 |
+         <a href="/about-us#Our%20Editors">
+          Infoplease Staff
+         </a>
+         <img class="b-lazy b-loaded" height="12px" src="/themes/ip/images/info-circle.png" title="Updated by an Infoplease Editor on November 12, 2019" width="12px"/>
+        </div>
+        <p class="center">
+         <b>
+          Jump to:
+         </b>
+         <a href="#maps">
+          Maps &amp; Flags
+         </a>
+         o
+         <a href="#trivia">
+          Trivia
+         </a>
+         o
+         <a href="#population">
+          Population &amp; Geography
+         </a>
+         o
+         <a href="#stats">
+          Economic &amp; Social Comparisons
+         </a>
+        </p>
+        <h3 class="browser-only">
+         Click a state in the map below to find facts, statistics, historical information, and more.
+        </h3>
+        <p>
+        </p>
+        <div class="center browser-only center_mobile_vie">
+         <img alt="Map of United States" class="b-lazy b-loaded" height="330" src="https://res.cloudinary.com/fen-learning/image/upload/c_limit,w_480,h_330/infopls_images/images/states_imgmap.gif" usemap="#states_imgmap" width="480"/>
+         <map id="states_imgmap" name="states_imgmap">
+          <area alt="State Profile: Washington" coords="27,5,25,8,26,12,26,23,26,30,31,34,33,40,39,41,45,41,52,41,57,41,66,44,74,46,77,34,78,20,78,15,60,10,43,5,39,11,27,5" href="/us/states/washington" shape="poly" title="State Profile: Washington"/>
+          <area alt="State Profile: Oregon" coords="26,30,23,34,21,40,19,44,18,49,17,53,15,57,10,61,10,66,9,71,9,73,34,80,51,85,63,86,67,73,70,64,68,61,75,51,72,46,58,41,43,41,37,41,33,39,30,34,25,30" href="/us/states/oregon" shape="poly" title="State Profile: Oregon"/>
+          <area alt="State Profile: California" coords="9,73,42,83,34,113,68,165,68,167,70,173,67,177,67,179,64,183,65,188,62,190,40,186,39,178,34,172,33,169,30,167,26,163,18,161,17,157,18,152,10,136,13,133,9,128,10,120,8,116,8,115,4,107,4,103,4,99,4,95,3,89,6,85,9,73" href="/us/states/california" shape="poly" title="State Profile: California"/>
+          <area alt="State Profile: Idaho" coords="79,15,87,16,85,28,89,34,93,44,90,53,96,53,96,60,100,64,101,68,104,67,108,68,111,67,115,69,111,95,64,86,70,64,68,60,75,51,74,46,79,15" href="/us/states/idaho" shape="poly" title="State Profile: Idaho"/>
+          <area alt="State Profile: Nevada" coords="42,83,86,92,74,156,71,155,68,165,34,112,42,83" href="/us/states/nevada" shape="poly" title="State Profile: Nevada"/>
+          <area alt="State Profile: Arizona" coords="62,190,65,188,63,184,66,181,66,177,70,173,68,167,68,164,71,155,74,157,75,145,98,150,119,152,111,213,94,212,63,191" href="/us/states/arizona" shape="poly" title="State Profile: Arizona"/>
+          <area alt="State Profile: Utah" coords="75,145,86,92,111,95,109,106,125,110,119,152,94,149,75,145" href="/us/states/utah" shape="poly" title="State Profile: Utah"/>
+          <area alt="State Profile: New Mexico" coords="111,213,119,153,139,156,169,158,166,213,135,209,133,212,120,210,117,215" href="/us/states/new-mexico" shape="poly" title="State Profile: New Mexico"/>
+          <area alt="State Profile: Colorado" coords="178,158,180,115,148,114,125,110,119,152,145,157" href="/us/states/colorado" shape="poly" title="State Profile: Colorado"/>
+          <area alt="State Profile: Wyoming" coords="109,106,135,113,165,115,168,71,115,66" href="/us/states/wyoming" shape="poly" title="State Profile: Wyoming"/>
+          <area alt="State Profile: Montana" coords="87,16,113,22,137,25,160,28,171,28,166,71,115,66,115,68,111,67,108,68,105,67,102,68,100,64,100,63,96,60,96,54,90,51,93,44,85,28" href="/us/states/montana" shape="poly" title="State Profile: Montana"/>
+          <area alt="State Profile: North Dakota" coords="171,28,219,30,225,64,169,60" href="/us/states/north-dakota" shape="poly" title="State Profile: North Dakota"/>
+          <area alt="State Profile: South Dakota" coords="225,64,222,67,226,71,225,100,217,97,215,99,211,95,166,92,169,60" href="/us/states/south-dakota" shape="poly" title="State Profile: South Dakota"/>
+          <area alt="State Profile: Nebraska" coords="166,92,200,95,211,97,216,99,217,97,225,101,229,115,232,128,207,126,180,126,180,116,165,115" href="/us/states/nebraska" shape="poly" title="State Profile: Nebraska"/>
+          <area alt="State Profile: Kansas" coords="178,126,178,158,211,161,240,161,241,137,238,134,238,129,220,126" href="/us/states/kansas" shape="poly" title="State Profile: Kansas"/>
+          <area alt="State Profile: Oklahoma" coords="169,158,169,165,193,166,195,186,199,186,201,190,202,190,205,191,208,190,210,194,214,193,219,194,225,196,230,194,235,194,241,196,241,196,241,178,240,173,240,161" href="/us/states/oklahoma" shape="poly" title="State Profile: Oklahoma"/>
+          <area alt="State Profile: Texas" coords="168,165,193,166,195,186,199,186,200,190,204,191,207,190,210,194,213,193,226,196,230,194,235,195,240,198,243,196,246,213,249,220,251,228,249,236,243,240,238,236,238,242,229,251,223,249,225,253,220,253,219,256,217,259,215,262,213,264,214,268,217,279,215,281,198,274,195,267,193,263,187,254,186,247,178,238,172,238,166,238,162,245,149,236,147,228,133,212,136,210,166,213" href="/us/states/texas" shape="poly" title="State Profile: Texas"/>
+          <area alt="State Profile: Louisiana" coords="244,203,272,202,271,206,273,208,269,223,275,224,284,224,285,228,287,231,282,231,285,233,287,236,290,233,288,238,294,242,291,245,285,240,283,243,281,241,278,243,271,240,269,238,263,241,255,238,248,238,251,226" href="/us/states/louisiana" shape="poly" title="State Profile: Louisiana"/>
+          <area alt="State Profile: Arkansas" coords="240,166,269,166,278,166,275,169,283,170,280,180,275,186,271,196,273,200,272,202,244,203,244,198,241,198" href="/us/states/arkansas" shape="poly" title="State Profile: Arkansas"/>
+          <area alt="State Profile: Missouri" coords="231,121,241,121,263,120,265,123,265,129,272,137,275,137,275,142,275,143,281,150,285,157,287,161,285,165,283,170,276,169,278,166,241,166,241,136,238,134,238,129,232,128" href="/us/states/missouri" shape="poly" title="State Profile: Missouri"/>
+          <area alt="State Profile: Iowa" coords="225,92,228,90,265,90,267,92,266,94,271,99,272,100,273,103,275,106,273,109,269,112,269,116,265,121,253,120,231,121,223,100" href="/us/states/iowa" shape="poly" title="State Profile: Iowa"/>
+          <area alt="State Profile: Minnesota" coords="273,41,264,47,258,53,255,64,253,74,255,78,258,78,261,83,265,86,264,90,226,92,226,76,226,71,223,67,223,63,225,57,219,32,230,32,235,30,243,35,250,34,256,37,260,40,265,38" href="/us/states/minnesota" shape="poly" title="State Profile: Minnesota"/>
+          <area alt="State Profile: Mississippi" coords="298,179,297,215,298,223,298,228,293,230,287,233,284,224,272,224,270,223,273,209,272,203,273,199,271,196,279,180" href="/us/states/mississippi" shape="poly" title="State Profile: Mississippi"/>
+          <area alt="State Profile: Tennessee" coords="285,164,288,164,290,163,293,164,297,161,299,162,303,161,332,157,351,156,345,163,336,167,332,172,330,175,318,178,279,180" href="/us/states/tennessee" shape="poly" title="State Profile: Tennessee"/>
+          <area alt="State Profile: Kentucky" coords="286,164,288,161,285,157,290,156,294,152,295,149,302,149,308,146,312,145,312,142,321,135,329,135,333,136,341,136,342,141,347,146,342,150,341,153,336,157" href="/us/states/kentucky" shape="poly" title="State Profile: Kentucky"/>
+          <area alt="State Profile: Illinois" coords="270,98,294,97,293,100,297,106,298,131,296,133,298,137,296,143,295,147,295,152,285,157,282,149,275,143,275,137,265,129,265,121,270,116,269,112,273,106,273,103" href="/us/states/illinois" shape="poly" title="State Profile: Illinois"/>
+          <area alt="State Profile: Wisconsin" coords="258,53,261,53,265,51,268,54,272,53,275,57,279,57,282,60,287,60,293,71,288,78,291,71,293,71,294,76,291,85,293,92,293,97,282,98,270,98,266,94,265,89,264,86,260,80,253,76,253,68,256,60" href="/us/states/wisconsin" shape="poly" title="State Profile: Wisconsin"/>
+          <area alt="State Profile: Michigan" coords="270,53,275,51,280,50,285,44,287,44,283,50,288,50,290,53,297,53,302,50,305,50,309,50,310,53,314,53,317,57,311,57,308,57,300,60,296,61,291,68,287,60,283,60,279,57,275,57,273,54" href="/us/states/michigan" shape="poly" title="State Profile: Michigan"/>
+          <area alt="State Profile: Michigan" coords="303,103,323,103,327,101,333,92,329,92,333,83,330,76,326,78,324,82,321,80,326,69,324,64,312,60,309,67,308,68,303,73,302,83,305,94" href="/us/states/michigan" shape="poly" title="State Profile: Michigan"/>
+          <area alt="State Profile: Indiana" coords="303,103,318,103,321,134,314,142,312,145,303,149,294,149,298,138,296,133,298,131,297,104" href="/us/states/indiana" shape="poly" title="State Profile: Indiana"/>
+          <area alt="State Profile: Alabama" coords="298,179,319,179,329,207,327,209,327,219,305,223,306,228,305,230,303,226,301,228,298,228,296,218" href="/us/states/alabama" shape="poly" title="State Profile: Alabama"/>
+          <area alt="State Profile: Ohio" coords="318,103,326,103,332,103,336,104,351,95,351,115,351,123,345,124,341,136,321,135" href="/us/states/ohio" shape="poly" title="State Profile: Ohio"/>
+          <area alt="State Profile: Florida" coords="308,228,305,224,327,219,330,223,348,220,356,221,357,218,360,218,377,247,375,248,381,259,381,264,381,269,381,274,375,277,372,272,366,268,363,263,363,259,360,259,357,253,357,249,354,249,354,240,348,236,338,228,333,231,327,233,326,231,323,228,319,228,317,226" href="/us/states/florida" shape="poly" title="State Profile: Florida"/>
+          <area alt="State Profile: Georgia" coords="319,178,338,176,340,179,342,179,347,186,354,190,357,193,363,203,363,209,360,213,362,218,357,218,355,221,345,221,330,223,327,219,327,208,329,205" href="/us/states/georgia" shape="poly" title="State Profile: Georgia"/>
+          <area alt="State Profile: South Carolina" coords="339,176,342,173,357,171,360,173,370,173,381,179,378,185,379,190,375,190,374,194,369,193,369,196,364,198,366,200,363,203,357,193,348,188,341,179" href="/us/states/south-carolina" shape="poly" title="State Profile: South Carolina"/>
+          <area alt="State Profile: North Carolina" coords="329,176,340,175,345,173,357,171,360,173,370,173,381,179,386,178,396,166,396,158,402,157,407,161,394,155,393,152,396,152,400,151,404,156,401,147,351,157,339,167" href="/us/states/north-carolina" shape="poly" title="State Profile: North Carolina"/>
+          <area alt="State Profile: Virginia" coords="338,157,355,156,400,147,396,142,390,142,393,139,396,138,399,133,396,136,393,137,393,135,387,129,384,129,384,123,375,120,369,129,368,131,366,137,363,134,357,145,349,152,348,148,342,150" href="/us/states/virginia" shape="poly" title="State Profile: Virginia"/>
+          <area alt="State Profile: West Virginia" coords="353,115,354,119,364,116,363,121,372,116,375,120,366,132,363,132,356,148,351,151,347,146,340,136,348,123" href="/us/states/west-virginia" shape="poly" title="State Profile: West Virginia"/>
+          <area alt="State Profile: Maryland" coords="402,129,444,138" href="/us/states/maryland" shape="rect" title="State Profile: Maryland"/>
+          <area alt="State Profile: Maryland" coords="363,118,393,113,396,126,402,124,401,128,399,136,396,129,393,124,390,123,390,132,387,129,385,129,384,123,372,118,363,121" href="/us/states/maryland" shape="poly" title="State Profile: Maryland"/>
+          <area alt="State Profile: Delaware" coords="393,113,396,126,402,123,396,118" href="/us/states/delaware" shape="poly" title="State Profile: Delaware"/>
+          <area alt="State Profile: Delaware" coords="405,119,447,128" href="/us/states/delaware" shape="rect" title="State Profile: Delaware"/>
+          <area alt="State Profile: Pensylvania" coords="357,92,360,92,363,92,364,92,390,89,396,95,394,100,398,106,394,115,393,113,355,119,351,116,351,95" href="/us/states/pennsylvania" shape="poly" title="State Profile: Pennsylvania"/>
+          <area alt="State Profile: New Jersey" coords="396,95,405,98,402,100,405,106,405,110,402,118,398,118,394,115,396,109,398,104,394,100" href="/us/states/new-jersey" shape="poly" title="State Profile: New Jersey"/>
+          <area alt="State Profile: New Jersey" coords="402,109,441,118" href="/us/states/new-jersey" shape="rect" title="State Profile: New Jersey"/>
+          <area alt="State Profile: New York" coords="360,86,357,82,362,78,378,76,379,64,386,56,396,53,401,66,405,76,405,85,405,90,404,94,405,95,408,95,416,92,417,92,405,100,404,98,396,95,396,95,389,89,357,94" href="/us/states/new-york" shape="poly" title="State Profile: New York"/>
+          <area alt="State Profile: New York" coords="351,68,383,76" href="/us/states/new-york" shape="rect" title="State Profile: New York"/>
+          <area alt="State Profile: Virginia" coords="394,141,426,150" href="/us/states/virginia" shape="rect" title="State Profile: Virginia"/>
+          <area alt="State Profile: Michigan" coords="329,85,349,92" href="/us/states/michigan" shape="rect" title="State Profile: Michigan"/>
+          <area alt="State Profile: South Carolina" coords="363,180,401,196" href="/us/states/south-carolina" shape="rect" title="State Profile: South Carolina"/>
+          <area alt="State Profile: North Carolina" coords="392,157,414,171" href="/us/states/north-carolina" shape="rect" title="State Profile: North Carolina"/>
+          <area alt="State Profile: Alaska" coords="130,315,136,310,136,315,134,317" href="/us/states/alaska" shape="poly" title="State Profile: Alaska"/>
+          <area alt="State Profile: Alaska" coords="160,254,159,258,162,261,162,270,163,273,160,275,163,281,163,293,163,296,163,301,166,301,169,305,178,305,184,309,187,317,192,317,193,325,190,325,187,324,184,314,181,319,172,307,162,304,157,304,151,298,147,298,150,302,144,305,137,307,140,298,133,307,135,309,116,320,101,324,83,325,64,322,51,315,39,301,46,305,54,314,65,321,78,322,89,324,101,322,111,319,121,312,124,307,120,305,114,305,114,297,109,298,108,294,108,287,115,282,120,282,120,277,113,274,111,269,117,267,117,270,122,270,121,266,117,259,119,254,125,253,126,251,132,249,136,247,142,252,148,253,154,254" href="/us/states/alaska" shape="poly" title="State Profile: Alaska"/>
+          <area alt="State Profile: Alaska" coords="102,294,108,298" href="/us/states/alaska" shape="rect" title="State Profile: Alaska"/>
+          <area alt="State Profile: Alaska" coords="104,279,98,275,99,274,105,277" href="/us/states/alaska" shape="poly" title="State Profile: Alaska"/>
+          <area alt="State Profile: Alaska" coords="140,307,172,315" href="/us/states/alaska" shape="rect" title="State Profile: Alaska"/>
+          <area alt="State Profile: Hawaii" coords="17,253,50,262" href="/us/states/hawaii" shape="rect" title="State Profile: Hawaii"/>
+          <area alt="State Profile: Hawaii" coords="62,261,62,264,60,269,64,275,68,273,72,269,68,263" href="/us/states/hawaii" shape="poly" title="State Profile: Hawaii"/>
+          <area alt="State Profile: Hawaii" coords="54,253,62,259" href="/us/states/hawaii" shape="rect" title="State Profile: Hawaii"/>
+          <area alt="State Profile: Hawaii" coords="50,251,54,256" href="/us/states/hawaii" shape="rect" title="State Profile: Hawaii"/>
+          <area alt="State Profile: Hawaii" coords="39,246,43,252" href="/us/states/hawaii" shape="rect" title="State Profile: Hawaii"/>
+          <area alt="State Profile: Hawaii" coords="23,238,29,243" href="/us/states/hawaii" shape="rect" title="State Profile: Hawaii"/>
+          <area alt="State Profile: Hawaii" coords="17,241,19,247" href="/us/states/hawaii" shape="rect" title="State Profile: Hawaii"/>
+          <area alt="State Profile: Connecticut" coords="405,85,417,80,419,88,411,90,407,95,404,92,405,92" href="/us/states/connecticut" shape="poly" title="State Profile: Connecticut"/>
+          <area alt="State Profile: Connecticut" coords="407,100,465,109" href="/us/states/connecticut" shape="rect" title="State Profile: Connecticut"/>
+          <area alt="State Profile: Rhode Island" coords="423,85,453,100" href="/us/states/rhode-island" shape="rect" title="State Profile: Rhode Island"/>
+          <area alt="State Profile: Rhode Island" coords="417,81,420,88,423,86,420,81" href="/us/states/rhode-island" shape="poly" title="State Profile: Rhode Island"/>
+          <area alt="State Profile: Massachusetts" coords="405,76,416,74,423,71,424,73,423,78,428,81,432,78,431,74,435,78,432,83,429,85,420,78,405,85" href="/us/states/massachusetts" shape="poly" title="State Profile: Massachusetts"/>
+          <area alt="State Profile: Massachusetts" coords="426,76,476,85" href="/us/states/massachusetts" shape="rect" title="State Profile: Massachusetts"/>
+          <area alt="State Profile: Vermont" coords="396,53,411,50,413,54,408,60,409,67,411,75,405,76" href="/us/states/vermont" shape="poly" title="State Profile: Vermont"/>
+          <area alt="State Profile: Vermont" coords="363,51,363,60,381,60,398,51" href="/us/states/vermont" shape="poly" title="State Profile: Vermont"/>
+          <area alt="State Profile: New Hampshire" coords="411,50,411,47,414,47,422,71,411,74,408,60,413,54" href="/us/states/new-hampshire" shape="poly" title="State Profile: New Hampshire"/>
+          <area alt="State Profile: New Hampshire" coords="471,71,422,71,428,66,426,57,471,57" href="/us/states/new-hampshire" shape="poly" title="State Profile: New Hampshire"/>
+          <area alt="State Profile: Maine" coords="422,71,426,67,426,63,426,59,434,53,434,49,441,47,445,44,441,40,435,34,432,20,428,17,424,20,420,19,419,20,419,25,417,30,416,35,417,38,416,41,416,44,414,46" href="/us/states/maine" shape="poly" title="State Profile: Maine"/>
+         </map>
+        </div>
+        <p>
+        </p>
+        <p>
+        </p>
+        <table id="chooseState" width="100%">
+         <tbody>
+          <tr>
+           <td class="browser-only" colspan="2">
+            <h3 style="padding-left:5px;">
+             Each State Profile includes:
+            </h3>
+           </td>
+           <td style="text-align:center">
+            <h3>
+             Choose a state:
+            </h3>
+           </td>
+          </tr>
+          <tr>
+           <td class="browser_only_specific" style="width: 30%; text-align: left; vertical-align: top;">
+            <ul class="profile bulletList">
+             <li>
+              Capital
+             </li>
+             <li>
+              Population
+             </li>
+             <li>
+              Median age
+             </li>
+             <li>
+              Elected officials
+             </li>
+             <li>
+              History
+             </li>
+             <li>
+              Economy
+             </li>
+             <li>
+              Points of interest
+             </li>
+             <li>
+              Famous natives
+             </li>
+            </ul>
+           </td>
+           <td class="browser_only_specific" style="width: 40%; vertical-align: top; text-align: left;">
+            <ul class="profile bulletList">
+             <li>
+              Entrance into Union
+             </li>
+             <li>
+              State map &amp; flag
+             </li>
+             <li>
+              State motto, symbols, nicknames
+             </li>
+             <li>
+              Name origins
+             </li>
+             <li>
+              Largest cities &amp; county
+             </li>
+             <li>
+              Land area
+             </li>
+             <li>
+              Counties, forests &amp; parks
+             </li>
+            </ul>
+           </td>
+           <td class="mobile_only_specific" style="width: 50%; text-align: left; vertical-align: top;">
+            <ul class="profile bulletList">
+             <li>
+              Capital
+             </li>
+             <li>
+              Population
+             </li>
+             <li>
+              Median age
+             </li>
+             <li>
+              Elected officials
+             </li>
+             <li>
+              History
+             </li>
+             <li>
+              Economy
+             </li>
+             <li>
+              Points of interest
+             </li>
+             <li>
+              Famous natives
+             </li>
+             <li>
+              Entrance into Union
+             </li>
+             <li>
+              State map &amp; flag
+             </li>
+             <li>
+              State motto, symbols, nicknames
+             </li>
+             <li>
+              Name origins
+             </li>
+             <li>
+              Largest cities &amp; county
+             </li>
+             <li>
+              Land area
+             </li>
+             <li>
+              Counties, forests &amp; parks
+             </li>
+            </ul>
+           </td>
+           <td style="width: 30%;">
+            <div align="center" class="stateList">
+             <ul>
+              <li>
+               <a href="/us/states/alabama">
+                Alabama
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/alaska">
+                Alaska
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/arizona">
+                Arizona
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/arkansas">
+                Arkansas
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/california">
+                California
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/colorado">
+                Colorado
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/connecticut">
+                Connecticut
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/delaware">
+                Delaware
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/florida">
+                Florida
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/georgia">
+                Georgia
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/hawaii">
+                Hawaii
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/idaho">
+                Idaho
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/illinois">
+                Illinois
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/indiana">
+                Indiana
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/iowa">
+                Iowa
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/kansas">
+                Kansas
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/kentucky">
+                Kentucky
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/louisiana">
+                Louisiana
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/maine">
+                Maine
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/maryland">
+                Maryland
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/massachusetts">
+                Massachusetts
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/michigan">
+                Michigan
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/minnesota">
+                Minnesota
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/mississippi">
+                Mississippi
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/missouri">
+                Missouri
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/montana">
+                Montana
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/nebraska">
+                Nebraska
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/nevada">
+                Nevada
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/new-hampshire">
+                New Hampshire
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/new-jersey">
+                New Jersey
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/new-mexico">
+                New Mexico
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/new-york">
+                New York
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/north-carolina">
+                North Carolina
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/north-dakota">
+                North Dakota
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/ohio">
+                Ohio
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/oklahoma">
+                Oklahoma
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/oregon">
+                Oregon
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/pennsylvania">
+                Pennsylvania
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/rhode-island">
+                Rhode Island
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/south-carolina">
+                South Carolina
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/south-dakota">
+                South Dakota
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/tennessee">
+                Tennessee
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/texas">
+                Texas
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/utah">
+                Utah
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/vermont">
+                Vermont
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/virginia">
+                Virginia
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/washington">
+                Washington
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/west-virginia">
+                West Virginia
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/wisconsin">
+                Wisconsin
+               </a>
+              </li>
+              <li>
+               <a href="/us/states/wyoming">
+                Wyoming
+               </a>
+              </li>
+             </ul>
+            </div>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+        <p>
+         <a id="moreinfo" name="moreinfo">
+         </a>
+        </p>
+        <h3>
+         More state info:
+        </h3>
+        <hr/>
+        <div class="col-sm-6">
+         <h4>
+          U.S. Capital
+         </h4>
+         <p>
+          The U.S. capital of Washington D.C. is described in the Constitution, and was later built per constitutional law. From then on D.C. has had an interesting life, full of rich history and gorgeous monuments. Learn more about the capital below.
+         </p>
+         <ul class="bulletList">
+          <li>
+           <a href="/us/cities/washington-dc">
+            Washington, DC
+           </a>
+          </li>
+         </ul>
+         <h4>
+          <br/>
+          Government
+         </h4>
+         <p>
+          The United States government, from its very beginnings, was built around representing the fifty states both equally (in the Senate) and proportionally (in the House). This balance of protecting the interests of smaller states while also listening to the majority has had lasting impacts on the U.S. system of government. Find out more about these and other important institutions.
+         </p>
+         <ul class="bulletList">
+          <li>
+           <a href="/homework-help/social-studies/symbols-united-states">
+            National Symbols
+           </a>
+          </li>
+          <li>
+           <a href="/us/government/legislative-branch/members-of-the-us-senate-112th-congress">
+            The Senate
+           </a>
+          </li>
+          <li>
+           <a href="/us/government/legislative-branch/members-of-the-house-of-representatives-114th-congress">
+            The House of Representatives
+           </a>
+          </li>
+          <li>
+           <a href="/governors-fifty-states">
+            Governors of the Fifty States
+           </a>
+          </li>
+          <li>
+           <a href="/us/cities/washington-dc">
+            U.S. Capital: District of Columbia
+           </a>
+          </li>
+          <li>
+           <a href="/us/postal-information/state-abbreviations-and-state-postal-codes">
+            State Abbreviations and State Postal Codes
+           </a>
+          </li>
+         </ul>
+         <h4>
+          <br/>
+          History
+         </h4>
+         <p>
+          The history of human societies within the states' territory stretches back millennia, but the history of the United States itself is quite recent. In the 450 years since the foundation was laid at St. Augustine, the United States has grown and expanded into one of the world's largest and wealthiest nations. Learn more about the tumultuous journey from then to now with our timelines and articles.
+         </p>
+         <ul class="bulletList">
+          <li>
+           <a href="/history/us/us-history-timeline">
+            U.S. History Timeline
+           </a>
+          </li>
+          <li>
+           <a href="/primary-sources/government/constitution/us-constitution-primer">
+            U.S. Constitution Primer
+           </a>
+          </li>
+          <li>
+           <a href="/history/us/the-confederate-states-of-america">
+            Confederate States
+           </a>
+          </li>
+          <li>
+           <a href="/us/states/states-by-order-of-entry-into-the-union">
+            States by Order of Entry into Union
+           </a>
+          </li>
+         </ul>
+         <h4>
+          <br/>
+          Population and Geography
+         </h4>
+         <p>
+          Perhaps more than in countries with stable long-term populations and settlement patterns, the United States has grown in leaps and bounds. From the waves of immigration, colonial border disputes, and the forced relocation of populations, the United States has developed very different populations across its diverse landscape. Meet the people of the U.S. and see the many places they live.
+         </p>
+         <ul class="bulletList">
+          <li>
+           <a href="/us/census/south-carolina/abbeville-county/social-statistics">
+            U.S. Census Data
+           </a>
+          </li>
+          <li>
+           <a href="/us/population/us-population-state-1790-2015">
+            Population by State (1790-present)
+           </a>
+          </li>
+          <li>
+           <a href="/us/states/state-population-by-rank">
+            State Population by Rank
+           </a>
+          </li>
+          <li>
+           <a href="/us/geography/extreme-points-united-states-50-states">
+            Extreme Points of the U.S.
+           </a>
+          </li>
+          <li>
+           <a href="/us/states/geographic-centers-of-states">
+            Geographic Centers of States
+           </a>
+          </li>
+          <li>
+           <a href="/us/states/state-capitals-and-largest-cities">
+            Capitals and Largest Cities
+           </a>
+          </li>
+          <li>
+           <a href="/us/geography/highest-lowest-and-mean-elevations-united-states">
+            Highest, Lowest, and Mean Elevations
+           </a>
+          </li>
+          <li>
+           <a href="/us/states/land-and-water-area-of-states">
+            Land and Water Area of States
+           </a>
+          </li>
+          <li>
+           <a href="/us/geography/united-states-geography">
+            More U.S. Geography
+           </a>
+          </li>
+         </ul>
+         <a id="maps" name="maps">
+         </a>
+         <h4>
+          <br/>
+          Maps and Flags
+         </h4>
+         <p>
+          Maps and flags both have played important historic roles in economic matters and in matters of identity. Every state has their own flag and their own defined territories. Learn more about the fifty states with our collections of maps and flags below.
+         </p>
+         <ul class="bulletList">
+          <li>
+           <a href="/atlas/north-america/united-states">
+            United States Map
+           </a>
+          </li>
+          <li>
+           <a href="/atlas/north-america/united-states">
+            State Maps
+           </a>
+          </li>
+          <li>
+           <a href="/atlas/map-library">
+            Map Library (Printables)
+           </a>
+          </li>
+          <li>
+           <a href="/atlas/infoplease-atlas-map-index#states">
+            Map Index
+           </a>
+          </li>
+          <li>
+           <a href="/us/states/us-state-flags-alabama-louisiana">
+            U.S. State Flags
+           </a>
+          </li>
+         </ul>
+         <a id="trivia" name="trivia">
+         </a>
+         <ul class="bulletList">
+         </ul>
+         <h4>
+          <br/>
+          Regions
+         </h4>
+         <p>
+          The regions of the U.S. are quite distinct and well-established. Despite having little to no legal meaning, these regions mark important cultural boundaries between areas with common culture and history. The Southwest, for example, has much more influence from the Mexican settlers who lived there before the U.S. acquired it. Explore the different regions, as well as U.S. territories.
+         </p>
+         <ul class="bulletList">
+          <li>
+           <a href="/us/states/regions-of-the-us">
+            Regions of the U.S.
+           </a>
+          </li>
+          <li>
+           <a href="/us/states/new-england">
+            New England
+           </a>
+          </li>
+          <li>
+           <a href="/us/states/the-middle-atlantic">
+            The Middle Atlantic
+           </a>
+          </li>
+          <li>
+           <a href="/us/states/the-south">
+            The South
+           </a>
+          </li>
+          <li>
+           <a href="/us/states/the-midwest">
+            The Midwest
+           </a>
+          </li>
+          <li>
+           <a href="/us/states/the-southwest">
+            The Southwest
+           </a>
+          </li>
+          <li>
+           <a href="/us/states/the-west">
+            The West
+           </a>
+          </li>
+          <li>
+           <a href="/world/countries/united-states/us-territories-and-outlying-areas">
+            U.S. Territories and Outlying Areas
+           </a>
+          </li>
+         </ul>
+         <h4>
+          <br/>
+          National Landmarks
+         </h4>
+         <p>
+          The United States is liberally sprinkled with monuments, parks, and all sorts of impressive structures from Yellowstone, the first national park in the West, to the Gateway Arch in St. Louis. Let Infoplease be your guide to some of America's greatest landmarks.
+         </p>
+         <ul class="bulletList">
+          <li>
+           <a href="/math-science/earth-environment/the-national-park-system">
+            The National Park System
+           </a>
+          </li>
+          <li>
+           <a href="/math-science/earth-environment/ten-most-visited-national-parks-2010">
+            Top Ten Most Visited National Parks
+           </a>
+          </li>
+          <li>
+           <a href="/us/states/offbeat-national-parks">
+            Offbeat National Parks
+           </a>
+          </li>
+          <li>
+           <a href="/culture-entertainment/art-architecture/us-historical-monuments-and-landmarks">
+            U.S. Historical Monuments
+           </a>
+          </li>
+          <li>
+           <a href="/world/monuments-landmarks/notable-modern-bridges">
+            Notable Modern Bridges in the U.S.
+           </a>
+          </li>
+          <li>
+           <a href="/world/monuments-landmarks/tallest-buildings-united-states">
+            Tallest Buildings in the U.S.
+           </a>
+          </li>
+          <li>
+           <a href="https://www.factmonster.com/take-quiz/fmlandmarks">
+            U.S. Monuments and Landmarks Quiz
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div class="col-sm-6">
+         <h4>
+          Economic and Social Comparisons
+         </h4>
+         <p>
+          As a result of the history and populations of different parts of the country, the economy and cultural values have developed differently between the states. See which parts of the country are the most and least wealthy, which have extended the most rights to transgender people, and more.
+         </p>
+         <ul class="bulletList">
+          <li>
+           <a href="/business/poverty-income/capita-personal-income-state">
+            Per Capita Personal Income
+           </a>
+          </li>
+          <li>
+           <a href="/us/states/us-policies-on-marijuana">
+            Policies on Marijuana
+           </a>
+          </li>
+          <li>
+           <a href="/us/mortality/deaths-state-2007">
+            Number of Deaths
+           </a>
+          </li>
+          <li>
+           <a href="/business/poverty-income/percent-people-poverty-state-2002-2010">
+            Percent of Persons in Poverty
+           </a>
+          </li>
+          <li>
+           <a href="/us/crime/crime-rate-state-2014">
+            Crime Index
+           </a>
+          </li>
+          <li>
+           <a href="/us/education/corporal-punishment-public-schools-state">
+            Corporal Punishment in School
+           </a>
+          </li>
+          <li>
+           <a href="/us/population/births-birth-rates-and-fertility-rates-2008">
+            Births and Birth Rates
+           </a>
+          </li>
+          <li>
+           <a href="/us/states/top-ten-states-for-transgender-rights">
+            Transgender Rights
+           </a>
+          </li>
+          <li>
+           <a href="/us/family-statistics/homeownership-state-2000-2007-and-2010">
+            Homeownership
+           </a>
+          </li>
+         </ul>
+         <h4>
+          <br/>
+          U.S. Cities
+         </h4>
+         <p>
+          The United States has seen a steady rise in its cities across all fifty states. The urban population today is larger than it's ever been, in total and in proportion. Discover the many cities that help define the U.S., and find information on weather, population, facts, history, and landmarks of major U.S. cities.
+         </p>
+         <ul class="bulletList">
+          <li>
+           <a href="/us/cities/top-50-cities-us-population-and-rank">
+            50 Largest Cities of the U.S.
+           </a>
+          </li>
+          <li>
+           <a href="/us/cities/firsts-us-cities">
+            Firsts in U.S. Cities
+           </a>
+          </li>
+          <li>
+           <a href="/us/cities/americas-most-literate-cities-2014">
+            Most Literate Cities
+           </a>
+          </li>
+          <li>
+           <a href="/math-science/weather/climate-of-100-selected-us-cities">
+            Climate of 100 Selected U.S. Cities
+           </a>
+          </li>
+          <li>
+           <a href="/us/states/state-capitals-and-largest-cities">
+            Capitals and Largest Cities
+           </a>
+          </li>
+          <li>
+           <a href="/us/cities/safest-and-most-dangerous-us-cities-2010">
+            Safest and Most Dangerous U.S. Cities
+           </a>
+          </li>
+          <li>
+           <a href="/business/consumer-resources/cost-living-index-selected-us-cities1">
+            Cost of Living for Selected U.S. Cities
+           </a>
+          </li>
+          <li>
+           <a href="/us/immigration/foreign-born-population-metropolitan-areas-5-million-or-more-people-2000">
+            Foreign-Born Population in Large U.S. Cities
+           </a>
+          </li>
+          <li>
+           <a href="/us/geography/latitude-and-longitude-us-and-canadian-cities">
+            Latitude and Longitude of U.S. and Canadian Cities
+           </a>
+          </li>
+          <li>
+           <a href="/us/cities">
+            More on U.S. Cities
+           </a>
+          </li>
+         </ul>
+         <h4>
+          <br/>
+          State Superlatives
+         </h4>
+         <p>
+          All of the fifty states have their own charms and selling points. However, by some metrics, some states are the "most" and some are the "least." Some states have fewer car accidents than the rest, others have younger populations, and others might report higher happiness. See how the states stack up with our lists below.
+         </p>
+         <ul class="bulletList">
+          <li>
+           <a href="/us/states/happiest-states">
+            Happiest
+           </a>
+          </li>
+          <li>
+           <a href="/us/states/most-livable-states">
+            Most Livable
+           </a>
+          </li>
+          <li>
+           <a href="/us/states/healthiest-states">
+            Healthiest
+           </a>
+          </li>
+          <li>
+           <a href="/us/states/top-ten-smartest-states-2012">
+            Smartest
+           </a>
+          </li>
+          <li>
+           <a href="/world/travel-transportation/widespread-bad-driving-habits">
+            Most and Least Educated Drivers
+           </a>
+          </li>
+          <li>
+           <a href="/us/states/safest-and-most-dangerous-states-2017">
+            Most Dangerous
+           </a>
+          </li>
+          <li>
+           <a href="/us/states/youngest-states">
+            Youngest States
+           </a>
+          </li>
+          <li>
+           <a href="/us/states/oldest-states">
+            Oldest States
+           </a>
+          </li>
+          <li>
+           <a href="/us/states/male-states">
+            States with the Most Men
+           </a>
+          </li>
+          <li>
+           <a href="/us/states/female-states">
+            States with the Most Women
+           </a>
+          </li>
+         </ul>
+         <h4>
+          <br/>
+          State Trivia
+         </h4>
+         <p>
+          Did you know California's name was taken from a popular Spanish adventure story? Did you know that the state fruit of New Hampshire is the pumpkin (or that the pumpkin is a fruit)? Whether you want to impress your friends at trivia night or just want to learn something new, follow the links below for more fun facts about the states.
+         </p>
+         <ul class="bulletList">
+          <li>
+           <a href="/us/population/most-popular-baby-names-state-2015">
+            Most Popular Baby Names
+           </a>
+          </li>
+          <li>
+           <a href="/us/states/state-symbols">
+            Symbols
+           </a>
+          </li>
+          <li>
+           <a href="/us/states/state-mottoes">
+            Mottoes
+           </a>
+          </li>
+          <li>
+           <a href="/us/states/state-nicknames">
+            Nicknames
+           </a>
+          </li>
+          <li>
+           <a href="/us/states/origin-of-state-names">
+            Origin of State Names
+           </a>
+          </li>
+          <li>
+           <a href="/us/states/names-of-state-residents">
+            Resident Names
+           </a>
+          </li>
+          <li>
+           <a href="/us/states/fifty-states-and-fifty-fun-facts">
+            Fifty Fun Facts
+           </a>
+          </li>
+          <li>
+           <a href="/us/states/states-by-order-of-entry-into-the-union">
+            States by Order of Entry into Union
+           </a>
+          </li>
+          <li>
+           <a href="/business/money/50-state-quarters-program-act">
+            50 State Quarters Program
+           </a>
+          </li>
+          <li>
+           <a href="/culture-entertainment/holidays/state-holidays">
+            State Holidays
+           </a>
+          </li>
+         </ul>
+         <h4>
+          <br/>
+          Americana
+         </h4>
+         <p>
+          The United States is a lot more than just serious statistics and boring textbook history. America exists in the day to day through ball games, hamburgers and apple pie, and all that jazz. Learn more about some off the eccentricities and quirky locales that help make this country what it is.
+         </p>
+         <ul class="bulletList">
+          <li>
+           <a href="/us/cities/destination-bizarre">
+            America's Eccentric Capitals
+           </a>
+          </li>
+          <li>
+           <a href="/curious-collections">
+            America's Weird Museums
+           </a>
+          </li>
+          <li>
+           <a href="/red-white-and-blue-highways">
+            Interstate History
+           </a>
+          </li>
+          <li>
+           <a href="/culture-entertainment/food/hot-dog-history">
+            Hot Dog Month
+           </a>
+          </li>
+          <li>
+           <a href="/us/cities/wacky-town-names">
+            Wacky Town Names
+           </a>
+          </li>
+          <li>
+           <a href="/us/states/roadside-attractions-america">
+            Roadside Attractions
+           </a>
+          </li>
+         </ul>
+         <h4>
+          <br/>
+          Travel and Climate
+         </h4>
+         <p>
+          Travel in the United States is a nearly trillion-dollar industry. The U.S. sees over a billion trips each year, and the travel industry directly contributes massive amounts of income and revenue around the country. Learn more about travel distances, the ways people travel, and some information about the places they go.
+         </p>
+         <ul class="bulletList">
+          <li>
+           <a href="/math-science/weather/record-highest-temperatures-by-state">
+            Highest Temperatures
+           </a>
+          </li>
+          <li>
+           <a href="/math-science/weather/record-lowest-temperatures-by-state">
+            Lowest Temperatures
+           </a>
+          </li>
+          <li>
+           <a href="/world/travel-transportation/us-highway-system">
+            The U.S. Interstate System
+           </a>
+          </li>
+          <li>
+           <a href="/world/travel-transportation/most-congested-roads-2014" title="Most Congested U.S. Roads">
+            Most Congested U.S. Roads
+           </a>
+          </li>
+          <li>
+           <a href="/world/travel-transportation/state-and-territory-tourism-offices">
+            State Tourism Offices
+           </a>
+          </li>
+          <li>
+           <a href="/world/travel-transportation/road-mileages-between-us-cities">
+            Mileage Between U.S. Cities
+           </a>
+          </li>
+          <li>
+           <a href="/world/travel-transportation/top-states-visited-us-tourists-2004-and-2009">
+            Top States Visited by U.S. Tourists
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div class="PageLinearNav">
+         <p class="PLN-intro">
+         </p>
+        </div>
+        <p>
+        </p>
+        <a href="/us">
+         United States
+        </a>
+       </article>
+       <div class="views-element-container block" id="block-views-block-most-popular-block-3">
+        <div class="home-most-popular js-view-dom-id-8d827564b7b94b994535157f31cd4c5fb8452c74238bf11c9382be55c50198b3">
+         <div class="view-header">
+          <center>
+           <h3>
+            Trending
+           </h3>
+           <p>
+            Here are the facts and trivia that people are buzzing about.
+           </p>
+          </center>
+         </div>
+         <div class="item-list">
+          <ul>
+           <li class="featured-item">
+            <div class="views-field views-field-nothing">
+             <span class="field-content">
+              <a href="/october-2020-current-events-us-news">
+               <div class="popular-image">
+                <img alt="Current Events" class="b-lazy lazy_load_image" data-src="https://www.infoplease.com/sites/infoplease.com/files/styles/scale600w/public/2020-05/Current%20Events%202020.jpg?itok=cS_W5kvE" src=""/>
+               </div>
+              </a>
+             </span>
+            </div>
+            <div class="views-field views-field-title">
+             <span class="field-content">
+              <a href="/october-2020-current-events-us-news">
+               October 2020 Current Events: US News
+              </a>
+             </span>
+            </div>
+           </li>
+           <li class="featured-item">
+            <div class="views-field views-field-nothing">
+             <span class="field-content">
+              <a href="/homework-help/us-government/top-ten-closest-us-presidential-elections">
+               <div class="popular-image">
+                <img alt="Elections" class="b-lazy lazy_load_image" data-src="https://www.infoplease.com/sites/infoplease.com/files/styles/scale600w/public/2020-09/US%20Elections.jpg?itok=TmfRYopY" src=""/>
+               </div>
+              </a>
+             </span>
+            </div>
+            <div class="views-field views-field-title">
+             <span class="field-content">
+              <a href="/homework-help/us-government/top-ten-closest-us-presidential-elections">
+               Top Ten Closest U.S. Presidential Elections
+              </a>
+             </span>
+            </div>
+           </li>
+           <li class="featured-item">
+            <div class="views-field views-field-nothing">
+             <span class="field-content">
+              <a href="/us/postal-information/state-abbreviations-and-state-postal-codes">
+               <div class="popular-image">
+                <img alt="US Postal Codes" class="b-lazy lazy_load_image" data-src="https://www.infoplease.com/sites/infoplease.com/files/styles/scale600w/public/2020-09/US%20Post.jpg?itok=nyOA5bak" src=""/>
+               </div>
+              </a>
+             </span>
+            </div>
+            <div class="views-field views-field-title">
+             <span class="field-content">
+              <a href="/us/postal-information/state-abbreviations-and-state-postal-codes">
+               State Abbreviations and State Postal Codes
+              </a>
+             </span>
+            </div>
+           </li>
+           <li class="featured-item">
+            <div class="views-field views-field-nothing">
+             <span class="field-content">
+              <a href="/the-5-best-air-purifiers-of-2020">
+               <div class="popular-image">
+                <img alt="Air Purifiers" class="b-lazy lazy_load_image" data-src="https://www.infoplease.com/sites/infoplease.com/files/styles/scale600w/public/2020-09/air-purifier%20%281%29.jpg?itok=dNQvSqoC" src=""/>
+               </div>
+              </a>
+             </span>
+            </div>
+            <div class="views-field views-field-title">
+             <span class="field-content">
+              <a href="/the-5-best-air-purifiers-of-2020">
+               The 5 Best Air Purifiers of 2020
+              </a>
+             </span>
+            </div>
+           </li>
+           <li class="featured-item">
+            <div class="views-field views-field-nothing">
+             <span class="field-content">
+              <a href="/old-poptropica-fan-favorite-islands">
+               <div class="popular-image">
+                <img alt="Poptropica" class="b-lazy lazy_load_image" data-src="https://www.infoplease.com/sites/infoplease.com/files/styles/scale600w/public/2020-07/poptropica.jpg?itok=L8JGHbBn" src=""/>
+               </div>
+              </a>
+             </span>
+            </div>
+            <div class="views-field views-field-title">
+             <span class="field-content">
+              <a href="/old-poptropica-fan-favorite-islands">
+               This List of Favorite Islands will Make You Remember Why You Loved Poptropica So Much
+              </a>
+             </span>
+            </div>
+           </li>
+           <li class="featured-item">
+            <div class="views-field views-field-nothing">
+             <span class="field-content">
+              <a href="/world/disasters/natural/worst-us-forest-fires">
+               <div class="popular-image">
+                <img alt="Wildfires" class="b-lazy lazy_load_image" data-src="https://www.infoplease.com/sites/infoplease.com/files/styles/scale600w/public/2020-09/Natural%20Disasters%20%281%29_0_0.jpg?itok=6w9Zs4IW" src=""/>
+               </div>
+              </a>
+             </span>
+            </div>
+            <div class="views-field views-field-title">
+             <span class="field-content">
+              <a href="/world/disasters/natural/worst-us-forest-fires">
+               Worst U.S. Forest Fires
+              </a>
+             </span>
+            </div>
+           </li>
+          </ul>
+         </div>
+        </div>
+       </div>
+      </section>
+      <div class="block" id="block-lockerdomeblock">
+       <div id="ld-2559-4525" style="max-width: 550px; margin: 0px auto;">
+        <iframe frameborder="0" height="355" loading="eager" scrolling="no" seamless="" src="https://lockerdome.com/lad/8440289106995559?pubid=ld-2559-4525&amp;pubo=https%3A%2F%2Fwww.infoplease.com&amp;rid=&amp;width=365" style="min-width: 225px; box-sizing: border-box !important;" width="365">
+        </iframe>
+       </div>
+       <script>
+        <!--//--><![CDATA[// ><!--
+(function(w,d,s,i){w.ldAdInit=w.ldAdInit||[];w.ldAdInit.push({slot:8440289106995559,size:[0, 0],id:"ld-2559-4525"});if(!d.getElementById(i)){var j=d.createElement(s),p=d.getElementsByTagName(s)[0];j.async=true;j.src="//cdn2.lockerdome.com/_js/ajs.js";j.id=i;p.parentNode.insertBefore(j,p);}})(window,document,"script","ld-ajs");
+       </script>
+       <p>
+       </p>
+      </div>
+     </article>
+     <aside class="col-sm-4">
+      <div id="tyche_trendi_parent_container" style="width: 352px; height: 198px; margin: 0px auto;">
+       <div id="tyche_trendi_video_container" style="height: 100%; width: 100%; visibility: visible; opacity: 1;">
+        <div data-script-id="34" id="tyche_trendi_video" style='width: 100%; height: 100%; position: relative; transition: opacity 0.2s ease-out 0s; background-color: transparent; background-image: url("//cdn.video.playwire.com/1022050/videos/5503119/poster_0000.webp"); background-position: center center; background-size: contain; background-repeat: no-repeat;'>
+         <div id="tyche_trendi_video_display_ad_container" style="display: none; position: absolute; top: 0px; left: 0px;">
+         </div>
+         <iframe allow="autoplay; fullscreen" allowfullscreen="true" class="zeus_iframe" data-script-id="34" data-zdbg='{"debugMode":null,"useLogger":false,"noPreroll":false,"noMidroll":false,"noAds":false,"noFlash":false,"noHLS":false,"forceHLS":false,"stickyLocal":false,"delayedPreroll":false,"previewMode":false,"enableAdRefresh":false}' id="zIframe_tyche_trendi_video" src="//cdn.playwire.com/bolt4/js/zeus/releases/4.3.32/frame/frame.html#id=tyche_trendi_video___pv=1" style="overflow: hidden; visibility: visible; box-sizing: border-box; border: none !important; width: 100% !important; height: 100% !important; min-height: 0px !important; display: block;">
+         </iframe>
+        </div>
+        <script charset="utf-8" data-config="https://config.playwire.com/1022050/playlists/v2/4622/zeus.json" data-height="100%" data-id="tyche_trendi_video" data-onready="window.tyche.handleBoltEvents.trendiVideo" data-script-id="34" data-width="100%" id="tyche_trendi_video_script" src="https://cdn.playwire.com/bolt/js/zeus/embed.js" type="text/javascript">
+        </script>
+       </div>
+      </div>
+      <div class="right-section" id="right-section">
+       <div class="block" id="block-ipabovethefold">
+        <p>
+         <span style="font-size: 10px; color: #b9b9b9; text-align: center; display:block; padding-top:10px;">
+          ADVERTISEMENT
+         </span>
+         <!-- 300 x 250 ATF Desktop -->
+        </p>
+        <div class="pw-tag" data-google-query-id="CKDt5fazvewCFeIIiAkd-EwNGg" data-pw-desk="med_rect_atf" id="med_rect_atf">
+         <div id="google_ads_iframe_/154013155/1022050/69785/1022050-69785-medium_rectangle_0__container__" style="border: 0pt none; display: inline-block; width: 300px; height: 600px;">
+          <iframe data-google-container-id="2" data-is-safeframe="true" data-load-complete="true" frameborder="0" height="600" id="google_ads_iframe_/154013155/1022050/69785/1022050-69785-medium_rectangle_0" marginheight="0" marginwidth="0" name="" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" scrolling="no" src="https://e2603231e1144c7b2718307577886878.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html" style="border: 0px; vertical-align: bottom;" title="3rd party ad content" width="300">
+          </iframe>
+         </div>
+         <div class="pw_report_ad_container" data-pw-in-article="true" style="line-height: normal; display: inline-block; width: 100%; text-align: center;">
+          <a class="playwire_report_ad_link" href="#" id="report_ad_med_rect_atf" style='color: #4db2ec;font-size:10px;font-family:"Open Sans",arial,sans-serif'>
+           Report Ad
+          </a>
+         </div>
+        </div>
+        <!-- 300 x 250 ATF Mobile -->
+        <div data-pw-mobi="med_rect_atf">
+        </div>
+       </div>
+       <div class="block" id="block-ipmiddlewaread">
+        <p>
+         <span style="font-size: 10px; color: #b9b9b9; text-align: center; display:block; padding-bottom:5px">
+          ADVERTISEMENT
+         </span>
+         <!-- 300 x 250 BTF Desktop -->
+        </p>
+        <div class="pw-tag" data-google-query-id="CKHt5fazvewCFeIIiAkd-EwNGg" data-pw-desk="med_rect_btf" id="med_rect_btf">
+         <div id="google_ads_iframe_/154013155/1022050/69785/1022050-69785-medium_rectangle_1__container__" style="border: 0pt none;">
+          <iframe data-google-container-id="3" data-load-complete="true" frameborder="0" height="600" id="google_ads_iframe_/154013155/1022050/69785/1022050-69785-medium_rectangle_1" marginheight="0" marginwidth="0" name="google_ads_iframe_/154013155/1022050/69785/1022050-69785-medium_rectangle_1" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-presentation" scrolling="no" srcdoc="" style="border: 0px; vertical-align: bottom;" title="3rd party ad content" width="300">
+          </iframe>
+         </div>
+         <div class="pw_report_ad_container" data-pw-in-article="true" style="line-height: normal; display: inline-block; width: 100%; text-align: center;">
+          <a class="playwire_report_ad_link" href="#" id="report_ad_med_rect_btf" style='color: #4db2ec;font-size:10px;font-family:"Open Sans",arial,sans-serif'>
+           Report Ad
+          </a>
+         </div>
+        </div>
+        <!-- 300 x 250 BTF Mobile -->
+        <div data-pw-mobi="med_rect_btf">
+        </div>
+       </div>
+      </div>
+     </aside>
+    </main>
+   </div>
+   <section class="page-content-bottom">
+    <div class="block" id="block-ipbtfad">
+     <!-- Desktop/iPad Leaderboard BTF -->
+     <div class="pw-tag" data-google-query-id="CPal5PazvewCFeIIiAkd-EwNGg" data-pw-desk="leaderboard_btf" id="leaderboard_btf" style="max-width: 970px; margin: auto;">
+      <div id="google_ads_iframe_/154013155/1022050/69785/1022050-69785-desktop_leaderboard_1__container__" style="border: 0pt none;">
+       <iframe data-google-container-id="4" data-load-complete="true" frameborder="0" height="90" id="google_ads_iframe_/154013155/1022050/69785/1022050-69785-desktop_leaderboard_1" marginheight="0" marginwidth="0" name="google_ads_iframe_/154013155/1022050/69785/1022050-69785-desktop_leaderboard_1" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-presentation" scrolling="no" srcdoc="" style="border: 0px; vertical-align: bottom;" title="3rd party ad content" width="728">
+       </iframe>
+      </div>
+      <div class="pw_report_ad_container" data-pw-in-article="true" style="line-height: normal; display: inline-block; width: 100%; text-align: center;">
+       <a class="playwire_report_ad_link" href="#" id="report_ad_leaderboard_btf" style='color: #4db2ec;font-size:10px;font-family:"Open Sans",arial,sans-serif'>
+        Report Ad
+       </a>
+      </div>
+     </div>
+     <!-- Mobile Leaderboard BTF -->
+     <div data-pw-mobi="leaderboard_btf">
+     </div>
+    </div>
+   </section>
+   <footer>
+    <div class="footer-inner">
+     <div class="block" id="block-copyrights">
+      <div class="col-8">
+       <div class="form-intro">
+        Encouraging curious minds for
+        <a href="/about-us">
+         nearly a century.
+        </a>
+       </div>
+       <form action="/search" class="search-area-wrap-footer" data-drupal-form-fields="searchquery,searchsubmit" method="GET">
+        <input data-drupal-selector="searchquery" id="searchquery" name="searchquery" placeholder="Enter your search here…" type="text"/>
+        <input class="button js-form-submit form-submit" data-drupal-selector="searchsubmit" id="searchsubmit_footer" name="searchsubmit" type="submit" value="Search"/>
+       </form>
+       <div class="footer-logo">
+        <a href="/">
+         <img alt="Infoplease logo" class="b-lazy lazy_load_image" data-entity-type="file" data-entity-uuid="24fb0ad1-1218-4036-986f-f25a079dd027" data-src="/sites/infoplease.com/files/inline-images/infoplease_white_logo_2.png" src=""/>
+        </a>
+       </div>
+       <div class="fe-site-info">
+        Infoplease knows the value of having sources you can trust. Infoplease is a reference and learning site, combining the contents of an encyclopedia, a dictionary, an atlas and several almanacs loaded with facts. Our editors update and regularly refine this enormous body of information to bring you reliable information.
+       </div>
+      </div>
+      <ul class="social list-unstyled" style="text-align:left;">
+       <li>
+        <a href="https://www.facebook.com/InfoPleaseOfficial/">
+         <img alt="Infoplease on Facebook" class="b-lazy lazy_load_image" data-src="/images/ip17_social_facebook_icon.png" src="" style="height:23px;width:auto;"/>
+        </a>
+       </li>
+       <li>
+        <a href="https://twitter.com/Info_Please">
+         <img alt="Infoplease on Twitter" class="b-lazy lazy_load_image" data-src="/images/ip17_social_twitter_icon.png" src="" style="height:19px;width:auto;"/>
+        </a>
+       </li>
+       <li>
+        <a href="https://www.pinterest.com/infopleasecom">
+         <img alt="Infoplease on Pinterest" class="b-lazy lazy_load_image" data-src="/images/ip17_social_pinterest_icon.png" src="" style="height:23px;width:auto;"/>
+        </a>
+       </li>
+      </ul>
+     </div>
+     <nav aria-labelledby="block-footer-2-menu" id="block-footer-2" role="navigation">
+      <h2 class="visually-hidden" id="block-footer-2-menu">
+       Footer
+      </h2>
+      <ul>
+       <li>
+        <a data-drupal-link-system-path="node/167329" href="/about-us">
+         About Us
+        </a>
+       </li>
+       <li>
+        <a data-drupal-link-system-path="node/167329" href="/about-us#Editorial%20Policy">
+         Editorial Policy
+        </a>
+       </li>
+       <li>
+        <a data-drupal-link-system-path="node/167396" href="/advertising-infopleasecom">
+         Advertise with Infoplease
+        </a>
+       </li>
+       <li>
+        <a data-drupal-link-system-path="node/472446" href="/privacy-policy">
+         Privacy Policy
+        </a>
+       </li>
+       <li>
+        <a data-drupal-link-system-path="node/167445" href="/sitemaps">
+         Site Map
+        </a>
+       </li>
+       <li>
+        <a data-drupal-link-system-path="node/506" href="/contact-us">
+         Contact Us
+        </a>
+       </li>
+       <li>
+        <a data-drupal-link-system-path="node/472456" href="/terms-of-use">
+         Terms of Use
+        </a>
+       </li>
+       <li>
+        <a data-drupal-link-system-path="node/167362" href="/citing-infoplease">
+         Citing Infoplease
+        </a>
+       </li>
+       <li>
+        <a data-drupal-link-system-path="node/475641" href="/privacy/ip-do-not-sell-my-info" rel="" target="_self">
+         Do Not Sell My Info (for CA Residents)
+        </a>
+       </li>
+       <li>
+        <a data-drupal-link-system-path="node/475691" href="/sources" rel="" target="_self">
+         Our Sources
+        </a>
+       </li>
+      </ul>
+     </nav>
+     <div class="block" id="block-customcoresharecontentblock">
+      <div id="custom-core-share">
+       <ul class="share-buttons">
+        <li>
+         <a class="facebook" role="”button”" title="Share this page to facebook">
+          <img alt="facebook share icon" src="/modules/custom/custom_core_common/images/facebook.svg"/>
+         </a>
+        </li>
+        <li>
+         <a class="twitter" role="”button”" title="Share this page to twitter">
+          <img alt="twitter share icon" src="/modules/custom/custom_core_common/images/twitter.svg"/>
+         </a>
+        </li>
+        <li>
+         <a class="gbookmark" role="”button”" title="Google bookmark this page">
+          <img alt="Google bookmark icon" src="/modules/custom/custom_core_common/images/googlebookmarks.svg"/>
+         </a>
+        </li>
+        <li>
+         <a class="email" role="”button”" title="Share this page to an email">
+          <img alt="email share icon" src="/modules/custom/custom_core_common/images/email.svg"/>
+         </a>
+        </li>
+        <li>
+         <a class="print" role="”button”" title="Print this page">
+          <img alt="Print page icon" src="/modules/custom/custom_core_common/images/print.svg"/>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="block" id="block-footerproducts">
+      <div class="fen-info">
+       <div class="fen-info-logo">
+        <a href="https://www.fen.com" rel="noopener nofollow" target="_blank">
+         <img alt="fen logo" class="b-lazy lazy_load_image" data-entity-type="file" data-entity-uuid="020026d3-a563-40dd-93f5-65a37bec192a" data-src="/sites/default/files/inline-images/fen_learning_logo.png" src=""/>
+        </a>
+       </div>
+       <div class="fen-info-copy">
+        Infoplease is part of the FEN Learning family of educational and reference sites for parents, teachers and students.
+       </div>
+      </div>
+      <div>
+       <span class="fen-product fen-product-fm">
+        <a href="https://www.factmonster.com" rel="noopener" target="_blank">
+         <img alt="factmonster logo" class="b-lazy lazy_load_image" data-entity-type="file" data-entity-uuid="052cbf24-649d-4d5e-a491-a1519884d056" data-src="/sites/default/files/inline-images/factmonster_logo.png" src=""/>
+        </a>
+       </span>
+       <span class="fen-product fen-product-fe">
+        <a href="https://www.familyeducation.com" rel="noopener" target="_blank">
+         <img alt="familyeducation logo" class="b-lazy lazy_load_image" data-src="/sites/infoplease.com/files/inline-images/familyeducation_logo_1.png" src=""/>
+        </a>
+       </span>
+       <span class="fen-product fen-product-tv">
+        <a href="https://www.teachervision.com" rel="noopener" target="_blank">
+         <img alt="TeacherVision logo" class="b-lazy lazy_load_image" data-entity-type="file" data-entity-uuid="c73c57cb-e555-416f-9e47-dd93cd150a12" data-src="/sites/default/files/inline-images/teachervision_logo.png" src=""/>
+        </a>
+       </span>
+      </div>
+     </div>
+    </div>
+   </footer>
+   <div class="page-footer-bottom">
+    <div class="block" id="block-footerbottomsandbox">
+     <div class="sandbox-branding">
+      <a href="https://sandboxandco.com">
+       <img alt="sandbbox logo" class="b-lazy lazy_load_image" data-entity-type="file" data-entity-uuid="696abfb6-fcf6-4f0d-ac1e-714bc8faaa4c" data-src="/sites/default/files/inline-images/sandbox_logo.png" src=""/>
+      </a>
+     </div>
+     <div class="sandbox-copy" style="padding-top: 5px;">
+      FEN Learning is part of Sandbox Networks, a digital learning company that operates education services and products for the 21st century.
+     </div>
+    </div>
+   </div>
+  </div>
+  <script data-drupal-selector="drupal-settings-json" type="application/json">
+   {"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/80737","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"calendar\/calendar.theme,core\/html5shiv,custom_core_common\/add-block-popup,custom_core_common\/share-content-block,custom_voice_search\/custom_voice_search,ip\/global-styling,lazy_load\/lazy_load.lazyLoading,poll\/drupal.poll-links,search_api_autocomplete\/search_api_autocomplete,system\/base,views\/views.module,we_megamenu\/form.we-mega-menu-frontend","theme":"ip","theme_token":null},"ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true},"":false,"cloudinary":true,"nodetype":"subhub","custom_voice_search":{"custom_voice_search":{"ids":[{"id":"search_api_page_block_form","input_id":"edit-keys"},{"id":"ip_search_form","input_id":"edit-keys"}]}},"custom_core_common":{"social_share":{"facebook_app_id":"140586622674265"}},"search_api_autocomplete":{"search":{"auto_submit":true}},"user":{"uid":0,"permissionsHash":"d0c5be3bbb424bc01fd77496a95310b4a9d150fe278273c8276fd2d675a9cafc"}}
+  </script>
+  <iframe id="pw_user_data" src="https://cdn.intergient.com/pageos/1.5.1/iframe/iframe.html" style="display: none; height: 0px; width: 0px; position: fixed; bottom: -99999px;">
+  </iframe>
+  <script src="/sites/infoplease.com/files/js/js_SuvKzKoY9eUXtc-OTT8n_1HiwziUs-2AH3YWR9RbxnA.js">
+  </script>
+  <script src="/sites/infoplease.com/files/js/js_ROb3aGDOGkj9DM0oXQCq2Ljs_hVxVCYd1_HvLGRjhTk.js">
+  </script>
+  <script src="//cdn.rawgit.com/leafo/sticky-kit/v1.1.2/jquery.sticky-kit.min.js">
+  </script>
+  <script src="/sites/infoplease.com/files/js/js_Sq3rx_LjwtvX34T6HNwGQXXIeTJ--WK1_ho5TXDL4ZI.js">
+  </script>
+  <script src="/sites/infoplease.com/files/js/js_L-hCyAsRjSEk05A4VenrO6aN2kPxtkz5TmX0KozS9oI.js">
+  </script>
+  <script type="text/javascript">
+   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"fc5994cfb8","applicationID":"41957789","transactionName":"NgAGbRRTXRFUBUBQXg9KJVoSW1wMGiJGTEEACThXCVZWPnYJWk1DDgkIXBRufQ1RA2JQVBYmC1cSQFwOWQNGFA8XDAFO","queueTime":0,"applicationTime":500,"atts":"GkcFG1xJTh8=","errorBeacon":"bam-cell.nr-data.net","agent":""}
+  </script>
+  <ul class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front search-api-autocomplete-search" id="ui-id-1" style="display: none;" tabindex="0">
+  </ul>
+  <div aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible" role="status">
+  </div>
+  <div id="cboxOverlay" style="display: none;">
+  </div>
+  <script src="https://mb.moatads.com/yi.js?ud=undefined&amp;qn=%604%7BZEYwoqI%24%5BK%2BdLLU)%2CMm~tW%2490vv9L%24%2FoDb%2Fz(lKm3GFlNUU%2Cu%5Bh_GcS%25%5BHvLU%5B4(K%2B%7BgeFWl_%3DNqUXR%3A%3D%2BAxMn%3Ch%2CyenA8p%2FHm%24%60%233P(ry5*ZRocMp1tq%5BN%7Bq%60RP%3CG.ceFW%7CoG%22mxT%3Bwv%40V374BKm55%3D%26npLvbR6thw0P%26oUK%3B(59%7CimPgh%24.Ye%23Vyt9.aS%3B4oD%7D%60%3Fjc!L2LmqMs%3Cex1bxNTK7%2BuCTpY%3CZ.T%5B%2B%22gbzbSSr1r4V%40bLwA&amp;th=2469185324&amp;tf=nMzjG---CSa7H-XSSptC-j7VIQD-xFQTS-nMzjG-&amp;vi=111111&amp;qp=00000&amp;is=BBBBB2BBEYBvGl2BBCkqtUTBBRmsqbKW8BsrBu0rCFE48CRBeeBS2hWTMBBQeQBBn2soYggyUig0CBlWZ0uBBCCCCCCOgRBBiOfnE6Bkg7Oxib8MxOtJYHCBdm5kBhIcC9Y8oBXckXBR76iUUsJBCBBBBBBBBBWBSqj3BBBZeGV2BBBCMciUBBBjgEBBBBBB94UMgTdJMtEcpMBBBQBBBniOccBBBBBB47kNBBBBBBBBBBBBBhcjG6BBJM2L4Bk8BwCBQmIoRBBCzBz1BBCTClBBrbGBC4ehueB57NG9aJeRzBqEKiuwBBBB&amp;iv=8&amp;qt=0&amp;gz=0&amp;hh=0&amp;hn=0&amp;tw=null&amp;qc=0&amp;qd=0&amp;qf=800&amp;qe=600&amp;qh=800&amp;qg=600&amp;qm=240&amp;qa=800&amp;qb=600&amp;qi=800&amp;qj=600&amp;to=00&amp;po=1-0020002000002120&amp;vy=ot%24b%5Bh%40%22oD%7BMx5%3C1%3B(8.%7CLK2_v%5Eq%2BGs1%7B%2CyB%3AU!%2FoD%7BMx5%3C1%3B(Oy%2CUy%3CD&amp;qr=0&amp;url=https%3A%2F%2Fwww.infoplease.com%2Fus%2Fstates&amp;confidence=2&amp;pcode=playwireprebidheader597261727146&amp;callback=MoatNadoAllJsonpRequest_2486058" type="text/javascript">
+  </script>
+  <div class="" id="colorbox" role="dialog" style="display: none;" tabindex="-1">
+   <div id="cboxWrapper">
+    <div>
+     <div id="cboxTopLeft" style="float: left;">
+     </div>
+     <div id="cboxTopCenter" style="float: left;">
+     </div>
+     <div id="cboxTopRight" style="float: left;">
+     </div>
+    </div>
+    <div style="clear: left;">
+     <div id="cboxMiddleLeft" style="float: left;">
+     </div>
+     <div id="cboxContent" style="float: left;">
+      <div id="cboxTitle" style="float: left;">
+      </div>
+      <div id="cboxCurrent" style="float: left;">
+      </div>
+      <button id="cboxPrevious" type="button">
+      </button>
+      <button id="cboxNext" type="button">
+      </button>
+      <button id="cboxSlideshow" type="button">
+      </button>
+      <div id="cboxLoadingOverlay" style="float: left;">
+      </div>
+      <div id="cboxLoadingGraphic" style="float: left;">
+      </div>
+     </div>
+     <div id="cboxMiddleRight" style="float: left;">
+     </div>
+    </div>
+    <div style="clear: left;">
+     <div id="cboxBottomLeft" style="float: left;">
+     </div>
+     <div id="cboxBottomCenter" style="float: left;">
+     </div>
+     <div id="cboxBottomRight" style="float: left;">
+     </div>
+    </div>
+   </div>
+   <div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;">
+   </div>
+  </div>
+  <iframe src="https://s.amazon-adsystem.com/iu3?cm3ppd=1&amp;d=dtb-pub&amp;csif=t&amp;dl=pm-db5_rbd_ppt_dm_cnv_an-db5_dmx_3lift" style="display: none;">
+  </iframe>
+  <div class="pw-tag pw-tps" data-google-query-id="COSOmfezvewCFcf6swoddsQMIQ" data-pw-status="loaded" id="pw-oop-bottom_rail" style="padding-top: 20px; box-sizing: border-box;">
+   <div id="google_ads_iframe_/154013155/1022050/69785/1022050-69785-bottom_rail_0__container__" style="border: 0pt none;">
+    <iframe data-google-container-id="5" data-load-complete="true" frameborder="0" height="6" id="google_ads_iframe_/154013155/1022050/69785/1022050-69785-bottom_rail_0" marginheight="0" marginwidth="0" name="google_ads_iframe_/154013155/1022050/69785/1022050-69785-bottom_rail_0" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-presentation" scrolling="no" srcdoc="" style="border: 0px; vertical-align: bottom;" title="3rd party ad content" width="1">
+    </iframe>
+   </div>
+   <div class="pw_report_ad_container" style="line-height: normal; display: block; top: 3px; left: 0px; right: 0px; position: absolute; text-align: left; margin: 0px auto;">
+    <span style='color: #888888;font-size:10px;font-family:"Open Sans",arial,sans-serif;user-select:none;'>
+     Advertisement |
+    </span>
+    <a class="playwire_report_ad_link" href="#" id="report_ad_pw-oop-bottom_rail" style='color: #4db2ec;font-size:10px;font-family:"Open Sans",arial,sans-serif'>
+     Report Ad
+    </a>
+   </div>
+  </div>
+  <iframe id="google_osd_static_frame_732066473249" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;">
+  </iframe>
+  <script src="//resources.infolinks.com/js/infolinks_main.js" type="text/javascript">
+  </script>
+  <div class="report_ad_modal" id="myModal">
+   <div class="report_ad_modal-content">
+    <span class="report_ad_close">
+     <img src="https://cdn.intergi.com/tyche-assets/report_ad/close-button.svg"/>
+    </span>
+    <iframe height="462px" scrolling="no" src="https://cdn.intergi.com/tyche-assets/report_ad/mail.html" width="320px">
+    </iframe>
+   </div>
+  </div>
+  <iframe id="IL_MANAGE" sandbox="allow-same-origin allow-scripts allow-top-navigation" src="https://router.infolinks.com/usync/manage?pid=3185668&amp;wsid=0&amp;usprivacy=1---" style="position: absolute; margin: 0px; display: none;">
+  </iframe>
+  <div class="IL_BASE insearch1" id="IL_INSEARCH" style="display: block; bottom: 0px; transition: all 0s ease 0s, all 1000ms ease-in-out 0s; position: fixed; z-index: 2147483647; width: 728px; height: 110px; left: 26px; border-top: 2px solid rgb(167, 169, 171); border-left: 1px solid rgb(167, 169, 171); border-right: 1px solid rgb(167, 169, 171); background-color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 6px 2px; transform: translate(0px, 0px) translate(0px, 0px);">
+   <div data-d_il_insearch_1_0_ntgwfje4mjq="" style="display: none">
+   </div>
+   <div class="IL_BASE" style="display: ; text-align:; position:absolute;top:0; left:0;    width:728px; height:110px; background-color:#FFFFFF; cursor: pointer;">
+    <div class="IL_BASE" style="position:absolute;     width:728px;      height:24px;                                         left:15px;                                     top:7px; color:#4E4E4E; font-family:Arial,sans-serif;             font-size:15pt; font-weight:normal; font-style:normal; ">
+     <span class="IL_BASE" style="color:#4E4E4E;            font-weight: bold; font-size:13pt; overflow:hidden;" title="">
+     </span>
+    </div>
+    <div class="IL_BASE IL_SR_BG" id="IL_SR_HELP" style="position:absolute; right:26px; top:3px; width:15px; height:15px;  background-position:0 0; cursor:pointer; font-size:1px;">
+    </div>
+    <div class="IL_BASE IL_SR_BG" id="IL_SR_X1" style="position:absolute; right:10px; top:3px; width:15px; height:15px;  background-position:-15px 0; cursor:pointer; font-size:1px;">
+    </div>
+   </div>
+   <div class="IL_BASE" id="IL_SR_AD_AREA" style="position:relative;   bottom:-50px; margin-top: 0px ; left:0; width:728px;   height:90px;     padding-top:0px; background-color:#ffffff;; cursor: pointer;">
+    <div class="IL_SR_RESULT IL_BASE d_IL_INSEARCH" id="IL_SR_RESULT_CONTENT" style="position:absolute;                     left:0px;            bottom:30px;            width:728px; height:90px; background-color:#ffffff;; cursor: pointer;">
+     <!--NO_IFRAME-->
+     <div data-hook="d_IL_INSEARCH" id="4807785">
+      <script src="https://adserver.adtech.advertising.com/addyn/3.0/11409.1/4807785/1019320/225/ADTECH;loc=100;target=_blank;grp=99;screenheight=600;screenwidth=800;screendensity=1;kvscreenheight=600;kvscreenwidth=800;kvscreendensity=1;kvviewportwidth=779;kvviewportheight=579;misc=1602998816794" type="text/javascript">
+      </script>
+     </div>
+     <script>
+      function loadScript(url, callback){
+    var script = document.createElement("script")
+    script.type = "text/javascript";
+    if (script.readyState){  //IE
+        script.onreadystatechange = function(){
+            if (script.readyState == "loaded" ||
+                    script.readyState == "complete"){
+                script.onreadystatechange = null;
+                callback();
+            }
+        };
+    } else {  //Others
+        script.onload = function(){
+            callback();
+        };
+    }
+    script.src = url;
+    document.getElementsByTagName("body")[0].appendChild(script);
+}
+loadScript("https://aka-cdn-ns.adtechus.com/dt/common/DAC.js", function(){
+ADTECH.config.page = { protocol: 'https', server: 'adserver.adtech.advertising.com', network: '11409.1', pageid: 1019320, params: { loc: '100' }};
+ADTECH.config.placements[4807785] = { sizeid: 225, params: { alias: '', target: '_blank' }};
+ADTECH.loadAd(4807785);
+});
+     </script>
+    </div>
+   </div>
+  </div>
+  <img src="https://rt3017.infolinks.com/action/adview.htm?rid=559c868f-4bf7-40ef-80c4-cfd81aaceae1&amp;bdc=1&amp;midx=0&amp;emd=NTgwfjE4MjQ&amp;rts=1602998816646&amp;prod_t=d&amp;jsv=1715.006-2.108&amp;skin=sidebar&amp;theme=nologo&amp;sdata=homes&amp;scs=1iC3F6b0W8&amp;rsd=1-oeiUmkkNaeYHqHYFx_JESgGE3hreuY3ZXo7QzXTEx_OtJMpqC_Ct4DUIIHu0i4yjUcuBeKYAaYwnfNRsYX9UNZ69qqoEw0hSRq2EPcJ7jjVpvBbdUcJiO7XzH4TG71UJ8k2jUzHiepZyzSS69H3_8mKmoxH_Q-&amp;rsk=47&amp;rcs=dzn-XG2Up8rTpK3hjG-mkw" style="display: none; width: 1px; height: 1px;"/>
+  <script src="https://aka-cdn-ns.adtechus.com/dt/common/DAC.js" type="text/javascript">
+  </script>
+  <iframe id="criteo-syncframe" src='https://gum.criteo.com/syncframe?topUrl=www.infoplease.com#{"optout":{"value":false,"origin":0},"uid":{"origin":0},"sid":{"origin":0},"origin":"publishertag","version":98,"lwid":{"origin":0},"tld":"infoplease.com","bundle":{"origin":0},"topUrl":"www.infoplease.com","cw":true}' style="display: none;">
+  </iframe>
+ </body>
+ <iframe allowtransparency="true" frameborder="0" height="0" hspace="0" id="195eac0ee3b97d2" marginheight="0" marginwidth="0" sandbox="allow-scripts allow-same-origin" scrolling="no" src="https://u.openx.net/w/1.0/pd" style="height:0px;width:0px;display:none;" vspace="0" width="0">
+ </iframe>
+ <iframe allowtransparency="true" frameborder="0" height="0" hspace="0" id="196db3f254217a6b" marginheight="0" marginwidth="0" sandbox="allow-scripts allow-same-origin" scrolling="no" src="https://ads.pubmatic.com/AdServer/js/showad.js#PIX&amp;kdntuid=1&amp;p=158326" style="height:0px;width:0px;display:none;" vspace="0" width="0">
+ </iframe>
+ <iframe allowtransparency="true" frameborder="0" height="0" hspace="0" id="197fb11689dc872c" marginheight="0" marginwidth="0" sandbox="allow-scripts allow-same-origin" scrolling="no" src="https://ads.pubmatic.com/AdServer/js/showad.js#PIX&amp;kdntuid=1&amp;p=158326" style="height:0px;width:0px;display:none;" vspace="0" width="0">
+ </iframe>
+ <iframe allowtransparency="true" frameborder="0" height="0" hspace="0" id="198adac31fc3eb8e" marginheight="0" marginwidth="0" sandbox="allow-scripts allow-same-origin" scrolling="no" src="https://us-u.openx.net/w/1.0/pd?plm=6&amp;ph=36f43d7a-82bf-4fdf-8a09-9bd06a2b981b&amp;gdpr=0" style="height:0px;width:0px;display:none;" vspace="0" width="0">
+ </iframe>
+ <iframe allowtransparency="true" frameborder="0" height="0" hspace="0" id="1998ffe257dfd1ff" marginheight="0" marginwidth="0" sandbox="allow-scripts allow-same-origin" scrolling="no" src="https://eus.rubiconproject.com/usync.html" style="height:0px;width:0px;display:none;" vspace="0" width="0">
+ </iframe>
+ <iframe allowtransparency="true" frameborder="0" height="0" hspace="0" id="11b2d6026f7b1da" marginheight="0" marginwidth="0" sandbox="allow-scripts allow-same-origin" scrolling="no" src="https://sync.go.sonobi.com/uc.html?pubid=0e0a64d7d3" style="height:0px;width:0px;display:none;" vspace="0" width="0">
+ </iframe>
+</html>

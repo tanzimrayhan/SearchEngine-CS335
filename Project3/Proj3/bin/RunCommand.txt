@@ -1,0 +1,1 @@
+java SearchEngine -CorpusDir D:\CS_335\Tanzim\Java_Proj\HtmlFile -InvertedIndex InvertedIndex.txt -StopList StopList.txt -Queries QueryFIle.txt -Results ResultFile.txt -SnippetText Snippet.txt -FixedNum 25 -Enable

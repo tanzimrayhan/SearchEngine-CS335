@@ -1,0 +1,1371 @@
+<html class="js" lang="en-US">
+ <head>
+  <meta charset="utf-8"/>
+  <script src="https://bam.nr-data.net/1/06ce85f426?a=933345079&amp;v=1184.ab39b52&amp;to=ZFxWYRFYVkIFUxANWF0WYUcKFlFfAFUcSkdbSQ%3D%3D&amp;rst=655&amp;ck=1&amp;ref=https://www.nobelprize.org/prizes/peace/1964/king/biographical/&amp;ap=701&amp;be=275&amp;fe=635&amp;dc=535&amp;perf=%7B%22timing%22:%7B%22of%22:1602999181150,%22n%22:0,%22f%22:0,%22dn%22:2,%22dne%22:99,%22c%22:99,%22s%22:123,%22ce%22:147,%22rq%22:147,%22rp%22:257,%22rpe%22:258,%22dl%22:261,%22di%22:535,%22ds%22:535,%22de%22:553,%22dc%22:635,%22l%22:635,%22le%22:637%7D,%22navigation%22:%7B%7D%7D&amp;fp=503&amp;fcp=503&amp;at=SBtVF1lCRUw%3D&amp;jsonp=NREUM.setToken" type="text/javascript">
+  </script>
+  <script async="" src="https://static.hotjar.com/c/hotjar-1004842.js?sv=7" type="text/javascript">
+  </script>
+  <script async="" src="https://www.google-analytics.com/analytics.js" type="text/javascript">
+  </script>
+  <script src="https://js-agent.newrelic.com/nr-1184.min.js">
+  </script>
+  <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-WDHZ8W5">
+  </script>
+  <script type="text/javascript">
+   (window.NREUM||(NREUM={})).loader_config={licenseKey:"06ce85f426",applicationID:"933345079"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);
+  </script>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link href="http://gmpg.org/xfn/11" rel="profile"/>
+  <script>
+   (function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);
+  </script>
+  <title>
+   Martin Luther King Jr. - Biography - NobelPrize.org
+  </title>
+  <!-- This site is optimized with the Yoast SEO Premium plugin v11.9 - https://yoast.com/wordpress/plugins/seo/ -->
+  <meta content="en_US" property="og:locale"/>
+  <meta content="object" property="og:type"/>
+  <meta content="NobelPrize.org" property="og:site_name"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <script class="yoast-schema-graph yoast-schema-graph--main" type="application/ld+json">
+   {"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.nobelprize.org/#website","url":"https://www.nobelprize.org/","name":"NobelPrize.org","potentialAction":{"@type":"SearchAction","target":"https://www.nobelprize.org/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"#webpage","url":false,"inLanguage":"en-US","name":"Martin Luther King Jr. - Biography - NobelPrize.org","isPartOf":{"@id":"https://www.nobelprize.org/#website"}}]}
+  </script>
+  <!-- / Yoast SEO Premium plugin. -->
+  <link href="//www.nobelprize.org" rel="dns-prefetch"/>
+  <link href="https://www.nobelprize.org/wp-content/plugins/the-events-calendar/common/src/resources/css/common-skeleton.min.css?ver=4.12.6" id="tribe-common-skeleton-style-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="https://www.nobelprize.org/wp-content/plugins/the-events-calendar/common/src/resources/css/tooltip.min.css?ver=4.12.6" id="tribe-tooltip-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="https://www.nobelprize.org/wp-includes/css/dist/block-library/style.min.css?ver=5.4.2" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="https://www.nobelprize.org/wp-content/themes/nobelprize/dist/css/style.0.3.8.min.css?ver=0.3.8" id="nobel-css" media="all" rel="stylesheet" type="text/css"/>
+  <script src="https://www.nobelprize.org/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp" type="text/javascript">
+  </script>
+  <script src="https://www.nobelprize.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   /* <![CDATA[ */
+var fallback = {"path":"https:\/\/www.nobelprize.org\/wp-content\/themes\/nobelprize\/assets\/js\/frontend\/lib\/respimg\/ls.respimg.min.js"};
+/* ]]> */
+  </script>
+  <script src="https://www.nobelprize.org/wp-content/themes/nobelprize/assets/js/frontend/lib/loadjs.js?ver=0.3.8" type="text/javascript">
+  </script>
+  <meta content="v1" name="tec-api-version"/>
+  <meta content="https://www.nobelprize.org" name="tec-api-origin"/>
+  <link href="https://www.nobelprize.org/wp-json/tribe/events/v1/" rel="https://theeventscalendar.com/"/>
+  <link href="https://www.nobelprize.org/wp-content/themes/nobelprize/humans.txt" rel="author" type="text/plain"/>
+  <script>
+   window.VIDEOJS_NO_BASE_THEME = true;
+		window.VIDEOJS_NO_DYNAMIC_STYLE = true;
+  </script>
+  <!-- Google Tag Manager -->
+  <script>
+   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-WDHZ8W5');
+  </script>
+  <!-- End Google Tag Manager -->
+  <!-- Hotjar Tracking Code for https://www.nobelprize.org/ -->
+  <script>
+   (function(h,o,t,j,a,r){
+				h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+				h._hjSettings={hjid:1004842,hjsv:6};
+				a=o.getElementsByTagName('head')[0];
+				r=o.createElement('script');r.async=1;
+				r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+				a.appendChild(r);
+			})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+  <script async="" src="https://static.hotjar.com/c/hotjar-1004842.js?sv=6">
+  </script>
+  <!-- //start Title specific social meta tags -->
+  <meta content="The Nobel Peace Prize 1964" name="twitter:title"/>
+  <!-- Twitter -->
+  <meta content="The Nobel Peace Prize 1964" itemprop="name"/>
+  <!-- Google+ -->
+  <meta content="The Nobel Peace Prize 1964" property="og:title"/>
+  <!-- OG -->
+  <!-- //end Title specific social meta tags -->
+  <!-- //start Description specific social meta tags -->
+  <meta content="The Nobel Peace Prize 1964 was awarded to Martin Luther King Jr.." name="twitter:description"/>
+  <!-- Twitter -->
+  <meta content="The Nobel Peace Prize 1964 was awarded to Martin Luther King Jr.." itemprop="description"/>
+  <!-- Google+ -->
+  <meta content="The Nobel Peace Prize 1964 was awarded to Martin Luther King Jr.." property="og:description"/>
+  <!-- OG -->
+  <!-- //end Description specific social meta tags -->
+  <!-- //start Image specific social meta tags -->
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="https://www.nobelprize.org/images/king-13174-landscape-medium.jpg" name="twitter:image"/>
+  <!-- Twitter -->
+  <meta content="https://www.nobelprize.org/images/king-13174-landscape-medium.jpg" itemprop="image"/>
+  <!-- Google+ -->
+  <meta content="https://www.nobelprize.org/images/king-13174-landscape-medium.jpg" property="og:image"/>
+  <!-- OG -->
+  <!-- //end Image specific social meta tags -->
+  <meta content="https://www.nobelprize.org/prizes/peace/1964/king/biographical/" property="og:url"/>
+  <!-- OG -->
+  <link href="https://www.nobelprize.org/uploads/2018/08/Nobel-favicon-50x50.png" rel="icon" sizes="32x32"/>
+  <link href="https://www.nobelprize.org/uploads/2018/08/Nobel-favicon-232x232.png" rel="icon" sizes="192x192"/>
+  <link href="https://www.nobelprize.org/uploads/2018/08/Nobel-favicon-188x188.png" rel="apple-touch-icon"/>
+  <meta content="https://www.nobelprize.org/uploads/2018/08/Nobel-favicon.png" name="msapplication-TileImage"/>
+ </head>
+ <body class="tribe-js laureate-content-type laureate-content-type-biographical">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+   <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-WDHZ8W5" style="display:none;visibility:hidden" width="0">
+   </iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <!--[if lte IE 9]>
+			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+		<![endif]-->
+  <a class="skip-link screen-reader-text" href="#content">
+   Skip to content
+  </a>
+  <header class="site-header" itemscope="itemscope" itemtype="http://schema.org/WPHeader" role="banner">
+   <div class="cookie-consent" id="cookie-consent">
+    <div class="cookie-consent-wrapper">
+     <p class="cookie-consent-content">
+      This website uses cookies to improve the user experience. By using this website you consent to all cookies in accordance with our
+      <a href="/about/privacy-policy/">
+       cookie policy
+      </a>
+      .
+     </p>
+     <button class="cookie-consent-agree" id="cookie-consent-agree" role="button">
+      I understand
+     </button>
+    </div>
+   </div>
+   <div class="site-banner" itemscope="" itemtype="http://schema.org/Organization">
+    <div class="mobile-search">
+     <a href="#" id="search-mobile-trigger-js">
+      <svg aria-labelledby="search-mobile-title search-mobile-description" height="20px" role="img" version="1.1" viewbox="0 0 20 20" width="20px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+       <title id="search-mobile-title">
+        Close the search form
+       </title>
+       <desc id="search-mobile-description">
+        A button that allows you to close the search form if needed
+       </desc>
+       <g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+        <g transform="translate(-1132.000000, -18.000000)">
+         <g id="mobile-search-icon" transform="translate(1132.000000, 18.000000)">
+          <rect fill="#2A2A2A" height="8" transform="translate(16.000000, 16.000000) rotate(-45.000000) translate(-16.000000, -16.000000) " width="2" x="15" y="12">
+          </rect>
+          <circle cx="8" cy="8" r="7" stroke="#2A2A2A" stroke-width="2">
+          </circle>
+         </g>
+        </g>
+       </g>
+      </svg>
+     </a>
+     <!-- Note: Exists only to close the mobile navigation when JS is disabled -->
+     <noscript>
+      <a class="toggle-close" href="#" id="mobile-close-js">
+       <span>
+        Close Mobile Menu
+       </span>
+      </a>
+     </noscript>
+    </div>
+    <div class="site-banner-logo" itemscope="" itemtype="http://schema.org/Organization">
+     <h1 class="site-logo" itemprop="logo">
+      <a href="https://www.nobelprize.org" itemprop="url" name="top">
+       <svg aria-labelledby="logo-title logo-description" height="86px" role="img" version="1.1" viewbox="0 0 109 86" width="109px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <title id="logo-title">
+         The Nobel Prize
+        </title>
+        <desc id="logo-description">
+         The Nobel Prize Logo
+        </desc>
+        <g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+         <g fill="#BB8A35" transform="translate(-586.000000, -21.000000)">
+          <g id="The_Nobel_Prize_logotype" transform="translate(586.000000, 21.000000)">
+           <path d="M16.6528099,62.0089676 L8.30051408,62.0089676 L8.30051408,85.946038 L11.4498099,85.946038 L11.4498099,74.5243901 L16.6528099,74.5243901 C20.8286549,74.5243901 23.7381197,72.0285732 23.7381197,68.2669817 C23.7381197,64.5053901 20.8286549,62.0089676 16.6528099,62.0089676 Z M16.6528099,71.6524746 L11.4498099,71.6524746 L11.4498099,64.8814887 L16.6528099,64.8814887 C19.0141761,64.8814887 20.5549085,66.0788268 20.5549085,68.2669817 C20.5549085,70.4551366 19.0141761,71.6524746 16.6528099,71.6524746 Z M42.3589366,85.946038 L46.1586831,85.946038 L37.4302887,74.4904746 C41.1270775,74.1482915 43.6253169,71.7548268 43.6253169,68.2669817 C43.6253169,64.5053901 40.7158521,62.0089676 36.540007,62.0089676 L28.1883169,62.0089676 L28.1883169,85.946038 L31.3376127,85.946038 L31.3376127,74.5243901 L33.7674155,74.5243901 L42.3589366,85.946038 Z M31.3376127,64.8814887 L36.540007,64.8814887 C38.9019789,64.8814887 40.4421056,66.0788268 40.4421056,68.2669817 C40.4421056,70.4551366 38.9019789,71.6524746 36.540007,71.6524746 L31.3376127,71.6524746 L31.3376127,64.8814887 Z M50.539838,85.946038 L53.6891338,85.946038 L53.6891338,62.0089676 L50.539838,62.0089676 L50.539838,85.946038 Z M58.6177817,85.946038 L76.930331,85.946038 L76.930331,83.0735169 L62.5883169,83.0735169 L76.5542324,64.3339958 L76.5542324,62.0089676 L59.9532042,62.0089676 L59.9532042,64.8814887 L72.4807394,64.8814887 L58.6177817,83.4496155 L58.6177817,85.946038 Z M85.0082746,83.0735169 L85.0082746,74.5243901 L95.1066127,74.5243901 L95.1066127,71.6524746 L85.0082746,71.6524746 L85.0082746,64.8814887 L95.8594155,64.8814887 L95.8594155,62.0089676 L81.8595845,62.0089676 L81.8595845,85.946038 L96.0302042,85.946038 L96.0302042,83.0735169 L85.0082746,83.0735169 Z" id="Prize">
+           </path>
+           <path d="M16.4987366,31.0045141 L16.4987366,49.059669 L2.46438451,31.0045141 L6.05633803e-05,31.0045141 L6.05633803e-05,54.9415845 L3.08091972,54.9415845 L3.08091972,36.4073732 L17.3884127,54.9415845 L19.5795958,54.9415845 L19.5795958,31.0045141 L16.4987366,31.0045141 Z M36.5567225,55.4545563 C43.4367225,55.4545563 49.0848634,49.8809085 49.0848634,42.9730493 C49.0848634,36.0651901 43.4367225,30.4915423 36.5567225,30.4915423 C29.6767225,30.4915423 24.0291873,36.0651901 24.0291873,42.9730493 C24.0291873,49.8809085 29.6767225,55.4545563 36.5567225,55.4545563 Z M36.5567225,52.445162 C31.4566803,52.445162 27.2463141,48.2051197 27.2463141,42.9730493 C27.2463141,37.7409789 31.4566803,33.5009366 36.5567225,33.5009366 C41.6573704,33.5009366 45.867131,37.7409789 45.867131,42.9730493 C45.867131,48.2051197 41.6573704,52.445162 36.5567225,52.445162 Z M65.069962,41.8447535 C67.0891451,40.8872465 68.2870887,39.0745845 68.2870887,36.7495563 C68.2870887,33.192669 65.5490183,31.0045141 61.1333423,31.0045141 L53.5344549,31.0045141 L53.5344549,54.9415845 L61.8861451,54.9415845 C66.3363423,54.9415845 69.3826803,52.0351479 69.3826803,47.7951056 C69.3826803,44.9219789 67.7056803,42.8016549 65.069962,41.8447535 Z M61.0649056,33.8085986 C63.3923563,33.8085986 65.1383986,34.8684577 65.1383986,37.0911338 C65.1383986,39.3138099 63.2900042,40.6819366 61.0649056,40.6819366 L56.6837507,40.6819366 L56.6837507,33.8085986 L61.0649056,33.8085986 Z M61.7153563,52.1381056 L56.6837507,52.1381056 L56.6837507,43.4860211 L61.7153563,43.4860211 C64.1457648,43.4860211 66.2333845,45.1272887 66.2333845,47.8290211 C66.2333845,50.5301479 64.1457648,52.1381056 61.7153563,52.1381056 Z M77.4945394,52.0690634 L77.4945394,43.5199366 L87.5922718,43.5199366 L87.5922718,40.6474155 L77.4945394,40.6474155 L77.4945394,33.8770352 L88.3456803,33.8770352 L88.3456803,31.0045141 L74.3458493,31.0045141 L74.3458493,54.9415845 L88.516469,54.9415845 L88.516469,52.0690634 L77.4945394,52.0690634 Z M97.4846944,52.0690634 L97.4846944,31.0045141 L94.3353986,31.0045141 L94.3353986,54.9415845 L108.335835,54.9415845 L108.335835,52.0690634 L97.4846944,52.0690634 Z" id="Nobel">
+           </path>
+           <path d="M66.8837141,0.000121126761 L66.8837141,23.9371915 L81.0549394,23.9371915 L81.0549394,21.0646704 L70.0330099,21.0646704 L70.0330099,12.5161493 L80.1307423,12.5161493 L80.1307423,9.64302254 L70.0330099,9.64302254 L70.0330099,2.87264225 L80.8841507,2.87264225 L80.8841507,0.000121126761 L66.8837141,0.000121126761 Z M58.2582775,0.000121126761 L58.2582775,9.64302254 L45.0457704,9.64302254 L45.0457704,0.000121126761 L41.8964746,0.000121126761 L41.8964746,23.9371915 L45.0457704,23.9371915 L45.0457704,12.5161493 L58.2582775,12.5161493 L58.2582775,23.9371915 L61.4075732,23.9371915 L61.4075732,0.000121126761 L58.2582775,0.000121126761 Z M21.2219535,0.000121126761 L21.2219535,2.87264225 L27.9311648,2.87264225 L27.9311648,23.9371915 L31.0804606,23.9371915 L31.0804606,2.87264225 L37.7890662,2.87264225 L37.7890662,0.000121126761 L21.2219535,0.000121126761 Z" id="The">
+           </path>
+          </g>
+         </g>
+        </g>
+       </svg>
+      </a>
+     </h1>
+    </div>
+    <div class="mobile-nav">
+     <a class="toggle" href="#main-navigation-js" id="mobile-nav-js">
+      <span>
+       Toggle Mobile Menu
+      </span>
+     </a>
+    </div>
+   </div>
+   <nav aria-expanded="false" aria-label="Main menu" class="site-main-navigation container" id="main-navigation-js" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+    <ul class="main-menu" id="menu-header_top" role="menu">
+     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-28259 active" id="menu-item-28259" role="menuitem">
+      <a href="/prizes/">
+       Nobel Prizes &amp; Laureates
+      </a>
+      <ul aria-hidden="true" class="sub-menu" role="menu">
+       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48853" id="menu-item-48853" role="menuitem">
+        <a href="/prizes/physics/">
+         Physics Prize
+        </a>
+       </li>
+       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48854" id="menu-item-48854" role="menuitem">
+        <a href="/prizes/chemistry/">
+         Chemistry Prize
+        </a>
+       </li>
+       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48855" id="menu-item-48855" role="menuitem">
+        <a href="/prizes/medicine/">
+         Medicine Prize
+        </a>
+       </li>
+       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48856" id="menu-item-48856" role="menuitem">
+        <a href="/prizes/literature/">
+         Literature Prize
+        </a>
+       </li>
+       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48857" id="menu-item-48857" role="menuitem">
+        <a href="/prizes/peace/">
+         Peace Prize
+        </a>
+       </li>
+       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48858" id="menu-item-48858" role="menuitem">
+        <a href="/prizes/economics/">
+         Prize in Economic Sciences
+        </a>
+       </li>
+       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-54140" id="menu-item-54140" role="menuitem">
+        <a href="https://www.nobelprize.org/prizes/facts/nobel-prize-facts/">
+         Quick facts
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-28260 active" id="menu-item-28260" role="menuitem">
+      <a href="/nomination/">
+       Nomination
+      </a>
+      <ul aria-hidden="true" class="sub-menu" role="menu">
+       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43405" id="menu-item-43405" role="menuitem">
+        <a href="https://www.nobelprize.org/nomination/nomination-and-selection-of-physics-laureates/">
+         Physics Prize
+        </a>
+       </li>
+       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43408" id="menu-item-43408" role="menuitem">
+        <a href="https://www.nobelprize.org/nomination/nomination-and-selection-of-chemistry-laureates/">
+         Chemistry Prize
+        </a>
+       </li>
+       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43407" id="menu-item-43407" role="menuitem">
+        <a href="https://www.nobelprize.org/nomination/nomination-and-selection-of-medicine-laureates/">
+         Medicine Prize
+        </a>
+       </li>
+       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43409" id="menu-item-43409" role="menuitem">
+        <a href="https://www.nobelprize.org/nomination/nomination-and-selection-of-literature-laureates/">
+         Literature Prize
+        </a>
+       </li>
+       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43406" id="menu-item-43406" role="menuitem">
+        <a href="https://www.nobelprize.org/nomination/nomination-and-selection-of-peace-prize-laureates/">
+         Peace Prize
+        </a>
+       </li>
+       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43410" id="menu-item-43410" role="menuitem">
+        <a href="https://www.nobelprize.org/nomination/nomination-and-selection-of-laureates-in-economic-sciences/">
+         Prize in Economic Sciences
+        </a>
+       </li>
+       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-49690" id="menu-item-49690" role="menuitem">
+        <a href="https://www.nobelprize.org/nomination/archive/">
+         Nomination Archive
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-28261 active" id="menu-item-28261" role="menuitem">
+      <a href="/alfred-nobel/">
+       Alfred Nobel
+      </a>
+      <ul aria-hidden="true" class="sub-menu" role="menu">
+       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43411" id="menu-item-43411" role="menuitem">
+        <a href="https://www.nobelprize.org/alfred-nobel/biographical-information/">
+         Alfred Nobel’s life
+        </a>
+       </li>
+       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43412" id="menu-item-43412" role="menuitem">
+        <a href="https://www.nobelprize.org/alfred-nobel/alfred-nobels-will/">
+         Alfred Nobel’s will
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-28262 active" id="menu-item-28262" role="menuitem">
+      <a href="/news-and-insights/">
+       News &amp; insights
+      </a>
+      <ul aria-hidden="true" class="sub-menu" role="menu">
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61852" id="menu-item-61852" role="menuitem">
+        <a href="https://www.nobelprize.org/press-room/">
+         Press
+        </a>
+       </li>
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61851" id="menu-item-61851" role="menuitem">
+        <a href="https://www.nobelprize.org/in-depth/">
+         In-depth
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-28263 active" id="menu-item-28263" role="menuitem">
+      <a href="/events/">
+       Events
+      </a>
+      <ul aria-hidden="true" class="sub-menu" role="menu">
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-43676" id="menu-item-43676" role="menuitem">
+        <a href="https://www.nobelprize.org/public-events/">
+         Public events
+        </a>
+        <ul aria-hidden="true" class="sub-menu" role="menu">
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50085" id="menu-item-50085" role="menuitem">
+          <a href="https://www.nobelprize.org/nobel-week-dialogue/">
+           Nobel Week Dialogue
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50086" id="menu-item-50086" role="menuitem">
+          <a href="https://www.nobelprize.org/nobel-prize-dialogue/">
+           Nobel Prize Dialogue
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50087" id="menu-item-50087" role="menuitem">
+          <a href="https://www.nobelprize.org/events/nobel-prize-summit/washington-2020/">
+           Nobel Prize Summit
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50088" id="menu-item-50088" role="menuitem">
+          <a href="https://www.nobelprize.org/nobel-prize-inspiration-initiative/">
+           Nobel Prize Inspiration Initiative
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43675" id="menu-item-43675" role="menuitem">
+        <a href="https://www.nobelprize.org/nobel-prize-award-ceremonies/">
+         Nobel Prize award ceremonies
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-28264 active" id="menu-item-28264" role="menuitem">
+      <a href="/education-network/">
+       Education network
+      </a>
+      <ul aria-hidden="true" class="sub-menu" role="menu">
+       <li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-39722" id="menu-item-39722" role="menuitem">
+        <a href="https://www.nobelprize.org/education-network-nobel-prize-lessons/">
+         Nobel Prize Lessons
+        </a>
+       </li>
+       <li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-39718" id="menu-item-39718" role="menuitem">
+        <a href="https://www.nobelprize.org/education-network-nobel-prize-teacher-summit/">
+         Nobel Prize Teacher Summit
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="searchform" role="menuitem">
+      <a href="javascript:void(0);" id="search-trigger-js">
+       <svg aria-labelledby="desktop-search-title desktop-search-description" height="20px" role="img" version="1.1" viewbox="0 0 20 20" width="20px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <title id="desktop-search-title">
+         Close the search form
+        </title>
+        <desc id="desktop-search-description">
+         A button that allows you to close the search form if needed
+        </desc>
+        <g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+         <g transform="translate(-1132.000000, -18.000000)">
+          <g transform="translate(1132.000000, 18.000000)">
+           <rect fill="#2A2A2A" height="8" transform="translate(16.000000, 16.000000) rotate(-45.000000) translate(-16.000000, -16.000000) " width="2" x="15" y="12">
+           </rect>
+           <circle cx="8" cy="8" r="7" stroke="#2A2A2A" stroke-width="2">
+           </circle>
+          </g>
+         </g>
+        </g>
+       </svg>
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div aria-hidden="true" class="header-search-form">
+    <div class="container">
+     <form action="/search/" class="searchform -header" method="GET">
+      <label class="screen-reader-text" for="search-form-input-header">
+       Header Search
+      </label>
+      <input class="input" id="search-form-input-header" name="s" placeholder="Enter your search here" type="text" value=""/>
+      <button type="submit">
+       <svg aria-labelledby="submit-search-title-header submit-search-description-header" height="20px" role="img" version="1.1" viewbox="0 0 20 20" width="20px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <title id="submit-search-title-header">
+         Submit a search term
+        </title>
+        <desc id="submit-search-description-header">
+         Allows users to submit a search term
+        </desc>
+        <g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+         <g transform="translate(-1132.000000, -18.000000)">
+          <g transform="translate(1132.000000, 18.000000)">
+           <rect fill="#2A2A2A" height="8" transform="translate(16.000000, 16.000000) rotate(-45.000000) translate(-16.000000, -16.000000) " width="2" x="15" y="12">
+           </rect>
+           <circle cx="8" cy="8" r="7" stroke="#2A2A2A" stroke-width="2">
+           </circle>
+          </g>
+         </g>
+        </g>
+       </svg>
+      </button>
+     </form>
+    </div>
+   </div>
+  </header>
+  <div class="sticky-navigation">
+   <section aria-haspopup="true" class="sub-navigation prizes-nav-collection">
+    <div class="container">
+     <ul class="prizes-nav-top-tier">
+      <li class="prizes-nav-category">
+       <button class="button" id="dropdown-laureate-js">
+        <span class="prizes-nav-menu-title">
+         <span id="dropdown-js-laureate-more">
+          Peace
+         </span>
+         <svg aria-hidden="true" fill="none" focusable="false" height="26" role="img" width="26" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="13" cy="13" fill="#CEA252" r="13">
+          </circle>
+          <path d="M8.41 10L13 14.58 17.59 10 19 11.41l-6 6-6-6L8.41 10z" fill="#fff">
+          </path>
+         </svg>
+        </span>
+       </button>
+      </li>
+      <li>
+       <span class="category-title">
+        <a href="https://www.nobelprize.org/prizes/peace/1964/summary/">
+         The Nobel Peace Prize 1964
+        </a>
+       </span>
+      </li>
+      <li>
+       <button class="button" id="dropdown-js">
+        <span class="prizes-nav-menu-title">
+         <span class="prizes-nav-menu-title-laureate" id="dropdown-js-laureate">
+          Martin Luther King Jr. -
+         </span>
+         <span class="dropdown-js-explore">
+          Explore
+         </span>
+         <span class="dropdown-js-more" id="dropdown-js-more">
+          Biographical
+         </span>
+         <svg aria-hidden="true" fill="none" focusable="false" height="26" role="img" width="26" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="13" cy="13" fill="#CEA252" r="13">
+          </circle>
+          <path d="M8.41 10L13 14.58 17.59 10 19 11.41l-6 6-6-6L8.41 10z" fill="#fff">
+          </path>
+         </svg>
+        </span>
+       </button>
+      </li>
+     </ul>
+     <section aria-hidden="true" class="prizes-nav-subjects prizes-nav-bottom-tier sub-navigation-dropdown" id="dropdown-menu-laureate-js">
+      <nav class="sub-navigation-wrapper">
+       <ul class="main-menu" id="menu-prizes_laureates">
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-160821" id="menu-item-160821">
+         <a href="/prizes/lists/all-nobel-prizes-in-physics/">
+          Physics Prizes
+         </a>
+        </li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-160822" id="menu-item-160822">
+         <a href="/prizes/lists/all-nobel-prizes-in-chemistry/">
+          Chemistry Prizes
+         </a>
+        </li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-160823" id="menu-item-160823">
+         <a href="/prizes/lists/all-nobel-laureates-in-physiology-or-medicine/">
+          Medicine Prizes
+         </a>
+        </li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-160824" id="menu-item-160824">
+         <a href="/prizes/lists/all-nobel-prizes-in-literature/">
+          Literature Prizes
+         </a>
+        </li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-160825" id="menu-item-160825">
+         <a href="/prizes/lists/all-nobel-peace-prizes/">
+          Peace Prizes
+         </a>
+        </li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-160826" id="menu-item-160826">
+         <a href="/prizes/lists/all-prizes-in-economic-sciences/">
+          Prizes in Economic Sciences
+         </a>
+        </li>
+       </ul>
+      </nav>
+     </section>
+     <section aria-hidden="true" class="prizes-nav-summary prizes-nav-bottom-tier sub-navigation-dropdown" id="dropdown-menu-js">
+      <nav class="prizes-nav-summary-nav">
+       <div class="prizes-nav-summary-nav-menus">
+        <ul class="prizes-nav-summary-nav-menu">
+         <li>
+          <a href="https://www.nobelprize.org/prizes/peace/1964/king/facts/" title="Martin Luther King Jr. - Facts">
+           Facts
+          </a>
+         </li>
+         <li>
+          <a href="https://www.nobelprize.org/prizes/peace/1964/king/biographical/" title="Martin Luther King Jr. - Biographical">
+           Biographical
+          </a>
+         </li>
+         <li>
+          <a href="https://www.nobelprize.org/prizes/peace/1964/king/lecture/" title="Martin Luther King Jr. - Nobel Lecture">
+           Nobel Lecture
+          </a>
+         </li>
+         <li>
+          <a href="https://www.nobelprize.org/prizes/peace/1964/king/acceptance-speech/" title="Martin Luther King Jr. - Acceptance Speech">
+           Acceptance Speech
+          </a>
+         </li>
+         <li>
+          <a href="https://www.nobelprize.org/prizes/peace/1964/king/prize-presentation/" title="Martin Luther King Jr. - Prize presentation">
+           Prize presentation
+          </a>
+         </li>
+         <li>
+          <a href="https://www.nobelprize.org/prizes/peace/1964/king/nominations/" title="Martin Luther King Jr. - Nominations">
+           Nominations
+          </a>
+         </li>
+         <li>
+          <a href="https://www.nobelprize.org/prizes/peace/1964/king/documentary/" title="Martin Luther King Jr. - Documentary">
+           Documentary
+          </a>
+         </li>
+         <li>
+          <a href="https://www.nobelprize.org/prizes/peace/1964/king/questions-and-answers/" title="Martin Luther King Jr. - Questions and Answers">
+           Questions and Answers
+          </a>
+         </li>
+         <li>
+          <a href="https://www.nobelprize.org/prizes/peace/1964/king/photo-gallery/" title="Martin Luther King Jr. - Photo gallery">
+           Photo gallery
+          </a>
+         </li>
+         <li>
+          <a href="https://www.nobelprize.org/prizes/peace/1964/king/other-resources/" title="Martin Luther King Jr. - Other resources">
+           Other resources
+          </a>
+         </li>
+        </ul>
+       </div>
+       <!-- Laureate specific menu -->
+       <ul class="prizes-nav-summary-nav-menu prizes-nav-summary-laureates">
+        <li class="prizes-nav-summary-laureates-title">
+         Laureates
+        </li>
+        <li>
+         <a href="https://www.nobelprize.org/prizes/peace/1964/king/facts/">
+          Martin Luther King Jr.
+         </a>
+        </li>
+       </ul>
+      </nav>
+     </section>
+    </div>
+   </section>
+  </div>
+  <main class="nobel-content" id="content" role="main">
+   <noscript id="noscript-list">
+    <h3>
+     Enhanced Page Navigation
+    </h3>
+    <ol>
+     <li>
+      <a data-related="0" href="https://www.nobelprize.org/prizes/peace/1964/king/biographical/" title="Martin Luther King Jr. - Biography">
+       Martin Luther King Jr. - Biography
+      </a>
+     </li>
+     <li>
+      <a data-related="0" href="https://www.nobelprize.org/prizes/peace/1964/king/facts/" title="Martin Luther King Jr. - Facts">
+       Martin Luther King Jr. - Facts
+      </a>
+     </li>
+     <li>
+      <a data-related="1" href="https://www.nobelprize.org/prizes/peace/1964/king/lecture/" title="Martin Luther King Jr. - Nobel Lecture: The quest for peace and justice">
+       Martin Luther King Jr. - Nobel Lecture: The quest for peace and justice
+      </a>
+     </li>
+    </ol>
+   </noscript>
+   <div class="container page-content-area" id="pjax-well">
+    <div class="pjax-container">
+     <section class="page-section biographical">
+      <aside class="page-aside border-top">
+       <header class="header">
+        <h5 class="heading">
+         <a href="https://www.nobelprize.org/prizes/peace/1964/summary/">
+          The Nobel Peace Prize 1964
+         </a>
+        </h5>
+       </header>
+       <ul class="list-laureates">
+        <li class="list-laureate" itemscope="" itemtype="http://schema.org/Person">
+         <a class="" href="https://www.nobelprize.org/prizes/peace/1964/king/facts/" itemprop="url" title="Martin Luther King Jr.">
+          <span itemprop="name">
+           Martin Luther King Jr.
+          </span>
+         </a>
+        </li>
+       </ul>
+       <footer class="footer">
+        <div class="share-this">
+         <h6 class="heading">
+          Share this
+         </h6>
+         <ul class="socialicons">
+          <li class="socialicon" data-social="facebook">
+           <a data-target="https://www.nobelprize.org/prizes/peace/1964/king/biographical/" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.nobelprize.org%2Fprizes%2Fpeace%2F1964%2Fking%2Fbiographical%2F&amp;t=Martin+Luther+King+Jr.+%E2%80%93+Biography" target="_blank">
+            <svg aria-labelledby="aside-facebook-title  aside-facebook-desc" height="32px" role="image" version="1.1" viewbox="0 0 32 32" width="32px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+             <title id="aside-facebook-title">
+              Share on Facebook: Martin Luther King Jr. – Biography
+             </title>
+             <desc id="aside-facebook-desc">
+              Share this content on Facebook
+             </desc>
+             <g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+              <g transform="translate(0.000000, -28.000000)">
+               <g transform="translate(0.000000, 28.000000)">
+                <circle cx="16" cy="16" r="15.5" stroke="#DBD9D6" stroke-width="1">
+                </circle>
+                <path d="M22.2273337,9 L9.7726663,9 C9.34589013,9 9,9.34588883 9,9.77266341 L9,22.2272841 C9,22.6540063 9.34589013,23 9.7726663,23 L16.4778676,23 L16.4778676,17.5784522 L14.653368,17.5784522 L14.653368,15.4655614 L16.4778676,15.4655614 L16.4778676,13.9073831 C16.4778676,12.0991514 17.5822611,11.1145169 19.195366,11.1145169 C19.9680847,11.1145169 20.6321686,11.1720077 20.8256761,11.1977107 L20.8256761,13.0874576 L19.7069099,13.0879822 C18.8296477,13.0879822 18.6597451,13.5048427 18.6597451,14.1165739 L18.6597451,15.4655614 L20.7520289,15.4655614 L20.4796286,17.5784522 L18.6597451,17.5784522 L18.6597451,23 L22.2273337,23 C22.6540574,23 23,22.6540063 23,22.2272841 L23,9.77266341 C23,9.34588883 22.6540574,9 22.2273337,9" fill="#4266B2" fill-rule="evenodd">
+                </path>
+               </g>
+              </g>
+             </g>
+            </svg>
+            <span class="screen-reader-text">
+             Facebook
+            </span>
+           </a>
+          </li>
+          <li class="socialicon" data-social="twitter">
+           <a data-target="https://www.nobelprize.org/prizes/peace/1964/king/biographical/" href="https://twitter.com/intent/tweet?text=Martin+Luther+King+Jr.+%E2%80%93+Biography&amp;url=https%3A%2F%2Fwww.nobelprize.org%2Fprizes%2Fpeace%2F1964%2Fking%2Fbiographical%2F" target="_blank">
+            <svg aria-labelledby="aside-twitter-title  aside-twitter-desc" height="32px" role="image" version="1.1" viewbox="0 0 32 32" width="32px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+             <title id="aside-twitter-title">
+              Tweet: Martin Luther King Jr. – Biography
+             </title>
+             <desc id="aside-twitter-desc">
+              Share this content on Twitter
+             </desc>
+             <g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+              <g transform="translate(-40.000000, -28.000000)">
+               <g transform="translate(40.000000, 28.000000)">
+                <circle cx="16" cy="16" r="15.5" stroke="#DBD9D6" stroke-width="1">
+                </circle>
+                <path d="M16.451625,13.4399657 L16.5181573,13.9860583 L15.9858984,13.9177967 C13.9899274,13.6447504 12.2600859,12.7573499 10.7963739,11.2555951 L10.0645179,10.5047177 L9.86492076,11.0508104 C9.46572656,12.2795188 9.73185602,13.5764888 10.5302444,14.4638894 C10.995971,14.9417204 10.8629062,15.009982 10.0645179,14.7369357 C9.79838839,14.6686741 9.59879129,14.6004125 9.53225893,14.6004125 C9.46572656,14.6686741 9.73185602,15.7608594 9.93145312,16.1021673 C10.1975826,16.7165215 10.7963739,17.2626142 11.3951652,17.6039221 L11.9274241,17.8769684 L11.3951652,17.8769684 C10.7963739,17.8769684 10.7963739,17.8769684 10.7963739,18.1500147 C11.0625033,18.9008921 11.8608917,19.6517695 12.7923449,20.061339 L13.4576685,20.3343853 L12.8588772,20.6756932 C11.9939565,21.2217858 10.995971,21.4948322 9.93145312,21.4948322 C9.46572656,21.4948322 9,21.5630937 9,21.5630937 C9,21.6313553 10.3306473,22.3139711 11.1290357,22.5870174 C13.4576685,23.3378948 16.1854955,23.0648485 18.2479988,21.7678785 C19.7117109,20.8804779 21.1754229,19.0374153 21.8407466,17.2626142 C22.2399408,16.306952 22.5726026,14.6686741 22.5726026,13.7812736 C22.5726026,13.2351809 22.639135,13.1669194 23.1713939,12.5525651 C23.5040558,12.2112572 23.8367176,11.7334262 23.9697823,11.6651646 C24.0363147,11.4603798 24.0363147,11.4603798 23.5040558,11.6651646 C22.5726026,12.0064725 22.4395379,11.9382109 22.9052645,11.4603798 C23.2379263,11.1190719 23.6371205,10.4364561 23.6371205,10.2316714 C23.6371205,10.1634098 23.5040558,10.2316714 23.3044587,10.3681946 C23.1048616,10.4364561 22.7056674,10.6412409 22.3730055,10.777764 L21.7742142,10.9825488 L21.37502,10.5729793 C21.1088906,10.3681946 20.643164,10.0951482 20.4435669,10.0951482 C19.8447756,9.95862508 19.0463872,9.95862508 18.5141283,10.1634098 C17.183481,10.5729793 16.3185602,11.9382109 16.451625,13.4399657 Z" fill="#1DA1F2" fill-rule="nonzero">
+                </path>
+               </g>
+              </g>
+             </g>
+            </svg>
+            <span class="screen-reader-text">
+             Twitter
+            </span>
+           </a>
+          </li>
+          <li class="socialicon" data-social="email">
+           <a data-target="https://www.nobelprize.org/prizes/peace/1964/king/biographical/" href="mailto:?subject=From+NobelPrize.org%3A+Martin+Luther+King+Jr.+%E2%80%93+Biography&amp;body=https%3A%2F%2Fwww.nobelprize.org%2Fprizes%2Fpeace%2F1964%2Fking%2Fbiographical%2F" target="_blank">
+            <svg aria-labelledby="aside-email-title  aside-email-desc" height="32px" role="image" version="1.1" viewbox="0 0 32 32" width="32px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+             <title id="aside-email-title">
+              Share via Email: Martin Luther King Jr. – Biography
+             </title>
+             <desc id="aside-email-desc">
+              Share this content via Email
+             </desc>
+             <g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+              <g transform="translate(-80.000000, -28.000000)">
+               <g transform="translate(80.000000, 28.000000)">
+                <circle cx="16" cy="16" r="15.5" stroke="#DBD9D6" stroke-width="1">
+                </circle>
+                <polygon fill="#DBD9D6" fill-rule="nonzero" points="22.1500528 11 9.85087585 11 16 17">
+                </polygon>
+                <polygon fill="#DBD9D6" fill-rule="nonzero" points="16 19 8 11 8 21 24 21 24 11">
+                </polygon>
+               </g>
+              </g>
+             </g>
+            </svg>
+            <span class="screen-reader-text">
+             Email this page
+            </span>
+           </a>
+          </li>
+         </ul>
+        </div>
+       </footer>
+      </aside>
+      <article class="-withdropcap page-content border-top entry-content">
+       <header class="section-header">
+        <h1>
+         Martin Luther King Jr.
+        </h1>
+        <h2>
+         Biographical
+        </h2>
+       </header>
+       <p>
+        <img alt="Martin Luther King" class="bio-img wp-image-13247 alignleft" data-imported-from-qbank="true" height="227" src="https://www.nobelprize.org/images/king-13174-content-portrait-mobile-tiny.jpg" width="162"/>
+        <span class="dropcap -serif">
+         M
+        </span>
+        artin Luther King, Jr., (January 15, 1929-April 4, 1968) was born Michael Luther King, Jr., but later had his name changed to Martin. His grandfather began the family’s long tenure as pastors of the Ebenezer Baptist Church in Atlanta, serving from 1914 to 1931; his father has served from then until the present, and from 1960 until his death Martin Luther acted as co-pastor. Martin Luther attended segregated public schools in Georgia, graduating from high school at the age of fifteen; he received the B. A. degree in 1948 from Morehouse College, a distinguished Negro institution of Atlanta from which both his father and grandfather had graduated. After three years of theological study at Crozer Theological Seminary in Pennsylvania where he was elected president of a predominantly white senior class, he was awarded the B.D. in 1951. With a fellowship won at Crozer, he enrolled in graduate studies at Boston University, completing his residence for the doctorate in 1953 and receiving the degree in 1955. In Boston he met and married Coretta Scott, a young woman of uncommon intellectual and artistic attainments. Two sons and two daughters were born into the family.
+       </p>
+       <p>
+        In 1954, Martin Luther King became pastor of the Dexter Avenue Baptist Church in Montgomery, Alabama. Always a strong worker for civil rights for members of his race, King was, by this time, a member of the executive committee of the National Association for the Advancement of Colored People, the leading organization of its kind in the nation. He was ready, then, early in December, 1955, to accept the leadership of the first great Negro nonviolent demonstration of contemporary times in the United States, the bus boycott described by Gunnar Jahn in his presentation speech in honor of the laureate. The boycott lasted 382 days. On December 21, 1956, after the Supreme Court of the United States had declared unconstitutional the laws requiring segregation on buses, Negroes and whites rode the buses as equals. During these days of boycott, King was arrested, his home was bombed, he was subjected to personal abuse, but at the same time he emerged as a Negro leader of the first rank.
+       </p>
+       <p>
+        In 1957 he was elected president of the Southern Christian Leadership Conference, an organization formed to provide new leadership for the now burgeoning civil rights movement. The ideals for this organization he took from Christianity; its operational techniques from Gandhi. In the eleven-year period between 1957 and 1968, King traveled over six million miles and spoke over twenty-five hundred times, appearing wherever there was injustice, protest, and action; and meanwhile he wrote five books as well as numerous articles. In these years, he led a massive protest in Birmingham, Alabama, that caught the attention of the entire world, providing what he called a coalition of conscience. and inspiring his “Letter from a Birmingham Jail”, a manifesto of the Negro revolution; he planned the drives in Alabama for the registration of Negroes as voters; he directed the peaceful march on Washington, D.C., of 250,000 people to whom he delivered his address, “l Have a Dream”, he conferred with President John F. Kennedy and campaigned for President Lyndon B. Johnson; he was arrested upwards of twenty times and assaulted at least four times; he was awarded five honorary degrees; was named Man of the Year by
+        <i>
+         Time
+        </i>
+        magazine in 1963; and became not only the symbolic leader of American blacks but also a world figure.
+       </p>
+       <p>
+        At the age of thirty-five, Martin Luther King, Jr., was the youngest man to have received the Nobel Peace Prize. When notified of his selection, he announced that he would turn over the prize money of $54,123 to the furtherance of the civil rights movement.
+       </p>
+       <p>
+        On the evening of April 4, 1968, while standing on the balcony of his motel room in Memphis, Tennessee, where he was to lead a protest march in sympathy with striking garbage workers of that city, he was assassinated.
+       </p>
+       <p>
+        <b>
+         Selected bibliography
+        </b>
+       </p>
+       <p>
+        Adams, Russell,
+        <i>
+         Great Negroes Past and Present
+        </i>
+        , pp. 106-107. Chicago, Afro-Am Publishing Co., 1963.
+       </p>
+       <p>
+        Bennett, Lerone, Jr.,
+        <i>
+         What Manner of Man: A Biography of Martin Luther King, Jr.
+        </i>
+        Chicago, Johnson, 1964.
+       </p>
+       <p>
+        <i>
+         I Have a Dream: The Story of Martin Luther King in Text and Pictures
+        </i>
+        . New York, Time Life Books, 1968.
+       </p>
+       <p>
+        King, Martin Luther, Jr.,
+        <i>
+         The Measure of a Man
+        </i>
+        . Philadelphia. The Christian Education Press, 1959. Two devotional addresses.
+       </p>
+       <p>
+        King, Martin Luther, Jr.,
+        <i>
+         Strength to Love
+        </i>
+        . New York, Harper &amp; Row, 1963. Sixteen sermons and one essay entitled “Pilgrimage to Nonviolence.”
+       </p>
+       <p>
+        King, Martin Luther, Jr.,
+        <i>
+         Stride toward Freedom: The Montgomery Story
+        </i>
+        . New York, Harper, 1958.
+       </p>
+       <p>
+        King, Martin Luther, Jr.,
+        <i>
+         The Trumpet of Conscience
+        </i>
+        . New York, Harper &amp; Row, 1968.
+       </p>
+       <p>
+        King, Martin Luther, Jr.,
+        <i>
+         Where Do We Go from Here: Chaos or Community?
+        </i>
+        New York, Harper &amp; Row, 1967.
+       </p>
+       <p>
+        King, Martin Luther, Jr.,
+        <i>
+         Why We Can’t Wait
+        </i>
+        . New York, Harper &amp; Row, 1963.
+       </p>
+       <p>
+        “Man of the Year”,
+        <i>
+         Time
+        </i>
+        , 83 (January 3, 1964) 13-16; 25-27.
+       </p>
+       <p>
+        “Martin Luther King, Jr.”
+        <i>
+         ,
+        </i>
+        in
+        <i>
+         Current Biography Yearbook 1965
+        </i>
+        , ed. by Charles Moritz, pp. 220-223. New York, H.W. Wilson.
+       </p>
+       <p>
+        Reddick, Lawrence D.,
+        <i>
+         Crusader without Violence: A Biography of Martin Luther King, Jr
+        </i>
+        . New York, Harper, 1959.
+       </p>
+       <p>
+       </p>
+       <footer class="copyright">
+        <small class="lectures">
+         From
+         <i>
+          <a href="/nobel_organizations/nobelfoundation/publications/lectures/index.html">
+           Nobel Lectures
+          </a>
+          , Peace 1951-1970
+         </i>
+         , Editor Frederick W. Haberman, Elsevier Publishing Company, Amsterdam, 1972
+         <p>
+         </p>
+        </small>
+       </footer>
+       <!--eri-no-index-->
+       <p class="smalltext">
+        This autobiography/biography was written 
+  at the time of the award and first
+    published in the book series
+        <a href="/nobel_organizations/nobelfoundation/publications/lesprix.html">
+         <i>
+          Les Prix Nobel
+         </i>
+        </a>
+        .
+     It was later edited and republished in
+        <i>
+         <a href="/nobel_organizations/nobelfoundation/publications/lectures/index.html">
+          Nobel Lectures
+         </a>
+        </i>
+        . To cite this document, always state the source as shown above.
+       </p>
+       <!--eri-no-index-->
+       <p>
+       </p>
+       <p class="smalltext">
+        <a href="/nobel_prizes/peace/laureates/1964/" id="note" name="not">
+         *
+        </a>
+        Note from Nobelprize.org: This biography uses the word “Negro”. Even though this word today is considered inappropriate, the biography is published in its original version in view of keeping it as a historical document.
+       </p>
+       <footer class="copyright">
+        <small class="global">
+         <span class="copy">
+          Copyright © The Nobel Foundation 1964
+         </span>
+        </small>
+       </footer>
+       <footer class="border-top pagecite" itemscope="" itemtype="http://schema.org/citation">
+        <p>
+         To cite this section
+         <br/>
+         MLA style: Martin Luther King Jr. – Biography. NobelPrize.org. Nobel Media AB 2020. Sat. 17 Oct 2020. &lt;https://www.nobelprize.org/prizes/peace/1964/king/biographical/&gt;
+        </p>
+       </footer>
+       <div class="back-to-top">
+        <a class="back-top-link" href="#top">
+         Back to top
+        </a>
+        <svg aria-labelledby="back-to-top-title  back-to-top-desc" height="15px" role="image" version="1.1" viewbox="0 0 20 17" width="18px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+         <title id="back-to-top-title">
+          Back To Top
+         </title>
+         <desc id="back-to-top-desc">
+          Takes users back to the top of the page
+         </desc>
+         <g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+          <g fill="#2E2A25" transform="translate(-474.000000, -9998.000000)">
+           <g transform="translate(474.000000, 9998.000000)">
+            <g transform="translate(10.000000, 10.000000) rotate(45.000000) translate(-10.000000, -10.000000) translate(3.000000, 3.000000)">
+             <rect height="14" width="2" x="0" y="0">
+             </rect>
+             <rect height="2" width="14" x="0" y="0">
+             </rect>
+            </g>
+            <rect height="14" width="2" x="9" y="3">
+            </rect>
+           </g>
+          </g>
+         </g>
+        </svg>
+       </div>
+      </article>
+     </section>
+     <section class="recommended-content page-section" itemscope="" itemtype="https://schema.org/Blog">
+      <header class="section-header border-top">
+       <h3>
+        Learn more
+       </h3>
+      </header>
+      <article class="item -full" itemscope="" itemtype="http://schema.org/BlogPosting">
+       <div class="content">
+        <h3 class="title border-top" itemprop="headline">
+         <a href="https://www.nobelprize.org/all-2020-nobel-prizes-drawings/">
+          Nobel Prizes 2020
+         </a>
+        </h3>
+        <div class="text">
+         Twelve laureates were awarded a Nobel Prize in 2020, for achievements that have conferred the greatest benefit to humankind.
+         <br/>
+         <br/>
+         Their work and discoveries range from the formation of black holes and genetic scissors to efforts to combat hunger and develop new auction formats.
+         <br/>
+         <br/>
+         See them all presented here.
+         <br/>
+        </div>
+       </div>
+       <figure>
+        <a href="https://www.nobelprize.org/all-2020-nobel-prizes-drawings/">
+        </a>
+        <a href="https://www.nobelprize.org/all-2020-nobel-prizes-drawings/">
+         <picture>
+          <source data-srcset="https://www.nobelprize.org/images/prizes-107794-landscape-mini-2x.jpg" media="(min-width: 220px)"/>
+          <source data-srcset="https://www.nobelprize.org/images/prizes-107794-landscape-small-2x.jpg" media="(min-width: 900px)"/>
+          <source data-srcset="https://www.nobelprize.org/images/prizes-107794-landscape-medium-2x.jpg" media="(min-width: 1400px)"/>
+          <img alt="Nobel Prizes 2020 graphics" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          <noscript>
+           <img alt="Nobel Prizes 2020 graphics" src="https://www.nobelprize.org/images/prizes-107794-landscape-medium.jpg"/>
+          </noscript>
+         </picture>
+        </a>
+       </figure>
+      </article>
+     </section>
+     <section class="explore-laureates page-section">
+      <header class="section-header border-top">
+       <h3>
+        Explore prizes and laureates
+       </h3>
+       <div class="info">
+        Look for popular awards and laureates in different fields, and discover the history of the Nobel Prize.
+       </div>
+      </header>
+      <form action="" class="exploreform" id="5f8ac56cb3962" method="GET">
+       <div class="dropdown">
+        <label class="screen-reader-text" for="mobile-dropdown">
+         Select the category or categories you would like to filter by
+        </label>
+        <select id="mobile-dropdown" name="filtermobile">
+         <option value="physics">
+          Physics
+         </option>
+         <option value="chemistry">
+          Chemistry
+         </option>
+         <option value="medicine">
+          Medicine
+         </option>
+         <option value="literature">
+          Literature
+         </option>
+         <option selected="selected" value="peace">
+          Peace
+         </option>
+         <option value="economic-sciences">
+          Economic Sciences
+         </option>
+        </select>
+       </div>
+       <div class="selector">
+        <label class="screen-reader-text">
+         Select the category or categories you would like to filter by
+        </label>
+        <div class="labelbutton" tabindex="0">
+         <label for="physics">
+          <input hidden="" id="physics" name="filter" type="radio" value="physics"/>
+          <span>
+           Physics
+          </span>
+         </label>
+        </div>
+        <div class="labelbutton" tabindex="0">
+         <label for="chemistry">
+          <input hidden="" id="chemistry" name="filter" type="radio" value="chemistry"/>
+          <span>
+           Chemistry
+          </span>
+         </label>
+        </div>
+        <div class="labelbutton" tabindex="0">
+         <label for="medicine">
+          <input hidden="" id="medicine" name="filter" type="radio" value="medicine"/>
+          <span>
+           Medicine
+          </span>
+         </label>
+        </div>
+        <div class="labelbutton" tabindex="0">
+         <label for="literature">
+          <input hidden="" id="literature" name="filter" type="radio" value="literature"/>
+          <span>
+           Literature
+          </span>
+         </label>
+        </div>
+        <div class="labelbutton" tabindex="0">
+         <label for="peace">
+          <input checked="checked" hidden="" id="peace" name="filter" type="radio" value="peace"/>
+          <span>
+           Peace
+          </span>
+         </label>
+        </div>
+        <div class="labelbutton" tabindex="0">
+         <label for="economic-sciences">
+          <input hidden="" id="economic-sciences" name="filter" type="radio" value="economic-sciences"/>
+          <span>
+           Economic Sciences
+          </span>
+         </label>
+        </div>
+       </div>
+       <div class="incrementor">
+        <label class="screen-reader-text" for="increment-down">
+         Decrease the year by one
+        </label>
+        <button class="increment-down" id="increment-down" type="button">
+         -
+        </button>
+        <label class="screen-reader-text" for="increment-input">
+         Choose a year you would like to search in
+        </label>
+        <input class="increment-input" id="increment-input" maxlength="4" name="prize_year" placeholder="2019" type="text" value="1964"/>
+        <label class="screen-reader-text" for="increment-up">
+         Increase the year by one
+        </label>
+        <button class="increment-up" id="increment-up" type="button">
+         +
+        </button>
+       </div>
+       <div class="submit">
+        <button type="submit">
+         Explore
+        </button>
+       </div>
+      </form>
+     </section>
+     <div class="long-scroll-preloader prize-explorer-preloader" data-target="5f8ac56cb3962" style="text-align: center; display: none">
+      <img src="https://www.nobelprize.org/wp-content/themes/nobelprize/assets/images/spinner.gif" style="display: inline-block"/>
+     </div>
+     <div class="prize-explorer-content container search-results" data-target="5f8ac56cb3962">
+     </div>
+    </div>
+    <div class="long-scroll-preloader" data-target="5f8ac56cb5371" style="text-align: center; display: none">
+     <img src="https://www.nobelprize.org/wp-content/themes/nobelprize/assets/images/spinner.gif" style="display: inline-block"/>
+    </div>
+   </div>
+  </main>
+  <footer class="site-footer" role="contentinfo">
+   <div class="container">
+    <section class="footer-information">
+     <h4 class="heading">
+      <a href="/the-nobel-prize-organisation/">
+       About the Nobel Prize organisation
+      </a>
+     </h4>
+     <div class="footer-sections border-top">
+      <div class="footer-section">
+       <h5>
+        <a href="/the-nobel-prize-organisation/the-nobel-foundation/">
+         The Nobel Foundation
+        </a>
+       </h5>
+       <p>
+        Tasked with a mission to manage Alfred Nobel's fortune and has ultimate responsibility for fulfilling the intentions of Nobel's will.
+       </p>
+      </div>
+      <div class="footer-section">
+       <h5>
+        <a href="/the-nobel-prize-organisation/prize-awarding-institutions/">
+         The prize-awarding institutions
+        </a>
+       </h5>
+       <p>
+        For more than a century, these academic institutions have worked independently to select Nobel Laureates in each prize category.
+       </p>
+      </div>
+      <div class="footer-section">
+       <h5>
+        <a href="/the-nobel-prize-organisation/outreach-activities/">
+         Nobel Prize outreach activities
+        </a>
+       </h5>
+       <p>
+        Several outreach organisations and activities have been developed to inspire generations and disseminate knowledge about the Nobel Prize.
+       </p>
+      </div>
+     </div>
+    </section>
+    <section class="footer-nav border-top">
+     <nav class="footer-menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="footer-column-items" id="menu-footer_col_1" role="menu">
+       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28266" id="menu-item-28266" role="menuitem">
+        <a href="https://www.nobelprize.org/press-room/">
+         Press
+        </a>
+       </li>
+       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42845" id="menu-item-42845" role="menuitem">
+        <a href="https://www.nobelprize.org/contact">
+         Contact
+        </a>
+       </li>
+       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28265" id="menu-item-28265" role="menuitem">
+        <a href="https://www.nobelprize.org/frequently-asked-questions/">
+         FAQ
+        </a>
+       </li>
+      </ul>
+     </nav>
+     <nav class="footer-menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="footer-column-items" id="menu-footer_col_2" role="menu">
+       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28268" id="menu-item-28268" role="menuitem">
+        <a href="/about/privacy-policy/">
+         Privacy policy
+        </a>
+       </li>
+       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28269" id="menu-item-28269" role="menuitem">
+        <a href="/about/technical-support/">
+         Technical support
+        </a>
+       </li>
+       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42844" id="menu-item-42844" role="menuitem">
+        <a href="/about/terms-of-use/">
+         Terms of use
+        </a>
+       </li>
+      </ul>
+     </nav>
+     <nav class="footer-menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="footer-column-items" id="menu-footer_col_3" role="menu">
+       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28272" id="menu-item-28272" role="menuitem">
+        <a href="/about/developer-zone/">
+         For developers
+        </a>
+       </li>
+       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42843" id="menu-item-42843" role="menuitem">
+        <a href="/mediaplayer/">
+         Media player
+        </a>
+       </li>
+      </ul>
+     </nav>
+     <nav class="footer-menu footer-social" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <h6>
+       Join us
+      </h6>
+      <ul class="socialmenu" id="menu-footer_social">
+       <li class="facebook menu-item menu-item-type-custom menu-item-object-custom menu-item-28273" id="menu-item-28273" role="menuitem">
+        <a href="https://www.facebook.com/nobelprize/" target="_blank">
+         <svg height="16px" version="1.1" viewbox="0 0 32 32" width="16px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g fill="none" fill-rule="evenodd" id="facebook" stroke="none" stroke-width="1">
+           <g fill="#4266B2" transform="translate(-16.000000, -707.000000)">
+            <path d="M46.2339056,707 L17.7660944,707 C16.790606,707 16,707.790603 16,708.766088 L16,737.233792 C16,738.209157 16.790606,739 17.7660944,739 L33.0922688,739 L33.0922688,726.607891 L28.921984,726.607891 L28.921984,721.778426 L33.0922688,721.778426 L33.0922688,718.216876 C33.0922688,714.083775 35.6165969,711.833182 39.3036936,711.833182 C41.0699079,711.833182 42.5878139,711.964589 43.0301168,712.023339 L43.0301168,716.34276 L40.4729368,716.343959 C38.4677662,716.343959 38.0794173,717.296783 38.0794173,718.695026 L38.0794173,721.778426 L42.8617803,721.778426 L42.2391511,726.607891 L38.0794173,726.607891 L38.0794173,739 L46.2339056,739 C47.2092741,739 48,738.209157 48,737.233792 L48,708.766088 C48,707.790603 47.2092741,707 46.2339056,707" id="Fill-1">
+            </path>
+           </g>
+          </g>
+         </svg>
+         <span class="screen-reader-text">
+          Facebook
+         </span>
+        </a>
+       </li>
+       <li class="twitter menu-item menu-item-type-custom menu-item-object-custom menu-item-28274" id="menu-item-28274" role="menuitem">
+        <a href="https://twitter.com/NobelPrize" target="_blank">
+         <svg aria-labelledby="twitter-social-icon-title twitter-social-icon-desc" height="32px" version="1.1" viewbox="0 0 32 32" width="32px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <title id="twitter-social-icon-title">
+           Twitter Icon
+          </title>
+          <desc id="twitter-social-icon-desc">
+           Follow The Nobel Prize on Twitter
+          </desc>
+          <g fill="none" fill-rule="evenodd" id="Symbols" stroke="none" stroke-width="1">
+           <g id="1280/join-us-on-social-media/twitter" transform="translate(0.000000, -48.000000)">
+            <g id="Group-7" transform="translate(0.000000, 48.000000)">
+             <rect fill="#1DA1F2" height="32" id="Rectangle-8-Copy-3" rx="2" width="32" x="0" y="0">
+             </rect>
+             <path d="M12.28988,24.127112 C19.83732,24.127112 23.96468,17.874232 23.96468,12.452232 C23.96468,12.274552 23.96108,12.097672 23.953,11.921752 C24.75412,11.342632 25.45052,10.619992 25.99996,9.797192 C25.26476,10.123752 24.47348,10.343912 23.64356,10.443192 C24.49068,9.935272 25.14116,9.131432 25.44788,8.173352 C24.65484,8.643352 23.77708,8.985272 22.84244,9.169272 C22.09364,8.371752 21.02724,7.872872 19.84724,7.872872 C17.581,7.872872 15.74332,9.710552 15.74332,11.975912 C15.74332,12.297992 15.7794,12.611032 15.8498,12.911512 C12.43964,12.740072 9.41556,11.107192 7.39204,8.624392 C7.03932,9.230632 6.83628,9.935272 6.83628,10.686792 C6.83628,12.110392 7.56076,13.367112 8.66228,14.102312 C7.98924,14.081592 7.35684,13.896632 6.8038,13.588952 C6.80292,13.606072 6.80292,13.623272 6.80292,13.641272 C6.80292,15.628792 8.21748,17.287832 10.09492,17.664072 C9.75028,17.757832 9.38764,17.808472 9.01324,17.808472 C8.74884,17.808472 8.49172,17.782232 8.24188,17.734392 C8.7642,19.364632 10.27892,20.550952 12.07516,20.584392 C10.67044,21.685032 8.90132,22.340872 6.97884,22.340872 C6.64772,22.340872 6.32116,22.321912 5.99996,22.283992 C7.81604,23.447832 9.9722,24.127112 12.28988,24.127112" fill="#FFFFFF" id="Fill-2">
+             </path>
+            </g>
+           </g>
+          </g>
+         </svg>
+         <span class="screen-reader-text">
+          Twitter
+         </span>
+        </a>
+       </li>
+       <li class="instagram menu-item menu-item-type-custom menu-item-object-custom menu-item-43144" id="menu-item-43144" role="menuitem">
+        <a href="https://www.instagram.com/nobelprize_org/?hl=en" target="_blank">
+         <svg aria-labelledby="instagram-social-icon-title instagram-social-icon-desc" height="32px" version="1.1" viewbox="0 0 32 32" width="32px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <title id="instagram-social-icon-title">
+           Instagram Icon
+          </title>
+          <desc id="instagram-social-icon-desc">
+           Follow The Nobel Prize on Instagram
+          </desc>
+          <g fill="none" fill-rule="evenodd" id="Symbols" stroke="none" stroke-width="1">
+           <g id="1280/join-us-on-social-media/instagram" transform="translate(0.000000, -48.000000)">
+            <g id="Group-8" transform="translate(0.000000, 48.000000)">
+             <rect fill="#E6007E" height="32" id="Rectangle-8-Copy" rx="2" width="32" x="0" y="0">
+             </rect>
+             <g fill="#FFFFFF" id="Group" transform="translate(5.000000, 5.000000)">
+              <g id="Group-3">
+               <path d="M10.9965298,0.00694047619 C8.01002976,0.00694047619 7.6355496,0.0195992063 6.46269643,0.0731150794 C5.2922004,0.1265 4.49286706,0.31240873 3.7933631,0.584222222 C3.07024405,0.865246032 2.45699405,1.24125397 1.84566468,1.85258333 C1.23433532,2.46395635 0.858327381,3.07720635 0.577303571,3.8003254 C0.305446429,4.49978571 0.119581349,5.2991627 0.0661527778,6.46961508 C0.0126369048,7.6425119 -2.18253968e-05,8.01699206 -2.18253968e-05,11.0034921 C-2.18253968e-05,13.9899484 0.0126369048,14.3644286 0.0661527778,15.5373254 C0.119581349,16.7077778 0.305446429,17.5071548 0.577303571,18.2066151 C0.858327381,18.9297341 1.23433532,19.5429841 1.84566468,20.1543571 C2.45699405,20.7656865 3.07024405,21.1416944 3.7933631,21.4227183 C4.49286706,21.6945317 5.2922004,21.8804405 6.46269643,21.9338254 C7.6355496,21.9873413 8.01002976,22 10.9965298,22 C13.9830298,22 14.3575099,21.9873413 15.5303631,21.9338254 C16.7008591,21.8804405 17.5001925,21.6945317 18.1996964,21.4227183 C18.9228155,21.1416944 19.5360655,20.7656865 20.1473948,20.1543571 C20.7587242,19.5429841 21.1347321,18.9297341 21.415756,18.2066151 C21.6876131,17.5071548 21.8734782,16.7077778 21.9269067,15.5373254 C21.9804226,14.3644286 21.9930813,13.9899484 21.9930813,11.0034921 C21.9930813,8.01699206 21.9804226,7.6425119 21.9269067,6.46961508 C21.8734782,5.2991627 21.6876131,4.49978571 21.415756,3.8003254 C21.1347321,3.07720635 20.7587242,2.46395635 20.1473948,1.85258333 C19.5360655,1.24125397 18.9228155,0.865246032 18.1996964,0.584222222 C17.5001925,0.31240873 16.7008591,0.1265 15.5303631,0.0731150794 C14.3575099,0.0195992063 13.9830298,0.00694047619 10.9965298,0.00694047619 M10.9965298,1.98829365 C13.932744,1.98829365 14.2805099,1.9995119 15.4400496,2.05241667 C16.5122004,2.10130556 17.094502,2.28044841 17.4819901,2.43104365 C17.9952361,2.63052778 18.3615536,2.86881746 18.746379,3.25364286 C19.1311607,3.6384246 19.369494,4.00474206 19.5689782,4.51803175 C19.7195298,4.90551984 19.8986726,5.48777778 19.9476052,6.55992857 C20.0005099,7.71946825 20.0116845,8.06727778 20.0116845,11.0034921 C20.0116845,13.9396627 20.0005099,14.2874722 19.9476052,15.4470119 C19.8986726,16.5191627 19.7195298,17.1014206 19.5689782,17.4889087 C19.369494,18.0021984 19.1311607,18.3685159 18.746379,18.7532976 C18.3615536,19.138123 17.9952361,19.3764127 17.4819901,19.5758968 C17.094502,19.7264921 16.5122004,19.9056349 15.4400496,19.9545238 C14.2806845,20.0074286 13.9329187,20.0186468 10.9965298,20.0186468 C8.06014087,20.0186468 7.712375,20.0074286 6.55300992,19.9545238 C5.48085913,19.9056349 4.89855754,19.7264921 4.51106944,19.5758968 C3.99782341,19.3764127 3.63150595,19.138123 3.24668056,18.7532976 C2.86189881,18.3685159 2.62356548,18.0021984 2.42408135,17.4889087 C2.27352976,17.1014206 2.0943869,16.5191627 2.04545437,15.4470119 C1.9925496,14.2874722 1.981375,13.9396627 1.981375,11.0034921 C1.981375,8.06727778 1.9925496,7.71946825 2.04545437,6.55992857 C2.0943869,5.48777778 2.27352976,4.90551984 2.42408135,4.51803175 C2.62356548,4.00474206 2.86189881,3.6384246 3.24668056,3.25364286 C3.63150595,2.86881746 3.99782341,2.63052778 4.51106944,2.43104365 C4.89855754,2.28044841 5.48085913,2.10130556 6.55296627,2.05241667 C7.7125496,1.9995119 8.06031548,1.98829365 10.9965298,1.98829365" id="Fill-1">
+               </path>
+              </g>
+              <path d="M11.1468849,14.812373 C9.12249206,14.812373 7.48135317,13.1712778 7.48135317,11.1468849 C7.48135317,9.12244841 9.12249206,7.48135317 11.1468849,7.48135317 C13.1712778,7.48135317 14.812373,9.12244841 14.812373,11.1468849 C14.812373,13.1712778 13.1712778,14.812373 11.1468849,14.812373 M11.1468849,5.5 C8.02821032,5.5 5.5,8.02816667 5.5,11.1468849 C5.5,14.2655595 8.02821032,16.7937262 11.1468849,16.7937262 C14.2655595,16.7937262 16.7937698,14.2655595 16.7937698,11.1468849 C16.7937698,8.02816667 14.2655595,5.5 11.1468849,5.5" id="Fill-4">
+              </path>
+              <path d="M18.1860905,5.17020516 C18.1860905,5.89899881 17.595277,6.48976865 16.866527,6.48976865 C16.1377333,6.48976865 15.5469198,5.89899881 15.5469198,5.17020516 C15.5469198,4.44141151 16.1377333,3.85064167 16.866527,3.85064167 C17.595277,3.85064167 18.1860905,4.44141151 18.1860905,5.17020516" id="Fill-6">
+              </path>
+             </g>
+            </g>
+           </g>
+          </g>
+         </svg>
+         <span class="screen-reader-text">
+          Instagram
+         </span>
+        </a>
+       </li>
+       <li class="youtube menu-item menu-item-type-custom menu-item-object-custom menu-item-43145" id="menu-item-43145" role="menuitem">
+        <a href="https://www.youtube.com/thenobelprize" target="_blank">
+         <svg aria-labelledby="youtube-social-icon-title youtube-social-icon-desc" height="32px" role="img" version="1.1" viewbox="0 0 32 32" width="32px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <title id="youtube-social-icon-title">
+           Youtube Icon
+          </title>
+          <desc id="youtube-social-icon-desc">
+           Follow The Nobel Prize on Youtube
+          </desc>
+          <defs>
+           <polygon id="path-1" points="3.75e-05 0 22 0 22 15.499975 3.75e-05 15.499975">
+           </polygon>
+          </defs>
+          <g fill="none" fill-rule="evenodd" id="Symbols" stroke="none" stroke-width="1">
+           <g id="1280/join-us-on-social-media/youtube" transform="translate(0.000000, -48.000000)">
+            <g id="Group-9" transform="translate(0.000000, 48.000000)">
+             <rect fill="#ED3124" height="32" id="Rectangle-8-Copy-2" rx="2" width="32" x="0" y="0">
+             </rect>
+             <g id="Page-1" transform="translate(5.000000, 8.000000)">
+              <g id="Group-3">
+               <mask fill="white" id="mask-2">
+                <use xlink:href="#path-1">
+                </use>
+               </mask>
+               <g id="Clip-2">
+               </g>
+               <path d="M21.5402875,2.42035 C21.2872875,1.4676 20.5417875,0.71735 19.5951625,0.462725 C17.8796625,-2.5e-05 11.0000375,-2.5e-05 11.0000375,-2.5e-05 C11.0000375,-2.5e-05 4.1204125,-2.5e-05 2.4047875,0.462725 C1.4581625,0.71735 0.7126625,1.4676 0.4596625,2.42035 C3.75e-05,4.1471 3.75e-05,7.749975 3.75e-05,7.749975 C3.75e-05,7.749975 3.75e-05,11.352725 0.4596625,13.0796 C0.7126625,14.03235 1.4581625,14.7826 2.4047875,15.03735 C4.1204125,15.499975 11.0000375,15.499975 11.0000375,15.499975 C11.0000375,15.499975 17.8796625,15.499975 19.5951625,15.03735 C20.5417875,14.7826 21.2872875,14.03235 21.5402875,13.0796 C22.0000375,11.352725 22.0000375,7.749975 22.0000375,7.749975 C22.0000375,7.749975 22.0000375,4.1471 21.5402875,2.42035" fill="#FFFFFF" id="Fill-1" mask="url(#mask-2)">
+               </path>
+              </g>
+              <polygon fill="#ED3124" id="Fill-4" points="8.75 11.0211125 8.75 4.4788625 14.5 7.7501125">
+              </polygon>
+             </g>
+            </g>
+           </g>
+          </g>
+         </svg>
+         <span class="screen-reader-text">
+          Youtube
+         </span>
+        </a>
+       </li>
+      </ul>
+     </nav>
+    </section>
+    <section class="colophon border-top">
+     <div class="footer-logo" itemscope="" itemtype="http://schema.org/Organization">
+      <h1 class="site-logo" itemprop="logo">
+       <a href="https://www.nobelprize.org" itemprop="url">
+        The Nobel Prize
+       </a>
+      </h1>
+     </div>
+     <div class="copyright">
+      Copyright © Nobel Media AB 2020
+     </div>
+    </section>
+   </div>
+  </footer>
+  <script>
+   ( function ( body ) {
+			'use strict';
+			body.className = body.className.replace( /\btribe-no-js\b/, 'tribe-js' );
+		} )( document.body );
+  </script>
+  <script>
+   /* <![CDATA[ */var tribe_l10n_datatables = {"aria":{"sort_ascending":": activate to sort column ascending","sort_descending":": activate to sort column descending"},"length_menu":"Show _MENU_ entries","empty_table":"No data available in table","info":"Showing _START_ to _END_ of _TOTAL_ entries","info_empty":"Showing 0 to 0 of 0 entries","info_filtered":"(filtered from _MAX_ total entries)","zero_records":"No matching records found","search":"Search:","all_selected_text":"All items on this page were selected. ","select_all_link":"Select all pages","clear_selection":"Clear Selection.","pagination":{"all":"All","next":"Next","previous":"Previous"},"select":{"rows":{"0":"","_":": Selected %d rows","1":": Selected 1 row"}},"datepicker":{"dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesMin":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Prev","currentText":"Today","closeText":"Done","today":"Today","clear":"Clear"}};/* ]]> */
+  </script>
+  <script src="https://www.nobelprize.org/wp-content/plugins/nobelprize/assets/js/admin/lib/jquery.pjax/jquery.pjax.js?ver=0.2.0-81e976391af3417a543e5129dee75fc47668091d" type="text/javascript">
+  </script>
+  <script src="https://www.nobelprize.org/wp-content/plugins/nobelprize/assets/js/admin/lib/jquery.waypoints/jquery.waypoints.js?ver=0.2.0-81e976391af3417a543e5129dee75fc47668091d" type="text/javascript">
+  </script>
+  <script src="https://www.nobelprize.org/wp-content/plugins/nobelprize/assets/js/admin/lib/jquery.waypoints/inview.js?ver=0.2.0-81e976391af3417a543e5129dee75fc47668091d" type="text/javascript">
+  </script>
+  <script src="https://www.nobelprize.org/wp-content/plugins/nobelprize/dist/js/long-scroll.min.js?ver=0.2.0-81e976391af3417a543e5129dee75fc47668091d" type="text/javascript">
+  </script>
+  <script src="https://www.nobelprize.org/wp-content/themes/nobelprize/assets/js/frontend/lib/clamp/clamp.min.js?ver=0.3.8" type="text/javascript">
+  </script>
+  <script src="https://www.nobelprize.org/wp-content/plugins/nobelprize/assets/js/admin/lib/flickity/flickity.pkgd.js?ver=0.2.0-81e976391af3417a543e5129dee75fc47668091d" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   /* <![CDATA[ */
+var nobelJsText = {"more":"More","close":"Close"};
+/* ]]> */
+  </script>
+  <script src="https://www.nobelprize.org/wp-content/themes/nobelprize/dist/js/frontend.0.3.8.min.js?ver=0.3.8" type="text/javascript">
+  </script>
+  <script src="https://www.nobelprize.org/wp-content/themes/nobelprize/assets/js/frontend/lib/bgset/ls.bgset.min.js?ver=0.3.8" type="text/javascript">
+  </script>
+  <script src="https://www.nobelprize.org/wp-content/themes/nobelprize/assets/js/frontend/lib/lazysizes/lazysizes.min.js?ver=0.3.8" type="text/javascript">
+  </script>
+  <script src="https://www.nobelprize.org/wp-content/themes/nobelprize/assets/js/frontend/lib/objectfit/ls.object-fit.min.js?ver=0.3.8" type="text/javascript">
+  </script>
+  <script src="https://www.nobelprize.org/wp-content/themes/nobelprize/assets/js/frontend/lib/amp/amp/amp.min.js?ver=0.3.8" type="text/javascript">
+  </script>
+  <script src="https://www.nobelprize.org/wp-includes/js/wp-embed.min.js?ver=5.4.2" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"06ce85f426","applicationID":"933345079","transactionName":"ZFxWYRFYVkIFUxANWF0WYUcKFlFfAFUcSkdbSQ==","queueTime":0,"applicationTime":701,"atts":"SBtVF1lCRUw=","errorBeacon":"bam.nr-data.net","agent":""}
+  </script>
+  <!-- Performance optimized by Redis Object Cache. Learn more: https://wprediscache.com -->
+ </body>
+</html>

@@ -1,0 +1,2557 @@
+<html lang="en">
+ <head>
+  <title>
+   Population Clock
+  </title>
+  <meta charset="utf-8"/>
+  <link href="./css/main.min.css" media="screen" rel="stylesheet"/>
+  <link href="./css/population_counter.min.css" media="screen" rel="stylesheet"/>
+  <link href="./css/population_on_date.min.css" media="screen" rel="stylesheet"/>
+  <link href="./css/population_growth.min.css" media="screen" rel="stylesheet"/>
+  <link href="./css/population_pyramid.min.css" media="screen" rel="stylesheet"/>
+  <link href="./css/populous_density.min.css" media="screen" rel="stylesheet"/>
+  <link href="./css/world.min.css" media="all" rel="stylesheet"/>
+  <link href="./css/world.print.min.css" media="print" rel="stylesheet"/>
+  <!--[if IE]>
+	<link rel="stylesheet" href="./css/ie8.min.css" media="screen" />
+	<![endif]-->
+  <!--[if IE 7]>
+	<link rel="stylesheet" href="./css/ie7.min.css" media="screen" />
+	<![endif]-->
+  <!-- external libraries -->
+  <link href="./js/jquery-ui.custom/css/custom-theme/jquery-ui.custom.min.css" media="screen" rel="stylesheet"/>
+  <!--
+<script src="https://code.jquery.com/jquery-1.10.0.js"></script>
+<script src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+-->
+  <script async="" id="www-widgetapi-script" src="https://s.ytimg.com/yts/jsbin/www-widgetapi-vfl7r2f24/www-widgetapi.js" type="text/javascript">
+  </script>
+  <script src="//www.youtube.com/player_api">
+  </script>
+  <script async="" src="//www.google-analytics.com/analytics.js">
+  </script>
+  <script src="./js/jquery-1.8.3.min.js" type="text/javascript">
+  </script>
+  <script src="./js/jquery-ui-1.9.2.custom/js/jquery-ui-1.9.2.custom.min.js" type="text/javascript">
+  </script>
+  <script src="./js/jquery-ui-themes-1.10.0/themes/base/jquery-ui.css" type="text/javascript">
+  </script>
+  <!--
+	<script src="./js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="./js/jquery-ui.custom/js/jquery-ui.custom.min.js" type="text/javascript"></script>
+<script src="./js/jquery.ajaxhooks.custom.min.js" type="text/javascript"></script>
+-->
+  <script src="./js/raphael/raphael-min.js" type="text/javascript">
+  </script>
+  <!-- raphael.export required for svg-to-png -->
+  <script src="./js/raphael/raphael.export.min.js" type="text/javascript">
+  </script>
+  <!-- g.raphael required for charting libraries -->
+  <script src="./js/raphael/g.raphael.min.js" type="text/javascript">
+  </script>
+  <script charset="utf-8" src="./js/raphael/g.line.min.js" type="text/javascript">
+  </script>
+  <!-- custom objects -->
+  <script src="./js/main.min.js" type="text/javascript">
+  </script>
+  <script src="./js/api.min.js" type="text/javascript">
+  </script>
+  <script src="./js/animator.min.js" type="text/javascript">
+  </script>
+  <script src="./js/counter.min.js" type="text/javascript">
+  </script>
+  <script src="./js/odometer.min.js" type="text/javascript">
+  </script>
+  <script src="./js/html_progress_bar.min.js" type="text/javascript">
+  </script>
+  <script src="./js/linechart_with_overlay.min.js" type="text/javascript">
+  </script>
+  <script src="./js/tabbed_table.min.js" type="text/javascript">
+  </script>
+  <script charset="utf-8" src="./js/population.js" type="text/javascript">
+  </script>
+  <script charset="utf-8" src="./js/slider.min.js" type="text/javascript">
+  </script>
+  <script charset="utf-8" src="./js/pyramid_graph.min.js" type="text/javascript">
+  </script>
+  <script src="./js/share.min.js" type="text/javascript">
+  </script>
+  <script charset="utf-8" src="//www.census.gov/popclock/population_counters/population_counters_controller.js" type="text/javascript">
+  </script>
+  <script charset="utf-8" src="//www.census.gov/popclock/population_on_date/population_on_date_controller.min.js" type="text/javascript">
+  </script>
+  <script charset="utf-8" src="//www.census.gov/popclock/population_growth/population_growth_controller.min.js" type="text/javascript">
+  </script>
+  <script charset="utf-8" src="//www.census.gov/popclock/population_pyramid/population_pyramid_controller.min.js" type="text/javascript">
+  </script>
+  <script charset="utf-8" src="//www.census.gov/popclock/most_populous/most_populous_controller.min.js" type="text/javascript">
+  </script>
+  <script charset="utf-8" src="//www.census.gov/popclock/highest_density/highest_density_controller.min.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   var config = {"component_dividing_header":"Annual Population Estimates","learn_more_link_label":"Learn More","share_link_label":"Download and Share","view_data_table_link_label":"View Data Table","embed_world_footnotes":{"world_counter":{"label":"World Population","content":"<p>World Population Clock Source: U.S. Census Bureau, International Data Base (demographic data) and USA Trade Online (trade data).<\/p>\r\n\t\t\t\t<p>Populations shown for the Most Populous Countries and on the world map are projected to July 1, 2020.<\/p>\r\n                                <p>To learn more about world population projections, go to <a href=\"https:\/\/www.census.gov\/data\/data-tools\/population-clock\/world-notes.html\">Notes on the World Population Clock<\/a>.<\/p>\r\n                                <p>To learn more about international trade data, go to <a href=\"https:\/\/www.census.gov\/foreign-trade\/guide\/index.html\">Guide to Foreign Trade Statistics<\/a>.<\/p>\r\n\t\t\t\t<p>Coordinated Universal Time (UTC) is the equivalent of Eastern Standard Time (EST) plus 5 hours or Eastern Daylight Saving Time (EDT) plus 4 hours.<\/p>"}},"world_footnotes":{"label":"About the Population Clock and Population Estimates","map":{"label":"Source and Notes","content":"<p>Source: U.S. Census Bureau, <a href=\"https:\/\/www.census.gov\/programs-surveys\/international-programs\/about\/idb.html\">International Data Base<\/a> (demographic data) and <a href=\"http:\/\/usatrade.census.gov\/\">USA Trade Online<\/a> (trade data).<\/p>\r\n\t\t\t\t<p>Populations shown for the Most Populous Countries and on the world map are projected to July 1, 2020.<\/p>\r\n\r\n                                <p>To learn more about world population projections, go to <a href=\"https:\/\/www.census.gov\/data\/data-tools\/population-clock\/world-notes.html\">Notes on the World Population Clock<\/a>.<\/p>\r\n                                <p>To learn more about international trade data, go to <a href=\"https:\/\/www.census.gov\/foreign-trade\/guide\/index.html\">Guide to Foreign Trade Statistics<\/a>.<\/p>\r\n\r\n\r\n\r\n\r\n\t\t\t\t<p>All trade figures are in U.S. dollars on a nominal basis.<\/p>\r\n\t\t\t\t<p>Coordinated Universal Time (UTC) is the equivalent of Eastern Standard Time (EST) plus 5 hours or Eastern Daylight Saving Time (EDT) plus 4 hours.<\/p>"},"country":{"label":"Source and Notes","content":"<p>Source: U.S. Census Bureau, <a href=\"https:\/\/www.census.gov\/programs-surveys\/international-programs\/about\/idb.html\">International Data Base<\/a> (demographic data) and <a href=\"http:\/\/usatrade.census.gov\">USA Trade Online<\/a> (trade data); Central Intelligence Agency, <a href=\"https:\/\/www.cia.gov\/library\/publications\/the-world-factbook\/\">The World Fact Book<\/a> (country reference maps).<\/p>\r\n\t\t\t\t<p>This application presents data for 228 countries and areas of the world with a 2020 population of 5,000 or more. For eleven of those countries and areas, only demographic data are presented. <\/p>\r\n\t\t\t\t<p>\"Data not available\" indicates that data are not available from this application.  In such instances, data may be available elsewhere at the census.gov website.<\/p>\r\n\t\t\t\t<p>Trade figures presented for France do not include data for overseas departments French Guiana, Guadeloupe, Martinique, Mayotte, and Reunion but do include data for dependencies Saint Barthelemy and Saint Martin.  Trade figures for the United Kingdom include data for crown dependencies Guernsey, Isle of Man, and Jersey.<\/p>\r\n                                <p>To learn more about world population projections, go to <a href=\"https:\/\/www.census.gov\/data\/data-tools\/population-clock\/world-notes.html\">Notes on the World Population Clock<\/a>.<\/p>\r\n                                <p>To learn more about international trade data, go to <a href=\"https:\/\/www.census.gov\/foreign-trade\/guide\/index.html\">Guide to Foreign Trade Statistics<\/a>.<\/p>\r\n\t\t\t\t<p>All trade figures are in U.S. dollars on a nominal basis.<\/p>"}},"footnotes":{"label":"About the Population Clock and Population Estimates","counter":{"label":"U.S. Population","content":"<p>The U.S. population clock is based on a series of short-term projections for the resident population of the United States. This includes people whose usual residence is in the 50 states and the District of Columbia. These projections do not include members of the Armed Forces overseas, their dependents, or other U.S. citizens residing outside the United States.<\/p>\r\n\t\t\t\t<p>The projections are based on a monthly series of population estimates starting with the April 1, 2010 resident population from the 2010 Census.<\/p>\r\n\t\t\t\t<p>At the end of each year, a new series of population estimates, from the census date forward, is used to revise the postcensal estimates, including the population clock projections series. Once a series of monthly projections is completed, the daily population clock numbers are derived by interpolation. Within each calendar month, the daily numerical population change is assumed to be constant, subject to negligible differences caused by rounding.<\/p>\r\n\t\t\t\t<p>Population estimates produced by the U.S. Census Bureau for the United States, states, counties, and cities or towns can be found on the <a href=\"\/\/www.census.gov\/programs-surveys\/popest.html\"> Population Estimates<\/a> web page. Future projections for the United States can be found on the <a href=\"\/\/www.census.gov\/programs-surveys\/popproj.html\">Population Projections<\/a> web page.<\/p>"},"pop_on_date":{"label":"","content":""},"growth":{"label":"","content":""},"pyramid":{"label":"","content":""},"populous":{"label":"","content":""},"density":{"label":"","content":""}},"components":{"counter":{"label":"Population Counters"},"us":{"label":"U.S. Population","url":"\/\/www.census.gov\/popclock\/?intcmp=w_200x402","interval":15,"birth_rate_label":"One birth every <strong>%@ seconds<\/strong>","death_rate_label":"One death every <strong>%@ seconds<\/strong>","immigrant_rate_label":"One international migrant (net) every <strong>%@ seconds<\/strong>","net_gain_label":"Net gain of one person every <strong>%@ seconds<\/strong>","learn_more_link_title":"Placeholder title for component link 1","share_link_title":"Placeholder title for component link 1"},"us_rates":{"label":"Components of Population Change","table_summary":"Placeholder for population rates table summary 1","table_header_labels":["Rates","Visualization"]},"world":{"label":"World Population","url":"\/\/www.census.gov\/popclock\/world?intcmp=w_200x402","interval":0.1},"world_rates":{"label":"<a href=\".\/world\" target=\"_parent\" title=\"International Programs - Country Rank\">TOP 10 MOST POPULOUS COUNTRIES (July 1, 2020) <\/a>","tables":[{"title":"<a href=\".\/world\" title=\"International Programs - Country Rank\">TOP 10 MOST POPULOUS COUNTRIES (July 1, 2020) <\/a>","columns":["Rank. Country","Population","Rank. Country","Population"],"rows":{"China":1394015977,"India":1326093247,"United States":329877505,"Indonesia":267026366,"Pakistan":233500636,"Nigeria":214028302,"Brazil":211715973,"Bangladesh":162650853,"Russia":141722205,"Mexico":128649565},"vintage":"2012","table_summary":"Placeholder for population rates table summary 5"},{"title":"<a href=\".\/population\/international\/data\/countryrank\/rank.php\" title=\"International Programs - Country Rank\">Top 10 Fastest Growing Countries<\/a>","columns":["Rank","Country"],"rows":{"China":1394015977,"India":1326093247,"United States":329877505,"Indonesia":267026366,"Pakistan":233500636,"Nigeria":214028302,"Brazil":211715973,"Bangladesh":162650853,"Russia":141722205,"Mexico":128649565},"vintage":"2012","table_summary":"Placeholder for population rates table summary 6"}]},"pop_on_date":{"label":"The United States population on %@ %@: %@","default_year":"2020","default_month":"10","default_day":"17","min_year":2010,"min_month":4,"min_day":1,"learn_more_link_title":"Placeholder title for component link 2","share_link_title":"Placeholder title for component link 2"},"growth":{"label":"United States Population Growth by Region","y_axis_label":"Population (in millions)","min_year":2010,"max_year":2019,"learn_more_link_title":"Placeholder title for component link 3","share_link_title":"Placeholder title for component link 3","view_data_table_link_title":"Placeholder title for component link3","table_summary":"Placeholder for population rates table summary 3","table_header_labels":["Region","Population","Visualization","Percentage"]},"pyramid":{"label":"United States Population by Age and Sex","x_axis_label_middle":"% of Population","x_axis_label_modifier":"%","min_year":2010,"max_year":2019,"max_total_percentage":1,"table_summary":"Placeholder for population rates table summary 4","learn_more_link_title":"Placeholder title for component link 4","share_link_title":"Placeholder title for component link 4","view_data_table_link_title":"Placeholder title for component link4"},"populous":{"label":"Most Populous","learn_more_link_title":"Placeholder title for component link 5","share_link_title":"Placeholder title for component link 5","tables":[{"title":"States","columns":["State","Population","Pop. per sq. mi."],"vintage":"2019","table_summary":"Placeholder for population rates table summary 7"},{"title":"Counties","columns":["County","Population","Pop. per sq. mi."],"vintage":"2019","table_summary":"Placeholder for population rates table summary 6"},{"title":"Cities","columns":["City, ST","Population","Pop. per sq. mi."],"vintage":"2019","table_summary":"Placeholder for population rates table summary 5"}]},"density":{"label":"Highest Density","learn_more_link_title":"Placeholder title for component link 6","share_link_title":"Placeholder title for component link 6","tables":[{"title":"States","columns":["State","Population","Pop. per sq. mi."],"vintage":"2019","table_summary":"Placeholder for population rates table summary 10"},{"title":"Counties","columns":["County","Population","Pop. per sq. mi."],"vintage":"2019","table_summary":"Placeholder for population rates table summary 9"},{"title":"Cities","columns":["City, ST","Population","Pop. per sq. mi."],"vintage":"2019","table_summary":"Placeholder for population rates table summary 8"}]}},"api":{"cache":false,"methods":{"us":{"url":"\/\/www.census.gov\/popclock\/data\/population.php\/us"},"world":{"url":"\/\/www.census.gov\/popclock\/data\/population.php\/world"},"pop_on_date":{"url":"\/\/www.census.gov\/popclock\/data\/population.php\/us"},"region":{"url":"\/\/www.census.gov\/popclock\/data\/population.php\/region","data":{"regions":"west,midwest,northeast,south"}},"demographic":{"url":"\/\/www.census.gov\/popclock\/data\/population.php\/demographic"},"populous":{"url":"\/\/www.census.gov\/popclock\/data\/population.php\/rank","data":{"type":"states,counties,cities","sort":"population:DESC","limit":10}},"density":{"url":"\/\/www.census.gov\/popclock\/data\/population.php\/rank","data":{"type":"states,counties,cities","sort":"density:DESC","limit":10}}}},"share":{"components":{"counter":{"pinterest":"Every minute the US #population is changing, see population changes @uscensusbureau Population Clock","facebook":"Every minute the U.S. population is changing, see how quickly it changes with the Census' Population Clock.","twitter":"Every minute the US #population is changing, see population changes @uscensusbureau Population Clock","email":"Every minute the U.S. population is changing, see how quickly it changes with the Census' Population Clock. %url%"},"pop_on_date":{"pinterest":"Did u know the US #population on %date% was %population%? Discover more with @uscensusbureau Population Clock","facebook":"Did you know the U.S. population on %date% was %population%? Discover how it has changed since with the new Census' Population Clock.","twitter":"Did u know the US #population on %date% was %population%? Discover more with @uscensusbureau Population Clock","email":"Did you know the U.S. population on %date% was %population%? Discover how it has changed since with the new Census' Population Clock. %url%"},"growth":{"pinterest":"How is the US #population changing, region by region? Find out with #Census' Population Clock. @uscensusbureau","facebook":"How is the U.S. population changing, region by region? Find out with the new Census' Population Clock.","twitter":"How is the US #population changing, region by region? Find out with #Census' Population Clock. @uscensusbureau %image%","email":"How is the U.S. population changing, region by region? Find out with the new Census' Population Clock. %url%"},"pyramid":{"pinterest":"What % of US women are #age 35? Men who are 58? Find out with @uscensusbureau #Population Clock","facebook":"What percentage of U.S. women are age 35? Men who are 58? Find out with the new Census' Population Clock.","twitter":"What % of US women are #age 35? Men who are 58? Find out with @uscensusbureau #Population Clock %image%","email":"What percentage of U.S. women are age 35? Men who are 58? Find out with the new Census' Population Clock. %url%"},"populous":{"pinterest":"What are the most populous US states, counties and cities? Find out with @uscensusbureau #Population Clock.","facebook":"What are the most populous U.S. states, counties and cities? Find out with the new Census' Population Clock.","twitter":"What are the most populous US states, counties and cities? Find out with @uscensusbureau #Population Clock.","email":"What are the most populous U.S. states, counties and cities? Find out with the new Census' Population Clock. %url%"},"density":{"pinterest":"Which US states and counties have the highest #population densities? Find out with @uscensusbureau Population Clock.","facebook":"Which U.S. states and counties have the highest population densities? Find out with the new Census Population Clock.","twitter":"Which US states and counties have the highest #population densities? Find out with @uscensusbureau Population Clock.","email":"Which U.S. states and counties have the highest population densities? Find out with the new Census Population Clock. %url%"}},"pinterest":{},"facebook":{"title":"Census Population Clock","site_name":"Census.gov","type":"government","tags":{"admins":"100003365860983"}},"twitter":{},"email":{"to":"","subject":"Check out the Census Population Clock"},"url":"http:\/\/go.usa.gov\/2Y45","image":"http:\/\/www.census.gov\/images\/census-logo-whiteBG.png"}};
+	var api = new API(config.api.cache, config.api.methods);
+
+
+	var animator = new Animator(100);
+
+	var popCountersViewController;
+	var popOnDateViewController;
+	var popGrowthViewController;
+	var popPyramidViewController;
+	var mostPopulousViewController;
+	var highestDensityViewController;
+
+	var popoverOverlay;
+	var $popoverContainer;
+	var $popoverFrame;
+
+	$(function ( )
+	{
+		// Init API
+		api = new API(config.api.cache, config.api.methods);
+
+		$('.share').each(function(index, element) {
+			// set text for the links inside each share link container
+			var $this = $(this);
+			$this.find('a:eq(0)').text(config.learn_more_link_label);
+			$this.find('a:eq(1)').text(config.share_link_label);
+			if ( $this.find('a:eq(2)') ) {
+				$this.find('a:eq(2)').text(config.view_data_table_link_label);
+			}
+		});
+
+		$('.component-header').find('.share a:eq(0)').click(function(event) {
+			// animate to anchor point
+			event.preventDefault();
+			var anchorTag = $(this).prop('href').split('#')[1];
+			var target = $('#' + anchorTag);
+			$('body, html').animate({ scrollTop : target.offset().top }, 300);
+			return false;
+		});
+
+		$('#content-wrapper h2').append(config.component_dividing_header);
+	});
+  </script>
+  <script src="https://assets.adobedtm.com/526d5084b7f8f688ea81a3aba09755d76a81f8e8/s-code-contents-6eafcaf24c53a8340cb08ca3a89da5a57f80a8cb.js">
+  </script>
+ </head>
+ <body>
+  <div style="display: none;">
+   <p>
+    This site uses Cascading Style Sheets to present information. Therefore, it may not display properly when disabled.
+   </p>
+  </div>
+  <noscript>
+   <p style="width: 1000px; margin: 20px auto; padding: 20px; background: #FFC">
+    This site requires Javascript enabled to retrieve and display data.
+   </p>
+  </noscript>
+  <!-- SIMPLE HEADER LAST UPDATED 5/6/2020 -->
+  <!-- Used for CSS resets and making rendering consistent across all browsers/devices -->
+  <!-- add Universal Federated Analytics -->
+  <script class="global-file" id="_fed_an_ua_tag" language="javascript" src="//www.census.gov/main/javascript/federated-analytics-min.js?agency=DOC&amp;subagency=CEN">
+  </script>
+  <!-- Adding original census.gov css -->
+  <link class="cb-main-support global-file" href="//www.census.gov/main/css/_new/bootstrap.css" rel="stylesheet"/>
+  <link class="cb-main-support global-file" href="//www.census.gov/main/css/_new/base.css" rel="stylesheet"/>
+  <link class="cb-main-support global-file" href="//www.census.gov/main/css/_new/extra.css" rel="stylesheet"/>
+  <link class="cb-main-support global-file" href="//www.census.gov/main/css/_new/typeahead.css" rel="stylesheet"/>
+  <link class="cb-main-support global-file" href="//www.census.gov/main/css/_new/header.css" rel="stylesheet"/>
+  <link class="cb-main-support global-file" href="//www.census.gov/main/css/_new/search.css" rel="stylesheet"/>
+  <script src="//www.census.gov/main/javascript/clickjack.js" type="text/javascript">
+  </script>
+  <script class="cb-main-support global-file" src="//www.census.gov/main/responsive-header/jquery/jquery.js">
+  </script>
+  <script class="cb-main-support global-file" src="//www.census.gov/main/responsive-header/jquery/jquery-ui.js">
+  </script>
+  <!-- Check for jquery conflict -->
+  <script type="text/javascript">
+   $acn = jQuery.noConflict();
+    if (typeof jQuery === 'undefined' || typeof $ === 'undefined') {
+        jQuery = $acn;
+        $ = $acn;
+    }
+    $(function () {
+        $('.cb-header-skip-nav').click(function () {
+            $('#cb-after-header-anchor').focus();
+        });
+    });
+  </script>
+  <script class="cb-main-support global-file" src="//www.census.gov/main/responsive-header/bootstrap-custom/js/bootstrap.js">
+  </script>
+  <script class="cb-main-support global-file" src="//www.census.gov/main/responsive-header/js/typeahead.js">
+  </script>
+  <!-- Adding DTM -->
+  <script src="//assets.adobedtm.com/526d5084b7f8f688ea81a3aba09755d76a81f8e8/satelliteLib-5b0c69cba9998404374755048324ea6deb6c9db5.js">
+  </script>
+  <script type="text/javascript">
+   // var parser = document.createElement('a');
+// parser.href = "http://example.com:3000/pathname/?search=test#hash";
+
+var digitalData = digitalData || {};
+  digitalData = {
+      "page" : {
+          "pageInfo" : {                
+              "pageName"       : (typeof document.title == 'string') ? document.title : null,
+              "legacyPageName" : null,
+              "pageURL"        : (typeof window.location.href == 'string') ? window.location.href : null,
+              "language"       : "en",
+              "pageTemplate"   : "DPL",
+              "tool"           : "noncms",
+              "siteSection"    : (typeof window.location.pathname == 'string') ? window.location.pathname.split('/').filter(function(e){return e}).shift() : null
+          },
+          "pageTag" : {
+                             
+              
+          }
+      },
+      "event" : {
+        "eventName" : {},
+        "eventInfo" : {
+          "share" : {},
+          "download" : {},
+          "search" : {},
+          "expandCollapseList" : {},
+          "language" : {},
+          "landingPageTab" : {}
+        }
+      }
+  };
+
+  if ( typeof(Storage) !== "undefined" ) {
+    if ( localStorage.getItem("pageLanguage") != null ) {
+      digitalData.event.eventInfo.language.pageLanguage = localStorage.getItem("pageLanguage");
+    }
+    if ( localStorage.getItem("langEventName") != null ) {
+      digitalData.event.eventName = localStorage.getItem("langEventName");
+    }
+    if ( localStorage.getItem("clickValue") != null ) {
+      digitalData.event.eventInfo.search.clickValue = localStorage.getItem("clickValue");
+    }
+    if ( localStorage.getItem("searchEventName") != null ) {
+      digitalData.event.eventName = localStorage.getItem("searchEventName");
+    }
+    /*if ( localStorage.getItem("landingPageTabClickValue") != null ) {
+      digitalData.event.eventInfo.landingPageTab.clickValue = localStorage.getItem("landingPageTabClickValue");
+    }*/ 
+    if ( localStorage.getItem("tabEventName") != null ) {
+      digitalData.event.eventName = localStorage.getItem("tabEventName");
+    } 
+    if ( localStorage.getItem("pageName") != null ) {
+      digitalData.page.pageInfo.pageName = localStorage.getItem("pageName");
+    }       
+    //After assigning the value to digitalData, clear the localStorage variable's content
+    localStorage.removeItem("pageLanguage");
+    localStorage.removeItem("langEventName");
+    localStorage.removeItem("clickValue");
+    localStorage.removeItem("searchEventName");
+    localStorage.removeItem("landingPageTabClickValue");
+    localStorage.removeItem("tabEventName");
+    localStorage.removeItem("pageName");
+  } else {
+    if ( getCookie("pageLanguage") != "" ) {
+      digitalData.event.eventInfo.language.pageLanguage = getCookie("pageLanguage");
+    }
+    if ( getCookie("langEventName") != "" ) {
+      digitalData.event.eventName = getCookie("langEventName");
+    }
+    if ( getCookie("clickValue") != "" ) {
+      digitalData.event.eventInfo.search.clickValue = getCookie("clickValue");
+    }
+    if ( getCookie("searchEventName") != "" ) {
+      digitalData.event.eventName = getCookie("searchEventName");
+    }
+    if ( getCookie("landingPageTabClickValue") != "" ) {
+      digitalData.event.eventInfo.landingPageTab.clickValue = getCookie("landingPageTabClickValue");
+    }
+    if ( getCookie("tabEventName") != "" ) {
+      digitalData.event.eventName = getCookie("tabEventName");
+    }
+    if ( getCookie("pageName") != "" ) {
+      digitalData.page.pageInfo.pageName = getCookie("pageName");
+    }
+    //After assigning the value to digitalData, clear the localStorage variable's content
+    setCookie("pageLanguage", "");
+    setCookie("langEventName", "");
+    setCookie("clickValue", "");
+    setCookie("searchEventName", "");
+    setCookie("landingPageTabClickValue", "");
+    setCookie("pageName", "");
+  }
+
+  
+  function setCookie(cname, cvalue, exdays) {
+     var d = new Date();
+     d.setTime(d.getTime() + (exdays*24*60*60*1000));
+     var expires = "expires="+d.toUTCString();
+     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+
+  function getCookie(cname) {
+     var name = cname + "=";
+     var ca = document.cookie.split(';');
+     for(var i = 0; i < ca.length; i++) {
+         var c = ca[i];
+         while (c.charAt(0) == ' ') {
+             c = c.substring(1);
+         }
+         if (c.indexOf(name) == 0) {
+             return c.substring(name.length, c.length);
+         }
+     }
+     return "";
+  }
+  </script>
+  <style type="text/css">
+   header.hdr-primary,
+  header.hdr-primary > nav {
+    display: flex !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 64px !important;
+    background-color: #112e51 !important;
+    border-color: #112e51 !important;
+  }
+  header.hdr-primary > nav > div {
+    box-sizing: border-box !important;
+    height: 36.62px !important;
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.02em !important;
+    line-height: 30px !important;
+    white-space: nowrap !important;
+    vertical-align: baseline !important;
+    padding: 0 0 0 16px !important;
+    margin: 0 !important;
+    min-width: 150px !important;
+  }
+  header.hdr-primary > nav > div > a,
+  header.hdr-primary > nav > div > a > img {
+    padding: 0 !important;
+    margin: 0 !important;
+    border-style: none !important;
+    background: transparent !important;
+    text-decoration: none !important;
+  }
+  header.hdr-primary > nav > div > a {  
+    box-sizing: border-box !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+  }
+  header.hdr-primary > nav > div > a > img {
+    width: 86px !important;
+    height: 33.62px !important;
+    margin-left: 15px !important;
+  }
+  </style>
+  <button class="cb-header-skip-nav sr-only sr-only-focusable">
+   Skip to main content
+  </button>
+  <header class="hdr-primary">
+   <nav>
+    <div>
+     <a href="//www.census.gov" id="census-home-link">
+      <img alt="United States Census Bureau" src="//data.census.gov/cedsci/img/census-logo-white.25c8cb29.svg" title="U.S. Census Bureau"/>
+     </a>
+    </div>
+   </nav>
+  </header>
+  <a class="sr-only" id="cb-after-header-anchor" tabindex="-1">
+   end of header
+  </a>
+  <div id="content-wrapper">
+   <div id="sections">
+    <div id="popclock-intro">
+     <h1>
+      U.S. and World Population Clock
+      <!--
+		<a href="//www.census.gov/popclock/rss/popclockRSS.php">
+			<img style="margin-left:3px;" src="/main/img/rss_icon.png"  width="26px" height="26px" alt="RSS icon" class="icon_rss_header button_sprite" />
+		</a>
+-->
+      <!--
+		<a href="./popclock_feedback.php" class="with-arrow">Tell us what you think</a>
+-->
+     </h1>
+    </div>
+    <a class="active" href="//www.census.gov/popclock/" id="us-tab">
+     United States main page
+    </a>
+    <a class="" href="//www.census.gov/popclock/world" id="world-tab">
+     World main page
+    </a>
+   </div>
+   <!-- U.S. and World populations -->
+   <script type="text/javascript">
+    $(function ( )
+{
+        popCountersViewController = new PopCountersViewController(api, animator, 'us-pop-container', 'us-pop-components-container', 'world-pop-container');
+
+        usPopContainer = $('us-pop-container');
+        usPopComponentsContainer = $('#us-pop-components-container');
+            usPopComponentsContainer.find('p').text(config.components.us_rates.label);
+
+        worldPopContainer = $('world-pop-container');
+        worldPopComponentsContainer = $('#world-pop-historical');
+             worldPopComponentsContainer.find('p').append(config.components.world_rates.label);
+
+        popCountersViewController.createViews(270, 115, 15, 44, 36, 484, { main: '//www.census.gov/popclock/images/strip.png'});
+
+});
+   </script>
+   <div class="container beveled shadow vertical-gradient" id="population-counter-container">
+    <div class="component-header alt">
+     <p>
+      Oct 18, 2020 05:28 UTC (+4)
+     </p>
+     <p class="share">
+      <a href="#counter-footnote" id="anch_4">
+       Learn More
+      </a>
+      |
+      <a href="./embed.php?component=counter" id="anch_5">
+       Download and Share
+      </a>
+     </p>
+    </div>
+    <div class="ffix">
+    </div>
+    <!-- U.S. population data -->
+    <div class="lcol" id="us-pop-wrapper">
+     <!-- contains header, progress bar, and counter -->
+     <div id="us-pop-container">
+      <h3>
+       U.S. Population
+      </h3>
+      <!-- population counter -->
+      <p>
+       <span class="rolling-digit">
+        <img height="484" src="//www.census.gov/popclock/images/strip.png" style="top: -132px;" width="36"/>
+       </span>
+       <span class="rolling-digit">
+        <img height="484" src="//www.census.gov/popclock/images/strip.png" style="top: -132px;" width="36"/>
+       </span>
+       <span class="rolling-digit">
+        <img height="484" src="//www.census.gov/popclock/images/strip.png" style="top: 0px;" width="36"/>
+       </span>
+       <span>
+        ,
+       </span>
+       <span class="rolling-digit">
+        <img height="484" src="//www.census.gov/popclock/images/strip.png" style="top: -176px;" width="36"/>
+       </span>
+       <span class="rolling-digit">
+        <img height="484" src="//www.census.gov/popclock/images/strip.png" style="top: -264px;" width="36"/>
+       </span>
+       <span class="rolling-digit">
+        <img height="484" src="//www.census.gov/popclock/images/strip.png" style="top: -88px;" width="36"/>
+       </span>
+       <span>
+        ,
+       </span>
+       <span class="rolling-digit">
+        <img height="484" src="//www.census.gov/popclock/images/strip.png" style="top: -396px;" width="36"/>
+       </span>
+       <span class="rolling-digit">
+        <img height="484" src="//www.census.gov/popclock/images/strip.png" style="top: 0px;" width="36"/>
+       </span>
+       <span class="rolling-digit">
+        <img height="484" src="//www.census.gov/popclock/images/strip.png" style="top: -264.273px;" width="36"/>
+       </span>
+      </p>
+     </div>
+     <!-- contains table with data types and progress bars -->
+     <div id="us-pop-components-container">
+      <p>
+       Components of Population Change
+      </p>
+      <table summary="Placeholder for population rates table summary 1">
+       <thead>
+        <tr>
+         <th scope="row">
+          Rates
+         </th>
+         <th>
+          Visualization
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>
+         </td>
+         <td id="component-timestamp">
+          05:28:27 UTC
+         </td>
+        </tr>
+        <tr>
+         <td>
+          One birth every
+          <strong>
+           8 seconds
+          </strong>
+         </td>
+         <td id="pop-counter-progress-bar-0">
+          <div class="html-progress-bar-track">
+           <span class="html-progress-bar-bar" style="width: 1.375px;">
+           </span>
+          </div>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          One death every
+          <strong>
+           12 seconds
+          </strong>
+         </td>
+         <td id="pop-counter-progress-bar-1">
+          <div class="html-progress-bar-track">
+           <span class="html-progress-bar-bar barIsReversed" style="width: 99.075px;">
+           </span>
+          </div>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          One international migrant (net) every
+          <strong>
+           47 seconds
+          </strong>
+         </td>
+         <td id="pop-counter-progress-bar-2">
+          <div class="html-progress-bar-track">
+           <span class="html-progress-bar-bar" style="width: 0.23617px;">
+           </span>
+          </div>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Net gain of one person every
+          <strong>
+           18 seconds
+          </strong>
+         </td>
+         <td id="pop-counter-progress-bar-3">
+          <div class="html-progress-bar-track">
+           <span class="html-progress-bar-bar" style="width: 0.609087px;">
+           </span>
+          </div>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <div class="ffix">
+     </div>
+    </div>
+    <!-- World population data -->
+    <div class="rcol" id="world-pop-wrapper">
+     <!-- container header, progress bar, and counter -->
+     <div id="world-pop-container">
+      <h3>
+       World Population
+      </h3>
+      <!-- population counter -->
+      <p>
+       <span class="rolling-digit">
+        <img height="484" src="//www.census.gov/popclock/images/strip.png" style="top: -308px;" width="36"/>
+       </span>
+       <span>
+        ,
+       </span>
+       <span class="rolling-digit">
+        <img height="484" src="//www.census.gov/popclock/images/strip.png" style="top: -264px;" width="36"/>
+       </span>
+       <span class="rolling-digit">
+        <img height="484" src="//www.census.gov/popclock/images/strip.png" style="top: -396px;" width="36"/>
+       </span>
+       <span class="rolling-digit">
+        <img height="484" src="//www.census.gov/popclock/images/strip.png" style="top: 0px;" width="36"/>
+       </span>
+       <span>
+        ,
+       </span>
+       <span class="rolling-digit">
+        <img height="484" src="//www.census.gov/popclock/images/strip.png" style="top: -308px;" width="36"/>
+       </span>
+       <span class="rolling-digit">
+        <img height="484" src="//www.census.gov/popclock/images/strip.png" style="top: -220px;" width="36"/>
+       </span>
+       <span class="rolling-digit">
+        <img height="484" src="//www.census.gov/popclock/images/strip.png" style="top: 0px;" width="36"/>
+       </span>
+       <span>
+        ,
+       </span>
+       <span class="rolling-digit">
+        <img height="484" src="//www.census.gov/popclock/images/strip.png" style="top: -44px;" width="36"/>
+       </span>
+       <span class="rolling-digit">
+        <img height="484" src="//www.census.gov/popclock/images/strip.png" style="top: -308px;" width="36"/>
+       </span>
+       <span class="rolling-digit">
+        <img height="484" src="//www.census.gov/popclock/images/strip.png" style="top: -367.922px;" width="36"/>
+       </span>
+      </p>
+     </div>
+     <!-- contains two tables with population on date -->
+     <div id="world-pop-historical">
+      <p>
+       <a href="./world" id="anch_6" target="_parent" title="International Programs - Country Rank">
+        TOP 10 MOST POPULOUS COUNTRIES (July 1, 2020)
+       </a>
+      </p>
+      <table>
+       <thead>
+        <tr>
+         <th colspan="6">
+          <a href="./world" title="International Programs - Country Rank">
+           TOP 10 MOST POPULOUS COUNTRIES (July 1, 2020)
+          </a>
+         </th>
+        </tr>
+        <tr>
+         <th>
+          Rank. Country
+         </th>
+         <th>
+          Population
+         </th>
+         <th>
+          Rank. Country. Population
+         </th>
+         <th>
+          NaN
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>
+          1. China
+         </td>
+         <td align="right">
+          1,394,015,977
+         </td>
+         <td>
+          6. Nigeria
+         </td>
+         <td align="right">
+          214,028,302
+         </td>
+        </tr>
+        <tr>
+         <td>
+          2. India
+         </td>
+         <td align="right">
+          1,326,093,247
+         </td>
+         <td>
+          7. Brazil
+         </td>
+         <td align="right">
+          211,715,973
+         </td>
+        </tr>
+        <tr>
+         <td>
+          3. United States
+         </td>
+         <td align="right">
+          329,877,505
+         </td>
+         <td>
+          8. Bangladesh
+         </td>
+         <td align="right">
+          162,650,853
+         </td>
+        </tr>
+        <tr>
+         <td>
+          4. Indonesia
+         </td>
+         <td align="right">
+          267,026,366
+         </td>
+         <td>
+          9. Russia
+         </td>
+         <td align="right">
+          141,722,205
+         </td>
+        </tr>
+        <tr>
+         <td>
+          5. Pakistan
+         </td>
+         <td align="right">
+          233,500,636
+         </td>
+         <td>
+          10. Mexico
+         </td>
+         <td align="right">
+          128,649,565
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <table>
+      </table>
+     </div>
+     <div class="ffix">
+     </div>
+    </div>
+    <div class="ffix">
+    </div>
+   </div>
+   <!-- End U.S. and World populations -->
+   <!-- U.S. and World populations -->
+   <script type="text/javascript">
+    $(function ( )
+{
+	var default_date = new Date(config.components.pop_on_date.default_year, config.components.pop_on_date.default_month - 1, config.components.pop_on_date.default_day);
+
+
+	popOnDateViewController = new PopOnDateViewController(api, 'us-pop-on-date', 'date', '.select-date', '.pop-count', default_date);
+	popOnDateViewController.shareLink = popOnDateViewController.jQueryEquivalent.find('.share a:eq(1)'); // download and share link
+	popOnDateViewController.shareLinkOriginalHref = popOnDateViewController.shareLink.attr('href'); // download and share original HREF
+	var preparingDataForDate = popOnDateViewController.prepareDataForDate();
+
+
+});
+   </script>
+   <div class="component-header vertical-gradient shadow full-border beveled" id="us-pop-on-date">
+    <form>
+     <input class="hasDatepicker" disabled="disabled" id="date" tabindex="-1" type="text"/>
+    </form>
+    <a class="select-date" href="#dateselect" id="select-date-image">
+     select date
+    </a>
+    <p id="seldate">
+     The United States population on
+     <span class="select-date">
+      October 17, 2020
+     </span>
+     <span id="pop-tense">
+      was
+     </span>
+     :
+     <span class="pop-count">
+      Not Available
+     </span>
+     <br/>
+     <a class="select-date" href="#dateselect" id="select-date-image-under">
+      select date
+     </a>
+    </p>
+    <p class="share">
+     <a href="#pop_on_date-footnote" id="anch_9">
+      Learn More
+     </a>
+     |
+     <a href="./embed.php?component=pop_on_date&amp;date=20201017" id="anch_10">
+      Download and Share
+     </a>
+    </p>
+    <div class="ffix">
+    </div>
+   </div>
+   <!-- Population distributions -->
+   <h2>
+    Annual Population Estimates
+   </h2>
+   <div class="container vertical-gradient shadow beveled default-border" id="pop-dist-wrapper">
+    <div class="vertical-gradient-light">
+     <div class="lcol" id="population-growth-container">
+      <script type="text/javascript">
+       $(function ( )
+{
+
+	$('#population-growth-header').find('h3').text(config.components.growth.label);
+	popGrowthViewController = new PopGrowth(api, 'population-growth-wrapper', 'population-growth-chart', 'population-growth-overlay', config.components.growth.min_year, config.components.growth.max_year);
+	var creatingChart = popGrowthViewController.createChart();
+
+
+
+});
+      </script>
+      <div class="component-header horizontal-gradient bottom-border outset" id="population-growth-header">
+       <h3 aria-label="Graph showing population growth by region">
+        United States Population Growth by Region
+       </h3>
+       <p class="share">
+        <a href="#growth-footnote" id="anch_11">
+         Learn More
+        </a>
+        |
+        <a href="./embed.php?component=growth" id="anch_12">
+         Download and Share
+        </a>
+        |
+        <a aria-label="United States Population Growth by Region graph" href="./data_tables.php?component=growth" id="anch_13">
+         View Data Table
+        </a>
+       </p>
+      </div>
+      <!-- population distribution chart w/ overlay -->
+      <div id="population-growth-wrapper">
+       <div class="vertical-gradient shadow beveled" id="population-growth-overlay" style="width: 364.8px; left: 65.6px;">
+        <h4>
+         Regional Populations
+        </h4>
+        <table>
+         <thead>
+         </thead>
+         <tbody>
+         </tbody>
+        </table>
+       </div>
+       <!-- raphy chart uses the inline style attribute for its width and height setting -->
+       <div id="population-growth-chart">
+        <svg height="440" style="overflow: hidden; position: relative;" version="1.1" width="503" xmlns="http://www.w3.org/2000/svg">
+         <desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+          Created with Raphaël 2.1.0
+         </desc>
+         <defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+          <lineargradient gradienttransform="matrix(1,0,0,1,0,0)" id="40190-_053b65-_0a507b:80" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" x1="0" x2="6.123233995736766e-17" y1="1" y2="0">
+           <stop offset="0%" stop-color="#053b65" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+           </stop>
+           <stop offset="80%" stop-color="#0a507b" stop-opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+           </stop>
+          </lineargradient>
+         </defs>
+         <path d="M40,10L88.44444444444444,10L136.88888888888889,10L185.33333333333331,10L233.77777777777777,10L282.22222222222223,10L330.66666666666663,10L379.1111111111111,10L427.55555555555554,10L476,10L476,390L40,390Z" fill="none" opacity="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;">
+         </path>
+         <path d="M40,96.14441730000004L88.44444444444444,94.02096970000002L136.88888888888889,91.86055950000002L185.33333333333331,89.80597075000003L233.77777777777777,87.61404240000002L282.22222222222223,85.39659515000005L330.66666666666663,83.20575455000005L379.1111111111111,81.26373795L427.55555555555554,79.64687405000001L476,78.17245315000002L476,390L40,390Z" fill="#8aedfa" opacity="0.8" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.8;">
+         </path>
+         <path d="M40,148.7555446L88.44444444444444,146.84498155L136.88888888888889,144.84701470000002L185.33333333333331,142.91268645000002L233.77777777777777,140.81975285L282.22222222222223,138.62954495L330.66666666666663,136.44596805000003L379.1111111111111,134.52001595000004L427.55555555555554,132.89116305000005L476,131.35611600000004L476,390L40,390Z" fill="#59bcc9" opacity="0.8" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.8;">
+         </path>
+         <path d="M40,212.3812398L88.44444444444444,210.64489155L136.88888888888889,208.81692055000002L185.33333333333331,207.0950465L233.77777777777777,205.17766150000003L282.22222222222223,203.09709880000003L330.66666666666663,201.03413105L379.1111111111111,199.2404579L427.55555555555554,197.71595965L476,196.2686698L476,390L40,390Z" fill="#2b8e9e" opacity="0.8" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.8;">
+         </path>
+         <path d="M40,280.87665400000003L88.44444444444444,279.7938041L136.88888888888889,278.6208524L185.33333333333331,277.55382L233.77777777777777,276.35716485L282.22222222222223,275.05252605L330.66666666666663,273.765828L379.1111111111111,272.63492045L427.55555555555554,271.65903865L476,270.6985744L476,390L40,390Z" fill="#006370" opacity="0.8" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.8;">
+         </path>
+         <path d="M40,390L88.44444444444444,390L136.88888888888889,390L185.33333333333331,390L233.77777777777777,390L282.22222222222223,390L330.66666666666663,390L379.1111111111111,390L427.55555555555554,390L476,390L476,390L40,390Z" fill="none" opacity="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;">
+         </path>
+         <text fill="#000000" font="11px 'Fontin Sans', Fontin-Sans, sans-serif" stroke="none" style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 11px "Fontin Sans", Fontin-Sans, sans-serif;' text-anchor="middle" x="40" y="402">
+          <tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+           2010
+          </tspan>
+         </text>
+         <text fill="#000000" font="11px 'Fontin Sans', Fontin-Sans, sans-serif" stroke="none" style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 11px "Fontin Sans", Fontin-Sans, sans-serif; display: none;' text-anchor="middle" x="88.44444444444444" y="402">
+          <tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+           2011
+          </tspan>
+         </text>
+         <text fill="#000000" font="11px 'Fontin Sans', Fontin-Sans, sans-serif" stroke="none" style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 11px "Fontin Sans", Fontin-Sans, sans-serif; display: none;' text-anchor="middle" x="136.88888888888889" y="402">
+          <tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+           2012
+          </tspan>
+         </text>
+         <text fill="#000000" font="11px 'Fontin Sans', Fontin-Sans, sans-serif" stroke="none" style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 11px "Fontin Sans", Fontin-Sans, sans-serif; display: none;' text-anchor="middle" x="185.33333333333331" y="402">
+          <tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+           2013
+          </tspan>
+         </text>
+         <text fill="#000000" font="11px 'Fontin Sans', Fontin-Sans, sans-serif" stroke="none" style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 11px "Fontin Sans", Fontin-Sans, sans-serif; display: none;' text-anchor="middle" x="233.77777777777777" y="402">
+          <tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+           2014
+          </tspan>
+         </text>
+         <text fill="#000000" font="11px 'Fontin Sans', Fontin-Sans, sans-serif" stroke="none" style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 11px "Fontin Sans", Fontin-Sans, sans-serif; display: none;' text-anchor="middle" x="282.22222222222223" y="402">
+          <tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+           2015
+          </tspan>
+         </text>
+         <text fill="#000000" font="11px 'Fontin Sans', Fontin-Sans, sans-serif" stroke="none" style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 11px "Fontin Sans", Fontin-Sans, sans-serif; display: none;' text-anchor="middle" x="330.6666666666667" y="402">
+          <tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+           2016
+          </tspan>
+         </text>
+         <text fill="#000000" font="11px 'Fontin Sans', Fontin-Sans, sans-serif" stroke="none" style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 11px "Fontin Sans", Fontin-Sans, sans-serif; display: none;' text-anchor="middle" x="379.11111111111114" y="402">
+          <tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+           2017
+          </tspan>
+         </text>
+         <text fill="#000000" font="11px 'Fontin Sans', Fontin-Sans, sans-serif" stroke="none" style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 11px "Fontin Sans", Fontin-Sans, sans-serif; display: none;' text-anchor="middle" x="427.5555555555556" y="402">
+          <tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+           2018
+          </tspan>
+         </text>
+         <text fill="#000000" font="11px 'Fontin Sans', Fontin-Sans, sans-serif" stroke="none" style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 11px "Fontin Sans", Fontin-Sans, sans-serif;' text-anchor="middle" x="476" y="402">
+          <tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+           2019
+          </tspan>
+         </text>
+         <path d="M40,390.5L476,390.5M40.5,390L40.5,395M88.94444444444444,390L88.94444444444444,395M137.38888888888889,390L137.38888888888889,395M185.83333333333331,390L185.83333333333331,395M234.27777777777777,390L234.27777777777777,395M282.72222222222223,390L282.72222222222223,395M331.1666666666667,390L331.1666666666667,395M379.61111111111114,390L379.61111111111114,395M428.0555555555556,390L428.0555555555556,395M476.5,390L476.5,395" fill="none" stroke="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+         </path>
+         <text fill="#000000" font="11px 'Fontin Sans', Fontin-Sans, sans-serif" font-weight="bold" stroke="none" style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: bold 11px "Fontin Sans", Fontin-Sans, sans-serif;' text-anchor="end" transform="matrix(1,0,0,1,-5,0)" x="35" y="390">
+          <tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+           0
+          </tspan>
+         </text>
+         <text fill="#000000" font="11px 'Fontin Sans', Fontin-Sans, sans-serif" stroke="none" style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 11px "Fontin Sans", Fontin-Sans, sans-serif; display: none;' text-anchor="end" transform="matrix(1,0,0,1,-5,0)" x="35" y="295">
+          <tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+           100
+          </tspan>
+         </text>
+         <text fill="#000000" font="11px 'Fontin Sans', Fontin-Sans, sans-serif" stroke="none" style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 11px "Fontin Sans", Fontin-Sans, sans-serif; display: none;' text-anchor="end" transform="matrix(1,0,0,1,-5,0)" x="35" y="200">
+          <tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+           200
+          </tspan>
+         </text>
+         <text fill="#000000" font="11px 'Fontin Sans', Fontin-Sans, sans-serif" stroke="none" style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 11px "Fontin Sans", Fontin-Sans, sans-serif; display: none;' text-anchor="end" transform="matrix(1,0,0,1,-5,0)" x="35" y="105">
+          <tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+           300
+          </tspan>
+         </text>
+         <text fill="#000000" font="11px 'Fontin Sans', Fontin-Sans, sans-serif" font-weight="bold" stroke="none" style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: bold 11px "Fontin Sans", Fontin-Sans, sans-serif;' text-anchor="end" transform="matrix(1,0,0,1,-5,0)" x="35" y="10">
+          <tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+           400
+          </tspan>
+         </text>
+         <path d="M40.5,390L40.5,10M36,390.5L41,390.5M36,295.5L41,295.5M36,200.5L41,200.5M36,105.5L41,105.5M36,10.5L41,10.5" fill="none" stroke="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+         </path>
+         <path d="M40,10L88.44444444444444,10L136.88888888888889,10L185.33333333333331,10L233.77777777777777,10L282.22222222222223,10L330.66666666666663,10L379.1111111111111,10L427.55555555555554,10L476,10" fill="none" opacity="0" stroke="#000000" stroke-dasharray="-2" stroke-linecap="" stroke-linejoin="round" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-linejoin: round; opacity: 0;">
+         </path>
+         <path d="M40,96.14441730000004L88.44444444444444,94.02096970000002L136.88888888888889,91.86055950000002L185.33333333333331,89.80597075000003L233.77777777777777,87.61404240000002L282.22222222222223,85.39659515000005L330.66666666666663,83.20575455000005L379.1111111111111,81.26373795L427.55555555555554,79.64687405000001L476,78.17245315000002" fill="none" stroke="#8aedfa" stroke-dasharray="-2" stroke-linecap="" stroke-linejoin="round" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-linejoin: round;">
+         </path>
+         <path d="M40,148.7555446L88.44444444444444,146.84498155L136.88888888888889,144.84701470000002L185.33333333333331,142.91268645000002L233.77777777777777,140.81975285L282.22222222222223,138.62954495L330.66666666666663,136.44596805000003L379.1111111111111,134.52001595000004L427.55555555555554,132.89116305000005L476,131.35611600000004" fill="none" stroke="#59bcc9" stroke-dasharray="-2" stroke-linecap="" stroke-linejoin="round" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-linejoin: round;">
+         </path>
+         <path d="M40,212.3812398L88.44444444444444,210.64489155L136.88888888888889,208.81692055000002L185.33333333333331,207.0950465L233.77777777777777,205.17766150000003L282.22222222222223,203.09709880000003L330.66666666666663,201.03413105L379.1111111111111,199.2404579L427.55555555555554,197.71595965L476,196.2686698" fill="none" stroke="#2b8e9e" stroke-dasharray="-2" stroke-linecap="" stroke-linejoin="round" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-linejoin: round;">
+         </path>
+         <path d="M40,280.87665400000003L88.44444444444444,279.7938041L136.88888888888889,278.6208524L185.33333333333331,277.55382L233.77777777777777,276.35716485L282.22222222222223,275.05252605L330.66666666666663,273.765828L379.1111111111111,272.63492045L427.55555555555554,271.65903865L476,270.6985744" fill="none" stroke="#006370" stroke-dasharray="-2" stroke-linecap="" stroke-linejoin="round" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-linejoin: round;">
+         </path>
+         <path d="M40,390L88.44444444444444,390L136.88888888888889,390L185.33333333333331,390L233.77777777777777,390L282.22222222222223,390L330.66666666666663,390L379.1111111111111,390L427.55555555555554,390L476,390" fill="none" opacity="0" stroke="#000000" stroke-dasharray="-2" stroke-linecap="" stroke-linejoin="round" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-linejoin: round; opacity: 0;">
+         </path>
+         <rect fill="#000000" height="400" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="30.22222222222222" x="34" y="0">
+         </rect>
+         <rect fill="#000000" height="400" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="49.44444444444444" x="63.22222222222223" y="0">
+         </rect>
+         <rect fill="#000000" height="400" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="49.444444444444436" x="111.66666666666666" y="0">
+         </rect>
+         <rect fill="#000000" height="400" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="49.44444444444444" x="160.1111111111111" y="0">
+         </rect>
+         <rect fill="#000000" height="400" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="49.44444444444446" x="208.55555555555554" y="0">
+         </rect>
+         <rect fill="#000000" height="400" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="49.44444444444443" x="257" y="0">
+         </rect>
+         <rect fill="#000000" height="400" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="49.44444444444443" x="305.44444444444446" y="0">
+         </rect>
+         <rect fill="#000000" height="400" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="49.44444444444446" x="353.88888888888886" y="0">
+         </rect>
+         <rect fill="#000000" height="400" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="49.44444444444446" x="402.3333333333333" y="0">
+         </rect>
+         <rect fill="#000000" height="400" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="30.22222222222223" x="450.77777777777777" y="0">
+         </rect>
+         <text fill="#4f4f4f" font='10px "Arial"' stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 10px Arial;" text-anchor="middle" transform="matrix(0,-1,1,0,-179.8906,220.1094)" x="20" y="200">
+          <tspan dy="3.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+           Population (in millions)
+          </tspan>
+         </text>
+         <path d="M41,10L476,10" fill="none" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+         </path>
+         <path d="M41,10L476,10" fill="none" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(1,0,0,1,0,285)">
+         </path>
+         <path d="M41,10L476,10" fill="none" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(1,0,0,1,0,190)">
+         </path>
+         <path d="M41,10L476,10" fill="none" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(1,0,0,1,0,95)">
+         </path>
+         <path d="M0,10L0,400" fill="none" opacity="0" stroke="#979797" stroke-dasharray="8,6" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;">
+         </path>
+         <path d="M22.5,2L26,9L38,9Q43,9,43,14L43,30Q43,35,38,35L7,35Q2,35,2,30L2,14Q2,9,7,9L7,9L19,9Z" fill="none" fill-opacity="1" opacity="1" stroke="#000000" stroke-opacity="0" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; fill-opacity: 1;" transform="matrix(1,0,0,1,0,0)">
+         </path>
+         <text fill="#ffffff" font='10px "Arial"' font-size="12px" font-weight="bold" opacity="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: bold 12px Arial; opacity: 0;" text-anchor="middle" transform="matrix(1,0,0,1,0,0)" x="22.5" y="22">
+          <tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+           XXXX
+          </tspan>
+         </text>
+         <text fill="#000000" font='10px "Arial"' font-size="18px" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 18px Arial; display: none;" text-anchor="middle" x="251.5" y="15">
+          <tspan dy="6" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+           United States Population Growth by Region
+          </tspan>
+         </text>
+        </svg>
+        <!-- stacked line chart, generated using Raphael -->
+       </div>
+       <p id="pop-growth-legend">
+        <span class="northeast-legend">
+        </span>
+        Northeast
+        <span class="midwest-legend">
+        </span>
+        Midwest
+        <span class="west-legend">
+        </span>
+        West
+        <span class="south-legend">
+        </span>
+        South
+       </p>
+      </div>
+      <!-- population distribution tables -->
+     </div>
+     <div class="rcol">
+      <script type="text/javascript">
+       $(function ( )
+{
+	popPyramidViewController = new PopPyramidViewController(api, animator, 'population-pyramid-graph', 'population-pyramid-slider', 0.3);
+
+	popPyramidViewController.shareLink = $('#population-pyramid-wrapper').parent().find('nav.share a:eq(1)'); // download and share link
+	popPyramidViewController.shareLinkOriginalHref = popPyramidViewController.shareLink.prop('href'); // download and share original HREF
+
+// we don't need to display a chart for print - image will be added later
+	popPyramidViewController.layoutViews(config.components.pyramid.min_year, config.components.pyramid.max_year);
+	var creatingChart = popPyramidViewController.createChart();
+
+
+
+});
+      </script>
+      <div class="component-header horizontal-gradient bottom-border outset" id="population-age-header">
+       <h3>
+        United States Population by Age and Sex
+       </h3>
+       <p class="share">
+        <a href="#pyramid-footnote" id="anch_14">
+         Learn More
+        </a>
+        |
+        <a href="./embed.php?component=pyramid" id="anch_15">
+         Download and Share
+        </a>
+        |
+        <a aria-label="United States Population by Age and Sex graph" href="./data_tables.php?component=pyramid" id="anch_16">
+         View Data Table
+        </a>
+       </p>
+      </div>
+      <div id="population-pyramid-wrapper">
+       <div id="population-pyramid-graph">
+        <svg height="432" style="overflow: hidden; position: relative;" version="1.1" width="502" xmlns="http://www.w3.org/2000/svg">
+         <desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+          Created with Raphaël 2.1.0
+         </desc>
+         <defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+         </defs>
+         <text fill="#000000" font='10px "Arial"' stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 10px Arial;" text-anchor="middle" x="20" y="404">
+          <tspan dy="404" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+          </tspan>
+         </text>
+         <text fill="#000000" font='10px "Arial"' stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 10px Arial;" text-anchor="middle" x="482" y="404">
+          <tspan dy="404" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+          </tspan>
+         </text>
+         <text fill="#000000" font='10px "Arial"' stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 10px Arial;" text-anchor="middle" x="251" y="404">
+          <tspan dy="404" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+          </tspan>
+         </text>
+         <path d="M20,0L482,0" fill="none" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+         </path>
+         <text fill="#4f4f4f" font='10px "Arial"' font-weight="bold" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: start; font: bold 10px Arial;" text-anchor="start" x="20" y="12">
+          <tspan dy="12" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+          </tspan>
+         </text>
+         <text fill="#000000" font='10px "Arial"' font-size="12px" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 12px Arial; display: none;" text-anchor="middle" transform="matrix(1,0,0,1,0,383.4653)" x="251" y="0">
+          <tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+           left
+          </tspan>
+         </text>
+         <text fill="#000000" font='10px "Arial"' font-size="12px" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 12px Arial; display: none;" text-anchor="middle" transform="matrix(1,0,0,1,0,383.4653)" x="251" y="0">
+          <tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+           right
+          </tspan>
+         </text>
+         <text fill="#000000" font='10px "Arial"' font-size="12px" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 12px Arial; display: none;" text-anchor="middle" transform="matrix(1,0,0,1,0,383.4653)" x="251" y="0">
+          <tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+           center
+          </tspan>
+         </text>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,191.7327)" width="203.5" x="20" y="383.46534653465346">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,191.7327)" width="203.5" x="278.5" y="383.46534653465346">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="383.46534653465346">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,189.9653)" width="203.5" x="20" y="379.9306930693069">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,189.9653)" width="203.5" x="278.5" y="379.9306930693069">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="379.9306930693069">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,188.198)" width="203.5" x="20" y="376.3960396039604">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,188.198)" width="203.5" x="278.5" y="376.3960396039604">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="376.3960396039604">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,186.4307)" width="203.5" x="20" y="372.86138613861385">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,186.4307)" width="203.5" x="278.5" y="372.86138613861385">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="372.86138613861385">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,184.6634)" width="203.5" x="20" y="369.3267326732673">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,184.6634)" width="203.5" x="278.5" y="369.3267326732673">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="369.3267326732673">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,182.896)" width="203.5" x="20" y="365.7920792079208">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,182.896)" width="203.5" x="278.5" y="365.7920792079208">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="365.7920792079208">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,181.1287)" width="203.5" x="20" y="362.25742574257424">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,181.1287)" width="203.5" x="278.5" y="362.25742574257424">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="362.25742574257424">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,179.3614)" width="203.5" x="20" y="358.7227722772277">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,179.3614)" width="203.5" x="278.5" y="358.7227722772277">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="358.7227722772277">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,177.5941)" width="203.5" x="20" y="355.18811881188117">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,177.5941)" width="203.5" x="278.5" y="355.18811881188117">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="355.18811881188117">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,175.8267)" width="203.5" x="20" y="351.65346534653463">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,175.8267)" width="203.5" x="278.5" y="351.65346534653463">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="351.65346534653463">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,174.0594)" width="203.5" x="20" y="348.1188118811881">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,174.0594)" width="203.5" x="278.5" y="348.1188118811881">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="348.1188118811881">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,172.2921)" width="203.5" x="20" y="344.58415841584156">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,172.2921)" width="203.5" x="278.5" y="344.58415841584156">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="344.58415841584156">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,170.5248)" width="203.5" x="20" y="341.049504950495">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,170.5248)" width="203.5" x="278.5" y="341.049504950495">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="341.049504950495">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,168.7574)" width="203.5" x="20" y="337.5148514851485">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,168.7574)" width="203.5" x="278.5" y="337.5148514851485">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="337.5148514851485">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,166.9901)" width="203.5" x="20" y="333.98019801980195">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,166.9901)" width="203.5" x="278.5" y="333.98019801980195">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="333.98019801980195">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,165.2228)" width="203.5" x="20" y="330.44554455445547">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,165.2228)" width="203.5" x="278.5" y="330.44554455445547">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="330.44554455445547">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,163.4554)" width="203.5" x="20" y="326.91089108910893">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,163.4554)" width="203.5" x="278.5" y="326.91089108910893">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="326.91089108910893">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,161.6881)" width="203.5" x="20" y="323.3762376237624">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,161.6881)" width="203.5" x="278.5" y="323.3762376237624">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="323.3762376237624">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,159.9208)" width="203.5" x="20" y="319.84158415841586">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,159.9208)" width="203.5" x="278.5" y="319.84158415841586">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="319.84158415841586">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,158.1535)" width="203.5" x="20" y="316.3069306930693">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,158.1535)" width="203.5" x="278.5" y="316.3069306930693">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="316.3069306930693">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,156.3861)" width="203.5" x="20" y="312.7722772277228">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,156.3861)" width="203.5" x="278.5" y="312.7722772277228">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="312.7722772277228">
+         </rect>
+         <text fill="#a8a8a8" font='10px "Arial"' font-size="18px" font-weight="bold" opacity="0.75" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: bold 18px Arial; opacity: 0.75;" text-anchor="middle" x="251" y="314.7722772277228">
+          <tspan dy="5.998839727722782" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+           20
+          </tspan>
+         </text>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,154.6188)" width="203.5" x="20" y="309.23762376237624">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,154.6188)" width="203.5" x="278.5" y="309.23762376237624">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="309.23762376237624">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,152.8515)" width="203.5" x="20" y="305.7029702970297">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,152.8515)" width="203.5" x="278.5" y="305.7029702970297">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="305.7029702970297">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,151.0842)" width="203.5" x="20" y="302.16831683168317">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,151.0842)" width="203.5" x="278.5" y="302.16831683168317">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="302.16831683168317">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,149.3168)" width="203.5" x="20" y="298.63366336633663">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,149.3168)" width="203.5" x="278.5" y="298.63366336633663">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="298.63366336633663">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,147.5495)" width="203.5" x="20" y="295.0990099009901">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,147.5495)" width="203.5" x="278.5" y="295.0990099009901">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="295.0990099009901">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,145.7822)" width="203.5" x="20" y="291.56435643564356">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,145.7822)" width="203.5" x="278.5" y="291.56435643564356">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="291.56435643564356">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,144.0149)" width="203.5" x="20" y="288.029702970297">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,144.0149)" width="203.5" x="278.5" y="288.029702970297">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="288.029702970297">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,142.2475)" width="203.5" x="20" y="284.4950495049505">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,142.2475)" width="203.5" x="278.5" y="284.4950495049505">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="284.4950495049505">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,140.4802)" width="203.5" x="20" y="280.96039603960395">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,140.4802)" width="203.5" x="278.5" y="280.96039603960395">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="280.96039603960395">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,138.7129)" width="203.5" x="20" y="277.4257425742574">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,138.7129)" width="203.5" x="278.5" y="277.4257425742574">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="277.4257425742574">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,136.9455)" width="203.5" x="20" y="273.8910891089109">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,136.9455)" width="203.5" x="278.5" y="273.8910891089109">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="273.8910891089109">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,135.1782)" width="203.5" x="20" y="270.35643564356434">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,135.1782)" width="203.5" x="278.5" y="270.35643564356434">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="270.35643564356434">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,133.4109)" width="203.5" x="20" y="266.8217821782178">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,133.4109)" width="203.5" x="278.5" y="266.8217821782178">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="266.8217821782178">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,131.6436)" width="203.5" x="20" y="263.28712871287127">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,131.6436)" width="203.5" x="278.5" y="263.28712871287127">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="263.28712871287127">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,129.8762)" width="203.5" x="20" y="259.7524752475247">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,129.8762)" width="203.5" x="278.5" y="259.7524752475247">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="259.7524752475247">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,128.1089)" width="203.5" x="20" y="256.21782178217825">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,128.1089)" width="203.5" x="278.5" y="256.21782178217825">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="256.21782178217825">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,126.3416)" width="203.5" x="20" y="252.6831683168317">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,126.3416)" width="203.5" x="278.5" y="252.6831683168317">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="252.6831683168317">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,124.5743)" width="203.5" x="20" y="249.14851485148515">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,124.5743)" width="203.5" x="278.5" y="249.14851485148515">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="249.14851485148515">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,122.8069)" width="203.5" x="20" y="245.6138613861386">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,122.8069)" width="203.5" x="278.5" y="245.6138613861386">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="245.6138613861386">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,121.0396)" width="203.5" x="20" y="242.07920792079207">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,121.0396)" width="203.5" x="278.5" y="242.07920792079207">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="242.07920792079207">
+         </rect>
+         <text fill="#a8a8a8" font='10px "Arial"' font-size="18px" font-weight="bold" opacity="0.75" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: bold 18px Arial; opacity: 0.75;" text-anchor="middle" x="251" y="244.07920792079207">
+          <tspan dy="5.993270420792072" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+           40
+          </tspan>
+         </text>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,119.2723)" width="203.5" x="20" y="238.54455445544554">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,119.2723)" width="203.5" x="278.5" y="238.54455445544554">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="238.54455445544554">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,117.505)" width="203.5" x="20" y="235.009900990099">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,117.505)" width="203.5" x="278.5" y="235.009900990099">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="235.009900990099">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,115.7376)" width="203.5" x="20" y="231.47524752475246">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,115.7376)" width="203.5" x="278.5" y="231.47524752475246">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="231.47524752475246">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,113.9703)" width="203.5" x="20" y="227.94059405940592">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,113.9703)" width="203.5" x="278.5" y="227.94059405940592">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="227.94059405940592">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,112.203)" width="203.5" x="20" y="224.40594059405942">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,112.203)" width="203.5" x="278.5" y="224.40594059405942">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="224.40594059405942">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,110.4356)" width="203.5" x="20" y="220.87128712871288">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,110.4356)" width="203.5" x="278.5" y="220.87128712871288">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="220.87128712871288">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,108.6683)" width="203.5" x="20" y="217.33663366336634">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,108.6683)" width="203.5" x="278.5" y="217.33663366336634">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="217.33663366336634">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,106.901)" width="203.5" x="20" y="213.8019801980198">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,106.901)" width="203.5" x="278.5" y="213.8019801980198">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="213.8019801980198">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,105.1337)" width="203.5" x="20" y="210.26732673267327">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,105.1337)" width="203.5" x="278.5" y="210.26732673267327">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="210.26732673267327">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,103.3663)" width="203.5" x="20" y="206.73267326732673">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,103.3663)" width="203.5" x="278.5" y="206.73267326732673">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="206.73267326732673">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,101.599)" width="203.5" x="20" y="203.1980198019802">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,101.599)" width="203.5" x="278.5" y="203.1980198019802">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="203.1980198019802">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,99.8317)" width="203.5" x="20" y="199.66336633663366">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,99.8317)" width="203.5" x="278.5" y="199.66336633663366">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="199.66336633663366">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,98.0644)" width="203.5" x="20" y="196.12871287128712">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,98.0644)" width="203.5" x="278.5" y="196.12871287128712">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="196.12871287128712">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,96.297)" width="203.5" x="20" y="192.59405940594058">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,96.297)" width="203.5" x="278.5" y="192.59405940594058">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="192.59405940594058">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,94.5297)" width="203.5" x="20" y="189.05940594059405">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,94.5297)" width="203.5" x="278.5" y="189.05940594059405">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="189.05940594059405">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,92.7624)" width="203.5" x="20" y="185.5247524752475">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,92.7624)" width="203.5" x="278.5" y="185.5247524752475">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="185.5247524752475">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,90.995)" width="203.5" x="20" y="181.99009900990097">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,90.995)" width="203.5" x="278.5" y="181.99009900990097">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="181.99009900990097">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,89.2277)" width="203.5" x="20" y="178.45544554455446">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,89.2277)" width="203.5" x="278.5" y="178.45544554455446">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="178.45544554455446">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,87.4604)" width="203.5" x="20" y="174.92079207920793">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,87.4604)" width="203.5" x="278.5" y="174.92079207920793">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="174.92079207920793">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,85.6931)" width="203.5" x="20" y="171.3861386138614">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,85.6931)" width="203.5" x="278.5" y="171.3861386138614">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="171.3861386138614">
+         </rect>
+         <text fill="#a8a8a8" font='10px "Arial"' font-size="18px" font-weight="bold" opacity="0.75" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: bold 18px Arial; opacity: 0.75;" text-anchor="middle" x="251" y="173.3861386138614">
+          <tspan dy="6.003326113861391" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+           60
+          </tspan>
+         </text>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,83.9257)" width="203.5" x="20" y="167.85148514851485">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,83.9257)" width="203.5" x="278.5" y="167.85148514851485">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="167.85148514851485">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,82.1584)" width="203.5" x="20" y="164.31683168316832">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,82.1584)" width="203.5" x="278.5" y="164.31683168316832">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="164.31683168316832">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,80.3911)" width="203.5" x="20" y="160.78217821782178">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,80.3911)" width="203.5" x="278.5" y="160.78217821782178">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="160.78217821782178">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,78.6238)" width="203.5" x="20" y="157.24752475247524">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,78.6238)" width="203.5" x="278.5" y="157.24752475247524">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="157.24752475247524">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,76.8564)" width="203.5" x="20" y="153.7128712871287">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,76.8564)" width="203.5" x="278.5" y="153.7128712871287">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="153.7128712871287">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,75.0891)" width="203.5" x="20" y="150.17821782178217">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,75.0891)" width="203.5" x="278.5" y="150.17821782178217">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="150.17821782178217">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,73.3218)" width="203.5" x="20" y="146.64356435643563">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,73.3218)" width="203.5" x="278.5" y="146.64356435643563">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="146.64356435643563">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,71.5545)" width="203.5" x="20" y="143.1089108910891">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,71.5545)" width="203.5" x="278.5" y="143.1089108910891">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="143.1089108910891">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,69.7871)" width="203.5" x="20" y="139.57425742574256">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,69.7871)" width="203.5" x="278.5" y="139.57425742574256">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="139.57425742574256">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,68.0198)" width="203.5" x="20" y="136.03960396039602">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,68.0198)" width="203.5" x="278.5" y="136.03960396039602">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="136.03960396039602">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,66.2525)" width="203.5" x="20" y="132.5049504950495">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,66.2525)" width="203.5" x="278.5" y="132.5049504950495">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="132.5049504950495">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,64.4851)" width="203.5" x="20" y="128.97029702970298">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,64.4851)" width="203.5" x="278.5" y="128.97029702970298">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="128.97029702970298">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,62.7178)" width="203.5" x="20" y="125.43564356435644">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,62.7178)" width="203.5" x="278.5" y="125.43564356435644">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="125.43564356435644">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,60.9505)" width="203.5" x="20" y="121.9009900990099">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,60.9505)" width="203.5" x="278.5" y="121.9009900990099">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="121.9009900990099">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,59.1832)" width="203.5" x="20" y="118.36633663366337">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,59.1832)" width="203.5" x="278.5" y="118.36633663366337">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="118.36633663366337">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,57.4158)" width="203.5" x="20" y="114.83168316831683">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,57.4158)" width="203.5" x="278.5" y="114.83168316831683">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="114.83168316831683">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,55.6485)" width="203.5" x="20" y="111.29702970297029">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,55.6485)" width="203.5" x="278.5" y="111.29702970297029">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="111.29702970297029">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,53.8812)" width="203.5" x="20" y="107.76237623762376">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,53.8812)" width="203.5" x="278.5" y="107.76237623762376">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="107.76237623762376">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,52.1139)" width="203.5" x="20" y="104.22772277227722">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,52.1139)" width="203.5" x="278.5" y="104.22772277227722">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="104.22772277227722">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,50.3465)" width="203.5" x="20" y="100.69306930693068">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,50.3465)" width="203.5" x="278.5" y="100.69306930693068">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="100.69306930693068">
+         </rect>
+         <text fill="#a8a8a8" font='10px "Arial"' font-size="18px" font-weight="bold" opacity="0.75" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: bold 18px Arial; opacity: 0.75;" text-anchor="middle" x="251" y="102.69306930693068">
+          <tspan dy="5.997756806930681" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+           80
+          </tspan>
+         </text>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,48.5792)" width="203.5" x="20" y="97.15841584158414">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,48.5792)" width="203.5" x="278.5" y="97.15841584158414">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="97.15841584158414">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,46.8119)" width="203.5" x="20" y="93.62376237623761">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,46.8119)" width="203.5" x="278.5" y="93.62376237623761">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="93.62376237623761">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,45.0446)" width="203.5" x="20" y="90.08910891089107">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,45.0446)" width="203.5" x="278.5" y="90.08910891089107">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="90.08910891089107">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,43.2772)" width="203.5" x="20" y="86.55445544554453">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,43.2772)" width="203.5" x="278.5" y="86.55445544554453">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="86.55445544554453">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,41.5099)" width="203.5" x="20" y="83.019801980198">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,41.5099)" width="203.5" x="278.5" y="83.019801980198">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="83.019801980198">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,39.7426)" width="203.5" x="20" y="79.48514851485146">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,39.7426)" width="203.5" x="278.5" y="79.48514851485146">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="79.48514851485146">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,37.9752)" width="203.5" x="20" y="75.95049504950492">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,37.9752)" width="203.5" x="278.5" y="75.95049504950492">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="75.95049504950492">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,36.2079)" width="203.5" x="20" y="72.41584158415839">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,36.2079)" width="203.5" x="278.5" y="72.41584158415839">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="72.41584158415839">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,34.4406)" width="203.5" x="20" y="68.88118811881185">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,34.4406)" width="203.5" x="278.5" y="68.88118811881185">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="68.88118811881185">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,32.6733)" width="203.5" x="20" y="65.34653465346537">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,32.6733)" width="203.5" x="278.5" y="65.34653465346537">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="65.34653465346537">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,30.9059)" width="203.5" x="20" y="61.81188118811883">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,30.9059)" width="203.5" x="278.5" y="61.81188118811883">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="61.81188118811883">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,29.1386)" width="203.5" x="20" y="58.277227722772295">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,29.1386)" width="203.5" x="278.5" y="58.277227722772295">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="58.277227722772295">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,27.3713)" width="203.5" x="20" y="54.74257425742576">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,27.3713)" width="203.5" x="278.5" y="54.74257425742576">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="54.74257425742576">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,25.604)" width="203.5" x="20" y="51.20792079207922">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,25.604)" width="203.5" x="278.5" y="51.20792079207922">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="51.20792079207922">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,23.8366)" width="203.5" x="20" y="47.673267326732685">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,23.8366)" width="203.5" x="278.5" y="47.673267326732685">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="47.673267326732685">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,22.0693)" width="203.5" x="20" y="44.13861386138615">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,22.0693)" width="203.5" x="278.5" y="44.13861386138615">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="44.13861386138615">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,20.302)" width="203.5" x="20" y="40.60396039603961">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,20.302)" width="203.5" x="278.5" y="40.60396039603961">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="40.60396039603961">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,18.5347)" width="203.5" x="20" y="37.069306930693074">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,18.5347)" width="203.5" x="278.5" y="37.069306930693074">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="37.069306930693074">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,16.7673)" width="203.5" x="20" y="33.53465346534654">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,16.7673)" width="203.5" x="278.5" y="33.53465346534654">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="33.53465346534654">
+         </rect>
+         <rect fill="#78909c" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,223.5,15)" width="203.5" x="20" y="30.000000000000004">
+         </rect>
+         <rect fill="#0095a8" height="3.5346534653465347" r="0" rx="0" ry="0" stroke="none" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(0,0,0,0.5,278.5,15)" width="203.5" x="278.5" y="30.000000000000004">
+         </rect>
+         <rect fill="#000000" height="3.5346534653465347" opacity="0" r="0" rx="0" ry="0" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" width="502" x="0" y="30.000000000000004">
+         </rect>
+         <text fill="#a8a8a8" font='10px "Arial"' font-size="18px" font-weight="bold" opacity="0.75" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: bold 18px Arial; opacity: 0.75;" text-anchor="middle" x="251" y="32">
+          <tspan dy="6" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+           Age
+          </tspan>
+         </text>
+         <path d="M20,20L20,392" fill="none" stroke="#ffffff" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+         </path>
+         <path d="M20,20L20,392" fill="none" stroke="#ffffff" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(1,0,0,1,40.7,0)">
+         </path>
+         <path d="M20,20L20,392" fill="none" stroke="#ffffff" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(1,0,0,1,81.4,0)">
+         </path>
+         <path d="M20,20L20,392" fill="none" stroke="#ffffff" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(1,0,0,1,122.1,0)">
+         </path>
+         <path d="M20,20L20,392" fill="none" stroke="#ffffff" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(1,0,0,1,162.8,0)">
+         </path>
+         <path d="M20,20L20,392" fill="none" stroke="#ffffff" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(1,0,0,1,299.2,0)">
+         </path>
+         <path d="M20,20L20,392" fill="none" stroke="#ffffff" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(1,0,0,1,339.9,0)">
+         </path>
+         <path d="M20,20L20,392" fill="none" stroke="#ffffff" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(1,0,0,1,380.6,0)">
+         </path>
+         <path d="M20,20L20,392" fill="none" stroke="#ffffff" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(1,0,0,1,421.3,0)">
+         </path>
+         <path d="M20,20L20,392" fill="none" stroke="#ffffff" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(1,0,0,1,462,0)">
+         </path>
+         <path d="M20,392L20,396" fill="none" stroke="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+         </path>
+         <path d="M20,392L20,396" fill="none" stroke="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(1,0,0,1,40.7,0)">
+         </path>
+         <path d="M20,392L20,396" fill="none" stroke="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(1,0,0,1,81.4,0)">
+         </path>
+         <path d="M20,392L20,396" fill="none" stroke="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(1,0,0,1,122.1,0)">
+         </path>
+         <path d="M20,392L20,396" fill="none" stroke="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(1,0,0,1,162.8,0)">
+         </path>
+         <path d="M20,392L20,396" fill="none" stroke="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(1,0,0,1,203.5,0)">
+         </path>
+         <path d="M20,392L20,396" fill="none" stroke="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(1,0,0,1,258.5,0)">
+         </path>
+         <path d="M20,392L20,396" fill="none" stroke="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(1,0,0,1,299.2,0)">
+         </path>
+         <path d="M20,392L20,396" fill="none" stroke="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(1,0,0,1,339.9,0)">
+         </path>
+         <path d="M20,392L20,396" fill="none" stroke="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(1,0,0,1,380.6,0)">
+         </path>
+         <path d="M20,392L20,396" fill="none" stroke="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(1,0,0,1,421.3,0)">
+         </path>
+         <path d="M20,392L20,396" fill="none" stroke="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(1,0,0,1,462,0)">
+         </path>
+         <path d="M20,392L482,392" fill="none" stroke="#656565" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+         </path>
+         <path d="M18.255,8.511L18.169,8.508C18.148,8.508,18.135,8.511999999999999,18.126,8.511999999999999L11.354000000000001,8.508V8.511C11.345,8.511,11.341000000000001,8.508,11.331000000000001,8.508L11.245000000000001,8.511C8.974,8.511,7.148000000000001,10.388,7.172000000000001,12.739999999999998L7.1690000000000005,12.907999999999998V22.543999999999997C7.1690000000000005,24.487,9.972000000000001,24.487,9.972000000000001,22.543999999999997V13.570999999999996H10.723L10.72,13.590999999999996V39.019C10.72,41.54,14.472000000000001,41.617,14.472000000000001,39.019V24.041H15.095V39.019C15.095,41.54,18.85,41.617,18.85,39.019V13.589V13.57H19.531000000000002V22.543C19.531000000000002,24.486,22.334000000000003,24.486,22.334000000000003,22.543V12.907V12.738C22.353,10.387,20.527,8.511,18.255,8.511Z" fill="#78909c" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(1,0,0,1,20,20)">
+         </path>
+         <circle cx="14.631" cy="4.203" fill="#78909c" r="3.265" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(1,0,0,1,20,20)">
+         </circle>
+         <path d="M14.294,27.337V39.199C14.294,41.516,10.823,41.516,10.823,39.199V27.337H8.091L11.143999999999998,13.745H10.37L8.312,21.444C7.624,23.57,4.700999999999999,22.7,5.369999999999999,20.419999999999998L7.752999999999999,11.877999999999998C8.096,10.669999999999998,9.623999999999999,8.526999999999997,12.270999999999999,8.526999999999997H14.709L14.709,8.526999999999997H17.333C19.953999999999997,8.526999999999997,21.488,10.686999999999998,21.884999999999998,11.877999999999997L23.985999999999997,20.343999999999994C24.629999999999995,22.619999999999994,21.729999999999997,23.561999999999994,21.042999999999996,21.343999999999994L19.262999999999995,13.745999999999995H18.426999999999996L21.22,27.34H18.779999999999998V39.213C18.779999999999998,41.517,15.322999999999997,41.501,15.322999999999997,39.213V27.34L14.294,27.337L14.294,27.337Z" fill="#0095a8" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(1,0,0,1,453,20)">
+         </path>
+         <circle cx="14.771" cy="4.202" fill="#0095a8" r="3.265" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(1,0,0,1,453,20)">
+         </circle>
+        </svg>
+        <!-- split bar chart, generated using Raphael -->
+       </div>
+       <a aria-label="Play and pause button for the Population by Age and Sex animated graph" href="" id="population-pyramid-play-button">
+        play/pause
+       </a>
+       <div id="population-pyramid-slider">
+        <svg height="59" style="overflow: hidden; position: relative; left: -0.09375px;" version="1.1" width="474.5" xmlns="http://www.w3.org/2000/svg">
+         <text fill="#000000" font='10px "Arial"' stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 10px Arial;" text-anchor="middle" x="32" y="30">
+          <tspan dy="3.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+           2010
+          </tspan>
+         </text>
+         <path d="M32.5,10L32.5,23" fill="none" opacity="1" stroke="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;" transform="matrix(1,0,0,1,0,0)">
+         </path>
+         <desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+          Created with Raphaël 2.1.0
+         </desc>
+         <defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+          <lineargradient gradienttransform="matrix(1,0,0,1,0,0)" id="34590-_053b65-_0a507b:80" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" x1="0" x2="6.123233995736766e-17" y1="1" y2="0">
+           <stop offset="0%" stop-color="#053b65" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+           </stop>
+           <stop offset="80%" stop-color="#0a507b" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+           </stop>
+          </lineargradient>
+         </defs>
+         <rect fill="#0095a8" height="14" r="7" rx="7" ry="7" stroke="#0095a8" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" width="405" x="23.5" y="3">
+         </rect>
+         <circle cx="419.5" cy="10" fill="#ffffff" r="7" stroke="#000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+         </circle>
+         <path d="M419.5,15C419.5,15,423,22,423,22C423,22,435,22,435,22C438.3333333333333,22,440,23.666666666666664,440,27C440,27,440,43,440,43C440,46.33333333333333,438.3333333333333,48,435,48C435,48,404,48,404,48C400.6666666666667,48,399,46.33333333333333,399,43C399,43,399,27,399,27C399,23.666666666666664,400.6666666666667,22,404,22C404,22,404,22,404,22C404,22,416,22,416,22C416,22,419.5,15,419.5,15" fill="#000000" opacity="0.1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-linejoin: round; stroke-linecap: round; opacity: 0.1;" transform="matrix(1,0,0,1,0,2)">
+         </path>
+         <path d="M419.5,15C419.5,15,423,22,423,22C423,22,435,22,435,22C438.3333333333333,22,440,23.666666666666664,440,27C440,27,440,43,440,43C440,46.33333333333333,438.3333333333333,48,435,48C435,48,404,48,404,48C400.6666666666667,48,399,46.33333333333333,399,43C399,43,399,27,399,27C399,23.666666666666664,400.6666666666667,22,404,22C404,22,404,22,404,22C404,22,416,22,416,22C416,22,419.5,15,419.5,15" fill="#000000" opacity="0.1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-linejoin: round; stroke-linecap: round; opacity: 0.1;" transform="matrix(1,0,0,1,0,2)">
+         </path>
+         <path d="M419.5,15C419.5,15,423,22,423,22C423,22,435,22,435,22C438.3333333333333,22,440,23.666666666666664,440,27C440,27,440,43,440,43C440,46.33333333333333,438.3333333333333,48,435,48C435,48,404,48,404,48C400.6666666666667,48,399,46.33333333333333,399,43C399,43,399,27,399,27C399,23.666666666666664,400.6666666666667,22,404,22C404,22,404,22,404,22C404,22,416,22,416,22C416,22,419.5,15,419.5,15" fill="#000000" opacity="0.1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-linejoin: round; stroke-linecap: round; opacity: 0.1;" transform="matrix(1,0,0,1,0,2)">
+         </path>
+         <path d="M22.5,2L26,9L38,9Q43,9,43,14L43,30Q43,35,38,35L7,35Q2,35,2,30L2,14Q2,9,7,9L7,9L19,9Z" fill="url(#34590-_053b65-_0a507b:80)" fill-opacity="1" opacity="1" stroke="#000000" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; fill-opacity: 1;" transform="matrix(1,0,0,1,397,13)">
+         </path>
+         <text fill="#ffffff" font='10px "Arial"' font-size="12px" font-weight="bold" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: bold 12px Arial;" text-anchor="middle" transform="matrix(1,0,0,1,397,13)" x="22.5" y="22">
+          <tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+           2019
+          </tspan>
+         </text>
+         <path d="M32.5,10L32.5,23" fill="none" opacity="0" stroke="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;">
+         </path>
+        </svg>
+        <!-- year slider, generated using Raphael -->
+       </div>
+      </div>
+     </div>
+     <div class="ffix">
+     </div>
+    </div>
+    <div class="vertical-gradient-light">
+     <div class="lcol">
+      <script type="text/javascript">
+       $(function ( )
+{
+		$('#most-populous-header h3').text(config.components.populous.label);
+		mostPopulousViewController = new MostPopulousViewController(api, 'us-most-populous-container', $('#most-populous-header'));
+		var creatingTables = mostPopulousViewController.createTables();
+
+		// temporary - testing getCSV method
+		creatingTables.done(function () {
+			mostPopulousViewController.getCSV();
+		});
+
+
+
+});
+      </script>
+      <div class="component-header horizontal-gradient top-bottom-border outset" id="most-populous-header">
+       <h3>
+        Most Populous
+       </h3>
+       <p class="share">
+        <a href="#populous-footnote" id="anch_18">
+         Learn More
+        </a>
+        |
+        <a href="./embed.php?component=populous" id="anch_19">
+         Download and Share
+        </a>
+       </p>
+      </div>
+      <div class="tabbed-table-wrapper">
+       <div id="us-most-populous-container">
+        <ul class="tabs">
+        </ul>
+       </div>
+      </div>
+     </div>
+     <div class="rcol">
+      <script type="text/javascript">
+       $(function ( )
+{
+		$('#highest-density-header h3').text(config.components.density.label);
+		highestDensityViewController = new HighestDensityViewController(api, 'us-highest-density-container', $('#highest-density-header'));
+		var creatingTables = highestDensityViewController.createTables();
+
+
+
+});
+      </script>
+      <div class="component-header horizontal-gradient top-bottom-border outset" id="highest-density-header">
+       <h3>
+        Highest Density
+       </h3>
+       <p class="share">
+        <a href="#footnotes" id="anch_20">
+         Learn More
+        </a>
+        |
+        <a href="//www.census.gov/popclock/embed.php?component=density" id="anch_21">
+         Download and Share
+        </a>
+       </p>
+      </div>
+      <div class="tabbed-table-wrapper">
+       <div id="us-highest-density-container">
+        <ul class="tabs">
+        </ul>
+       </div>
+      </div>
+     </div>
+     <div class="ffix">
+     </div>
+    </div>
+   </div>
+   <script type="text/javascript">
+    $( function( ) {
+		var footNoteContainer = $('#footnotes');
+		footNoteContainer.find('h3').text(config.footnotes.label);
+		for (var key in config.footnotes) {
+
+			footNoteContainer.append('<div id="' + key + '-footnote">');
+			if (key !== 'label' && isDefined(config.footnotes[key].label)) { // make sure not overal footnotes title label
+				footNoteContainer.append('<h4>' + config.footnotes[key].label + '</h4>');
+			}
+			if (key !== 'label' && isDefined(config.footnotes[key].content)) {
+				footNoteContainer.append(config.footnotes[key].content);
+			}
+			footNoteContainer.append('</div>');
+		}
+	});
+   </script>
+   <!-- Footnotes -->
+   <div id="footnotes">
+    <h3>
+     About the Population Clock and Population Estimates
+    </h3>
+    <div id="label-footnote">
+    </div>
+    <div id="counter-footnote">
+    </div>
+    <h4>
+     U.S. Population
+    </h4>
+    <p>
+     The U.S. population clock is based on a series of short-term projections for the resident population of the United States. This includes people whose usual residence is in the 50 states and the District of Columbia. These projections do not include members of the Armed Forces overseas, their dependents, or other U.S. citizens residing outside the United States.
+    </p>
+    <p>
+     The projections are based on a monthly series of population estimates starting with the April 1, 2010 resident population from the 2010 Census.
+    </p>
+    <p>
+     At the end of each year, a new series of population estimates, from the census date forward, is used to revise the postcensal estimates, including the population clock projections series. Once a series of monthly projections is completed, the daily population clock numbers are derived by interpolation. Within each calendar month, the daily numerical population change is assumed to be constant, subject to negligible differences caused by rounding.
+    </p>
+    <p>
+     Population estimates produced by the U.S. Census Bureau for the United States, states, counties, and cities or towns can be found on the
+     <a href="//www.census.gov/programs-surveys/popest.html" id="anch_22">
+      Population Estimates
+     </a>
+     web page. Future projections for the United States can be found on the
+     <a href="//www.census.gov/programs-surveys/popproj.html" id="anch_23">
+      Population Projections
+     </a>
+     web page.
+    </p>
+    <div id="pop_on_date-footnote">
+    </div>
+    <h4>
+    </h4>
+    <div id="growth-footnote">
+    </div>
+    <h4>
+    </h4>
+    <div id="pyramid-footnote">
+    </div>
+    <h4>
+    </h4>
+    <div id="populous-footnote">
+    </div>
+    <h4>
+    </h4>
+    <div id="density-footnote">
+    </div>
+    <h4>
+    </h4>
+   </div>
+   <div class="clear">
+   </div>
+   <br/>
+   <div class="pdf">
+    <span id="pdf">
+     [PDF] or
+     <a href="/main/www/pdf.html" id="anch_24">
+      <img alt="PDF" height="17" src="/main/www/img/pdficon.gif" width="17"/>
+     </a>
+     denotes a file in Adobe’s
+     <a href="/main/www/pdf.html" id="anch_25">
+      Portable Document Format
+     </a>
+     . To view the file, you will need the
+     <a href="http://www.adobe.com/products/reader/" id="anch_26">
+      Adobe® Reader®
+     </a>
+     <img alt="Off Site" height="12" src="/main/www/img/offsite.gif" width="15"/>
+     available
+     <span style="font-weight: bold;">
+      free
+     </span>
+     from Adobe.
+    </span>
+    <span id="excel">
+     [Excel] or the letters [xls] indicate a document is in the Microsoft® Excel® Spreadsheet Format (XLS). To view the file, you will need the
+     <a href="http://www.microsoft.com/en-us/download/details.aspx?id=10" id="anch_27" title="This external link, microsoft.com, is not part of the Census Bureau Web site and does not imply endorsement of any particular product, company, or content.">
+      Microsoft® Excel® Viewer
+     </a>
+     <img alt="Off Site" height="12" src="/main/www/img/offsite.gif" width="15"/>
+     available for
+     <strong>
+      free
+     </strong>
+     from Microsoft®.
+    </span>
+    <span id="offsite">
+     This symbol
+     <img alt="Off Site" height="12" src="/main/www/img/offsite.gif" width="15"/>
+     indicates a link to a non-government web site.  Our linking to these sites does not constitute an endorsement of any products, services or the information found on them. Once you link to another site you are subject to the policies of the new site.
+    </span>
+   </div>
+  </div>
+  <br/>
+  <br/>
+  <!-- START CB Footer - Last Revised: 10/1/2020 -->
+  <!-- Responsive Version -->
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <!-- <link rel="stylesheet" type="text/css" href="/main/css/bootstrap-4.3.1.min.css"> -->
+  <link href="/main/css/new_footer.css" rel="stylesheet" type="text/css"/>
+  <!-- <script src="/main/javascript/jquery-3.0.0/jquery.min.js"></script> -->
+  <!-- <script src="/main/javascript/bootstrap-4.3.1/bootstrap.min.js"></script> -->
+  <style>
+   @media only screen and (max-width: 700px) {
+    .val {
+    width: 100%;
+    margin: auto 0;
+    
+}
+
+a{
+font-size: x-small;
+}
+
+.foot_bottom_links{
+width: 100%;
+
+text-align:left;
+}
+
+}
+
+hr {
+margin-bottom: 0;
+}
+  </style>
+  <footer class="footer container-fluid">
+   <div class="row">
+    <div class="grid_footer_links cf">
+     <hr/>
+     <div class="foot_bottom">
+      <div class="foot_bottom_links">
+       <div class="footerbottom">
+        <div class="val">
+         <a class="foot_bottom_socialLinks" href="https://www.census.gov/about/contact-us/social_media.html" id="anch_28">
+          CONNECT WITH US
+         </a>
+         <a class="foot_bottom_socialLinks" href="https://www.facebook.com/uscensusbureau" id="anch_29" target="_blank">
+          <img alt="Facebook logo" src="//www.census.gov/main/img/Facebook_White.svg" title="Facebook"/>
+         </a>
+         <a class="foot_bottom_socialLinks" href="https://twitter.com/uscensusbureau" id="anch_30" target="_blank">
+          <img alt="Twitter logo" src="//www.census.gov/main/img/Twitter_White.svg" title="Twitter"/>
+         </a>
+         <a class="foot_bottom_socialLinks" href="https://www.linkedin.com/company/us-census-bureau" id="anch_31" target="_blank">
+          <img alt="LinkedIn logo" src="//www.census.gov/main/img/LinkedIN_White.svg" title="LinkedIn"/>
+         </a>
+         <a class="foot_bottom_socialLinks" href="https://www.youtube.com/user/uscensusbureau" id="anch_32" target="_blank">
+          <img alt="YouTube logo" src="//www.census.gov/main/img/Youtube_White.svg" title="YouTube"/>
+         </a>
+         <a class="foot_bottom_socialLinks" href="https://www.instagram.com/uscensusbureau/" id="anch_33" target="_blank">
+          <img alt="Instagram logo" src="//www.census.gov/main/img/Instagram_White.svg" title="Instagram"/>
+         </a>
+         <a class="foot_bottom_socialLinks" href="https://public.govdelivery.com/accounts/USCENSUS/subscriber/new" id="anch_34" target="_blank">
+          <img alt="Email Updates logo" src="//www.census.gov/main/img/Mail_White.svg" title="Email Updates"/>
+         </a>
+        </div>
+        <div class="val">
+         <ul class="legal-menu">
+          <li>
+           <a href="https://www.census.gov/about/policies/section-508.html" id="anch_35">
+            Accessibility
+           </a>
+          </li>
+          <li>
+           <a href="https://www.census.gov/quality/" id="anch_36">
+            Information Quality
+           </a>
+          </li>
+          <li>
+           <a href="https://www.census.gov/foia/" id="anch_37">
+            FOIA
+           </a>
+          </li>
+          <li>
+           <a href="https://www.census.gov/privacy/" id="anch_38">
+            Data Protection and Privacy Policy
+           </a>
+          </li>
+          <li>
+           <a href="https://www.commerce.gov/" id="anch_39">
+            U.S. Department of Commerce
+           </a>
+          </li>
+         </ul>
+        </div>
+       </div>
+      </div>
+      <!-- end class=footerbotom -->
+     </div>
+     <!-- end class=foot_bottom_links -->
+    </div>
+    <!-- end class=grid_footer_links -->
+   </div>
+  </footer>
+  <!-- end class=footer -->
+  <div id="ratingTool">
+   <!-- START Rating Tool -->
+   <div id="ratingtooljquery">
+    <script src="https://www.census.gov/ratingtool/js/jquery-1.4.2.min.js" type="text/javascript">
+    </script>
+   </div>
+   <script id="ratingtooljs" src="/ratingtool/js/ratingtool.min.js" type="text/javascript">
+   </script>
+   <link href="/ratingtool/css/ratingtool.min.css" rel="stylesheet" type="text/css"/>
+   <div class="ratingtool_div" id="thumbs_div">
+    <div alt="Close" id="CloseThumbs" tabindex="3">
+     X
+    </div>
+    <div class="WasThisPageHelpful_div">
+     <span align="top" class="WasThisPageHelpfulText">
+      Is this page helpful?
+     </span>
+     <br/>
+     <center>
+      <img alt="Thumbs Up Image" class="thumbs-valign" id="thumbsup" src="/ratingtool/images/thumbsup.png" tabindex="1"/>
+      <span class="YesNoText" id="yes">
+       Yes
+      </span>
+      <img alt="Thumbs Down Image" class="thumbs-valign" id="thumbsdown" src="/ratingtool/images/thumbsdown.png" tabindex="2"/>
+      <span class="YesNoText" id="no">
+       No
+      </span>
+     </center>
+    </div>
+   </div>
+   <div id="popupRating">
+    <div alt="Close" id="closeX" tabindex="4">
+     X
+    </div>
+    <div id="popupRatingHeadingContainer">
+     <span class="popupRatingHeading">
+     </span>
+    </div>
+    <div id="popupRatingContainer">
+     <form id="rtform" method="post" name="rtform">
+      <textarea alt="Comments or Suggestions 255 characters max" id="RatingTool_textarea" maxlength="255" name="message" placeholder="Tell us more." tabindex="2"></textarea>
+      <input alt="Submit" id="RatingToolSubmit" tabindex="3" type="submit" value="SUBMIT"/>
+     </form>
+     <div id="NoThanksDiv">
+      <span alt="No thanks" class="NoThanks" tabindex="1">
+       No, thanks
+      </span>
+     </div>
+     <div id="CharCounter">
+      <span id="rchars">
+       255
+      </span>
+      characters remaining
+     </div>
+    </div>
+   </div>
+   <div class="thankyou_div" id="thnx_div">
+    <div alt="Close" id="closeXX" tabindex="2">
+     X
+    </div>
+    <div class="thankyouforfeedback_div">
+     <span class="thankyouText">
+      Thank you for your feedback.
+     </span>
+     <br/>
+     <span class="YesNoText" id="linkcomments" tabindex="1">
+      Comments or suggestions?
+     </span>
+    </div>
+   </div>
+   <!-- END Rating Tool -->
+  </div>
+  <script type="text/javascript">
+   var popoverTopIsSet = false;
+function show_popover ( ) {
+	$popoverOverlay.show();
+	$popoverContainer.show();
+
+	position_popover();
+}
+
+function position_popover ( ) {
+	var $window = $(window);
+
+	
+	var top = $window.scrollTop() + Math.max(0, $window.height() / 2 - $popoverContainer.outerHeight(true) / 2);
+	var left = Math.max(0, $window.width() / 2 - $popoverContainer.outerWidth(true) / 2);
+
+	// Center container
+	if ( ! popoverTopIsSet ) 
+		$popoverContainer.css('top', top);
+	$popoverContainer.css('left', left);
+	
+}
+
+function resize_popover ( width, height ) {
+	// Set frame width and height
+	$popoverFrame.width(width).height(height);
+
+	position_popover();
+	popoverTopIsSet = true;
+}
+
+function hide_popover ( ) {
+	$popoverFrame.attr('src', 'about:blank');
+	$popoverOverlay.hide();
+	$popoverContainer.hide();
+	popoverTopIsSet = false;
+}
+
+$(function ( )
+{
+	// Sharing popup
+	$popoverOverlay = $('#popover-overlay');
+	$popoverContainer = $('#popover');
+	$popoverFrame = $popoverContainer.find('iframe');
+
+	$popoverContainer.find('a').click(function ( ) {
+		hide_popover();
+		return false;
+	});
+
+	$popoverOverlay.click(function ( ) {
+		hide_popover();
+		return false;
+	});
+
+	$('.share').each(function() {
+		var $theContainer = $(this);
+		$theContainer.find('a:eq(1)').click(function ( event ) {
+			event.preventDefault();
+			$popoverFrame.attr('src', this.href);
+			show_popover();
+			return false;
+		});
+	});
+
+	$(window).resize(resize_popover);
+});
+  </script>
+  <div id="popover-overlay">
+  </div>
+  <div id="popover">
+   <a href="#close" id="anch_40">
+    close
+   </a>
+   <iframe src="about:blank">
+   </iframe>
+  </div>
+  <div class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" id="ui-datepicker-div">
+   <div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all">
+    <a class="ui-datepicker-prev ui-corner-all" data-event="click" data-handler="prev" title="Prev">
+     <span class="ui-icon ui-icon-circle-triangle-w">
+      Prev
+     </span>
+    </a>
+    <a class="ui-datepicker-next ui-corner-all ui-state-disabled" title="Next">
+     <span class="ui-icon ui-icon-circle-triangle-e">
+      Next
+     </span>
+    </a>
+    <div class="ui-datepicker-title">
+     <select class="ui-datepicker-month" data-event="change" data-handler="selectMonth">
+      <option value="0">
+       Jan
+      </option>
+      <option value="1">
+       Feb
+      </option>
+      <option value="2">
+       Mar
+      </option>
+      <option value="3">
+       Apr
+      </option>
+      <option value="4">
+       May
+      </option>
+      <option value="5">
+       Jun
+      </option>
+      <option value="6">
+       Jul
+      </option>
+      <option value="7">
+       Aug
+      </option>
+      <option value="8">
+       Sep
+      </option>
+      <option selected="selected" value="9">
+       Oct
+      </option>
+     </select>
+     <select class="ui-datepicker-year" data-event="change" data-handler="selectYear">
+      <option value="2010">
+       2010
+      </option>
+      <option value="2011">
+       2011
+      </option>
+      <option value="2012">
+       2012
+      </option>
+      <option value="2013">
+       2013
+      </option>
+      <option value="2014">
+       2014
+      </option>
+      <option value="2015">
+       2015
+      </option>
+      <option value="2016">
+       2016
+      </option>
+      <option value="2017">
+       2017
+      </option>
+      <option value="2018">
+       2018
+      </option>
+      <option value="2019">
+       2019
+      </option>
+      <option selected="selected" value="2020">
+       2020
+      </option>
+     </select>
+    </div>
+   </div>
+   <table class="ui-datepicker-calendar">
+    <thead>
+     <tr>
+      <th class="ui-datepicker-week-end">
+       <span title="Sunday">
+        Su
+       </span>
+      </th>
+      <th>
+       <span title="Monday">
+        Mo
+       </span>
+      </th>
+      <th>
+       <span title="Tuesday">
+        Tu
+       </span>
+      </th>
+      <th>
+       <span title="Wednesday">
+        We
+       </span>
+      </th>
+      <th>
+       <span title="Thursday">
+        Th
+       </span>
+      </th>
+      <th>
+       <span title="Friday">
+        Fr
+       </span>
+      </th>
+      <th class="ui-datepicker-week-end">
+       <span title="Saturday">
+        Sa
+       </span>
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td class="ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">
+      </td>
+      <td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">
+      </td>
+      <td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">
+      </td>
+      <td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">
+      </td>
+      <td class="" data-event="click" data-handler="selectDay" data-month="9" data-year="2020">
+       <a class="ui-state-default" href="#" id="anch_43">
+        1
+       </a>
+      </td>
+      <td class="" data-event="click" data-handler="selectDay" data-month="9" data-year="2020">
+       <a class="ui-state-default" href="#" id="anch_44">
+        2
+       </a>
+      </td>
+      <td class="ui-datepicker-week-end" data-event="click" data-handler="selectDay" data-month="9" data-year="2020">
+       <a class="ui-state-default" href="#" id="anch_45">
+        3
+       </a>
+      </td>
+     </tr>
+     <tr>
+      <td class="ui-datepicker-week-end" data-event="click" data-handler="selectDay" data-month="9" data-year="2020">
+       <a class="ui-state-default" href="#" id="anch_46">
+        4
+       </a>
+      </td>
+      <td class="" data-event="click" data-handler="selectDay" data-month="9" data-year="2020">
+       <a class="ui-state-default" href="#" id="anch_47">
+        5
+       </a>
+      </td>
+      <td class="" data-event="click" data-handler="selectDay" data-month="9" data-year="2020">
+       <a class="ui-state-default" href="#" id="anch_48">
+        6
+       </a>
+      </td>
+      <td class="" data-event="click" data-handler="selectDay" data-month="9" data-year="2020">
+       <a class="ui-state-default" href="#" id="anch_49">
+        7
+       </a>
+      </td>
+      <td class="" data-event="click" data-handler="selectDay" data-month="9" data-year="2020">
+       <a class="ui-state-default" href="#" id="anch_50">
+        8
+       </a>
+      </td>
+      <td class="" data-event="click" data-handler="selectDay" data-month="9" data-year="2020">
+       <a class="ui-state-default" href="#" id="anch_51">
+        9
+       </a>
+      </td>
+      <td class="ui-datepicker-week-end" data-event="click" data-handler="selectDay" data-month="9" data-year="2020">
+       <a class="ui-state-default" href="#" id="anch_52">
+        10
+       </a>
+      </td>
+     </tr>
+     <tr>
+      <td class="ui-datepicker-week-end" data-event="click" data-handler="selectDay" data-month="9" data-year="2020">
+       <a class="ui-state-default" href="#" id="anch_53">
+        11
+       </a>
+      </td>
+      <td class="" data-event="click" data-handler="selectDay" data-month="9" data-year="2020">
+       <a class="ui-state-default" href="#" id="anch_54">
+        12
+       </a>
+      </td>
+      <td class="" data-event="click" data-handler="selectDay" data-month="9" data-year="2020">
+       <a class="ui-state-default" href="#" id="anch_55">
+        13
+       </a>
+      </td>
+      <td class="" data-event="click" data-handler="selectDay" data-month="9" data-year="2020">
+       <a class="ui-state-default" href="#" id="anch_56">
+        14
+       </a>
+      </td>
+      <td class="" data-event="click" data-handler="selectDay" data-month="9" data-year="2020">
+       <a class="ui-state-default" href="#" id="anch_57">
+        15
+       </a>
+      </td>
+      <td class="" data-event="click" data-handler="selectDay" data-month="9" data-year="2020">
+       <a class="ui-state-default" href="#" id="anch_58">
+        16
+       </a>
+      </td>
+      <td class="ui-datepicker-week-end ui-datepicker-days-cell-over ui-datepicker-current-day" data-event="click" data-handler="selectDay" data-month="9" data-year="2020">
+       <a class="ui-state-default ui-state-active ui-state-hover" href="#" id="anch_59">
+        17
+       </a>
+      </td>
+     </tr>
+     <tr>
+      <td class="ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled ui-datepicker-today">
+       <span class="ui-state-default">
+        18
+       </span>
+      </td>
+      <td class="ui-datepicker-unselectable ui-state-disabled">
+       <span class="ui-state-default">
+        19
+       </span>
+      </td>
+      <td class="ui-datepicker-unselectable ui-state-disabled">
+       <span class="ui-state-default">
+        20
+       </span>
+      </td>
+      <td class="ui-datepicker-unselectable ui-state-disabled">
+       <span class="ui-state-default">
+        21
+       </span>
+      </td>
+      <td class="ui-datepicker-unselectable ui-state-disabled">
+       <span class="ui-state-default">
+        22
+       </span>
+      </td>
+      <td class="ui-datepicker-unselectable ui-state-disabled">
+       <span class="ui-state-default">
+        23
+       </span>
+      </td>
+      <td class="ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled">
+       <span class="ui-state-default">
+        24
+       </span>
+      </td>
+     </tr>
+     <tr>
+      <td class="ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled">
+       <span class="ui-state-default">
+        25
+       </span>
+      </td>
+      <td class="ui-datepicker-unselectable ui-state-disabled">
+       <span class="ui-state-default">
+        26
+       </span>
+      </td>
+      <td class="ui-datepicker-unselectable ui-state-disabled">
+       <span class="ui-state-default">
+        27
+       </span>
+      </td>
+      <td class="ui-datepicker-unselectable ui-state-disabled">
+       <span class="ui-state-default">
+        28
+       </span>
+      </td>
+      <td class="ui-datepicker-unselectable ui-state-disabled">
+       <span class="ui-state-default">
+        29
+       </span>
+      </td>
+      <td class="ui-datepicker-unselectable ui-state-disabled">
+       <span class="ui-state-default">
+        30
+       </span>
+      </td>
+      <td class="ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled">
+       <span class="ui-state-default">
+        31
+       </span>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+  <i style="display: none; color: white;" title="Raphaël Colour Picker">
+  </i>
+ </body>
+</html>

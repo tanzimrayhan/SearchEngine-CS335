@@ -1,0 +1,5 @@
+Query President
+Query Bangladesh
+Query education
+Query Population
+Query territory
